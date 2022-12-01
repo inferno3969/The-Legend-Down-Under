@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53493580579a848e18890ff97fea7058, type: 3}
+  m_Name: Soldier Sword
+  m_EditorClassIdentifier: 
+  itemSprite: {fileID: 21300000, guid: 19310f5d6de6744ea8424772a1417a82, type: 3}
+  itemDescription: Sword your father left you, it's quite dull, but will get the
+    job done.
+  isKey: 0
+  isBossKey: 0

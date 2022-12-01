@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2164a63cbd14839b07c6ff097675b8, type: 3}
+  m_Name: General PlayerInventory
+  m_EditorClassIdentifier: 
+  currentItem: {fileID: 11400000, guid: ae13b6ec4b7994954a628bcb3aadb745, type: 2}
+  myInventory:
+  - {fileID: 11400000, guid: ae13b6ec4b7994954a628bcb3aadb745, type: 2}
+  - {fileID: 11400000, guid: b8b07a24e178645a781e184aa11595d3, type: 2}
+  - {fileID: 11400000, guid: 703f818dc9da345eb955c081cece27ed, type: 2}
+  - {fileID: 11400000, guid: e7e0ab8643b114aa685e634b58a2f54d, type: 2}
+  - {fileID: 11400000, guid: 0fe2e4d3f60ac454eb4109749fb78497, type: 2}
+  numberOfKeys: 4
+  numberOfBossKeys: 0
+  maxMagic: 10
+  currentMagic: 10
