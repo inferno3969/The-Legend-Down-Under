@@ -2,15 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PlayerState
+{
+    idle,
+    walk,
+    attack,
+    interact
+}
+
 public class PlayerMovement : MonoBehaviour
 {
+    public PlayerState currentState;
     public float speed;
     private Rigidbody2D playerRigidBody;
     private Vector3 change;
-    private Animator animator;
+    [HideInInspector]
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
+        currentState = PlayerState.idle;
         playerRigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
     }
@@ -21,16 +32,22 @@ public class PlayerMovement : MonoBehaviour
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal") * Time.deltaTime * speed;
         change.y = Input.GetAxisRaw("Vertical") * Time.deltaTime * speed;
-
-        if (Mathf.Abs(change.x) > Mathf.Abs(change.y))
+        if (Input.GetButtonDown("Attack") && currentState != PlayerState.attack && currentState == PlayerState.idle && currentState != PlayerState.walk)
         {
-            change.y = 0;
+            StartCoroutine(AttackCo());
         }
-        else
+        else if (currentState == PlayerState.walk || currentState == PlayerState.idle)
         {
-            change.x = 0;
+            if (Mathf.Abs(change.x) > Mathf.Abs(change.y))
+            {
+                change.y = 0;
+            }
+            else
+            {
+                change.x = 0;
+            }
+            UpdateAnimationAndMove();
         }
-        UpdateAnimationAndMove();
     }
 
     void MoveCharacter()
@@ -51,6 +68,17 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             animator.SetBool("Moving", false);
+            currentState = PlayerState.idle;
         }
+    }
+
+    private IEnumerator AttackCo()
+    {
+        animator.SetBool("Attacking", true);
+        currentState = PlayerState.attack;
+        yield return null;
+        animator.SetBool("Attacking", false);
+        yield return new WaitForSeconds(.3f);
+        currentState = PlayerState.idle;
     }
 }
