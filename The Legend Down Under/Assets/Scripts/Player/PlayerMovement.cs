@@ -30,7 +30,6 @@ public class PlayerMovement : MonoBehaviour
         {
             change.x = 0;
         }
-
         UpdateAnimationAndMove();
     }
 
