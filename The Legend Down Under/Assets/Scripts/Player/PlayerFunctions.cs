@@ -29,10 +29,11 @@ public class PlayerFunctions : MonoBehaviour
     void Start()
     {
         // set current state if player to idle
-        currentState = PlayerState.idle;
-
+        currentState = PlayerState.walk;
         playerRigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        animator.SetFloat("MoveX", 0);
+        animator.SetFloat("MoveY", -1);
     }
 
     // Update is called once per frame
@@ -45,23 +46,14 @@ public class PlayerFunctions : MonoBehaviour
         change.y = Input.GetAxisRaw("Vertical") * Time.deltaTime * speed;
 
         // initiate attack coroutine when attack Input is pressed and player current state doesn't
-        // equal attack and walk and equals idle
-        if (Input.GetButtonDown("Attack") && currentState != PlayerState.attack && currentState == PlayerState.idle && currentState != PlayerState.walk)
+        // equal attack
+        if (Input.GetButtonDown("Attack") && currentState != PlayerState.attack)
         {
             StartCoroutine(AttackCo());
         }
         // updates animation and moves when player current state equals walk or equals idle
         else if (currentState == PlayerState.walk || currentState == PlayerState.idle)
         {
-            // this if else block prevents player from moving diagonally
-            if (Mathf.Abs(change.x) > Mathf.Abs(change.y))
-            {
-                change.y = 0;
-            }
-            else
-            {
-                change.x = 0;
-            }
             UpdateAnimationAndMove();
         }
     }
@@ -69,7 +61,8 @@ public class PlayerFunctions : MonoBehaviour
     // moves position of player
     void MoveCharacter()
     {
-        playerRigidBody.MovePosition(transform.position + speed * Time.deltaTime * change.normalized);
+        change.Normalize();
+        playerRigidBody.MovePosition(transform.position + speed * Time.deltaTime * change);
     }
 
     void UpdateAnimationAndMove()
@@ -83,15 +76,15 @@ public class PlayerFunctions : MonoBehaviour
             animator.SetFloat("MoveY", change.y);
             animator.SetBool("Moving", true);
         }
-        // stops walking animations and player goes to idle state when not moving
+        // stops walking animations and player goes to walk state when not moving
         else
         {
             animator.SetBool("Moving", false);
-            currentState = PlayerState.idle;
+            currentState = PlayerState.walk;
         }
     }
 
-    // coroutine for attack to play attack animation and reset to idle after animation
+    // coroutine for attack to play attack animation and reset to walk after animation
     // and short delay
     private IEnumerator AttackCo()
     {
@@ -100,6 +93,6 @@ public class PlayerFunctions : MonoBehaviour
         yield return null;
         animator.SetBool("Attacking", false);
         yield return new WaitForSeconds(.3f);
-        currentState = PlayerState.idle;
+        currentState = PlayerState.walk;
     }
 }
