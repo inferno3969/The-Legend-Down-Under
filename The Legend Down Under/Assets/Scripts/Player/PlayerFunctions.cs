@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // state machine for player
 public enum PlayerState
@@ -8,14 +9,19 @@ public enum PlayerState
     idle,
     walk,
     attack,
+    stagger,
     interact
 }
 
 public class PlayerFunctions : MonoBehaviour
 {
-    // public variables (seen in Unity inspector)
     public PlayerState currentState;
     public float speed;
+
+    [Header("Player Health")]
+    public FloatValue currentHealth;
+    public SignalSender playerHealthSignal;
+    // public variables (seen in Unity inspector)
 
     // [HideInInspector] field hides the public variable in Unity inspector
     [HideInInspector]
@@ -47,7 +53,7 @@ public class PlayerFunctions : MonoBehaviour
 
         // initiate attack coroutine when attack Input is pressed and player current state doesn't
         // equal attack
-        if (Input.GetButtonDown("Attack") && currentState != PlayerState.attack)
+        if (Input.GetButtonDown("Attack") && currentState != PlayerState.attack && currentState != PlayerState.stagger)
         {
             StartCoroutine(AttackCo());
         }
@@ -94,5 +100,31 @@ public class PlayerFunctions : MonoBehaviour
         animator.SetBool("Attacking", false);
         yield return new WaitForSeconds(.3f);
         currentState = PlayerState.walk;
+    }
+
+    public void Knock(float knockTime, float damage)
+    {
+        currentHealth.RuntimeValue -= damage;
+        playerHealthSignal.RaiseSignal();
+        if (currentHealth.RuntimeValue > 0)
+        {
+            StartCoroutine(KnockCo(knockTime));
+        }
+        else
+        {
+            this.gameObject.SetActive(false);
+        }
+
+    }
+
+    private IEnumerator KnockCo(float knockTime)
+    {
+        if (playerRigidBody != null)
+        {
+            yield return new WaitForSeconds(knockTime);
+            playerRigidBody.velocity = Vector2.zero;
+            currentState = PlayerState.idle;
+            playerRigidBody.velocity = Vector2.zero;
+        }
     }
 }
