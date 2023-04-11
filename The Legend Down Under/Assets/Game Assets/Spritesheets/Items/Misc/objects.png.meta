@@ -7068,7 +7068,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      objects_4: 1672171928
+      objects_127: -2036337483
       objects_118: -1127846299
       objects_98: -1509844795
       objects_44: 1647344395
@@ -7396,9 +7396,9 @@ TextureImporter:
       objects_111: 1825268974
       objects_88: 1963366198
       objects_178: 1207066371
-      objects_127: -2036337483
-      objects_128: -683311768
+      objects_4: 1672171928
       objects_20: 1089516874
+      objects_128: -683311768
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

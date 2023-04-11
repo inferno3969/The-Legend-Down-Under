@@ -13,8 +13,9 @@ public class Knockback : MonoBehaviour
 
         if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Player"))
         {
-            
-            if (other.TryGetComponent<Rigidbody2D>(out var hit))
+            Rigidbody2D hit = other.GetComponent<Rigidbody2D>();
+
+            if (hit != null)
             {
                 Vector2 difference = hit.transform.position - transform.position;
                 difference = difference.normalized * thrust;
