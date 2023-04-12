@@ -21,7 +21,7 @@ public class InventorySlot : MonoBehaviour
         if (thisItem)
         {
             itemImage.sprite = thisItem.itemImage;
-            itemNumberText.text = "" + thisItem.numberHeld;
+            itemNumberText.text = "x" + thisItem.numberHeld;
         }
     }
 

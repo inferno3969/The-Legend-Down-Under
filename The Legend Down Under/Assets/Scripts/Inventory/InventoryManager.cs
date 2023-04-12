@@ -41,7 +41,7 @@ public class InventoryManager : MonoBehaviour
                     GameObject temp =
                         Instantiate(blankInventorySlot,
                         inventoryPanel.transform.position, Quaternion.identity);
-                    temp.transform.SetParent(inventoryPanel.transform);
+                    temp.transform.SetParent(inventoryPanel.transform, false);
                     InventorySlot newSlot = temp.GetComponent<InventorySlot>();
                     if (newSlot)
                     {
