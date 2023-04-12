@@ -10,7 +10,8 @@ public enum PlayerState
     walk,
     attack,
     stagger,
-    interact
+    interact,
+    shield
 }
 
 public class PlayerFunctions : MonoBehaviour
@@ -66,6 +67,10 @@ public class PlayerFunctions : MonoBehaviour
         {
             StartCoroutine(AttackCo());
         }
+        else if (Input.GetButton("Shield") && currentState != PlayerState.attack && currentState != PlayerState.stagger)
+        {
+            StartCoroutine(ShieldCo());
+        }
         // updates animation and moves when player current state equals walk or equals idle
         else if (currentState == PlayerState.walk || currentState == PlayerState.idle)
         {
@@ -99,6 +104,22 @@ public class PlayerFunctions : MonoBehaviour
         }
     }
 
+    private IEnumerator ShieldCo()
+    {
+        animator.SetBool("Shielding", true);
+        currentState = PlayerState.shield;
+        yield return null;
+        if (!Input.GetButton("Shield"))
+        {
+            animator.SetBool("HoldingDown", false);
+            animator.SetBool("Shielding", false);
+            currentState = PlayerState.walk;
+        }
+        else
+        {
+            animator.SetBool("HoldingDown", true);
+        }
+    }
     // coroutine for attack to play attack animation and reset to walk after animation
     // and short delay
     private IEnumerator AttackCo()
