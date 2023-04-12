@@ -16,8 +16,11 @@ public class Enemy : MonoBehaviour
     private void TakeDamage(float damage)
     {
         health -= damage;
+        Mathf.Round(health);
+
         if (health <= 0)
         {
+            health = 0;
             this.gameObject.SetActive(false);
         }
     }

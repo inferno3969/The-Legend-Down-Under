@@ -51,13 +51,16 @@ public class PlayerFunctions : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
         // changes sprite based on Input 
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal") * Time.deltaTime * speed;
         change.y = Input.GetAxisRaw("Vertical") * Time.deltaTime * speed;
+        Update();
+    }
 
-        // initiate attack coroutine when attack Input is pressed and player current state doesn't
+    void Update()
+    {
+         // initiate attack coroutine when attack Input is pressed and player current state doesn't
         // equal attack
         if (Input.GetButtonDown("Attack") && currentState != PlayerState.attack && currentState != PlayerState.stagger)
         {
@@ -70,11 +73,12 @@ public class PlayerFunctions : MonoBehaviour
         }
     }
 
+
     // moves position of player
     void MoveCharacter()
     {
         change.Normalize();
-        playerRigidBody.MovePosition(transform.position + speed * Time.deltaTime * change);
+        playerRigidBody.MovePosition(transform.position + change.normalized * speed * Time.deltaTime);
     }
 
     void UpdateAnimationAndMove()
@@ -82,7 +86,6 @@ public class PlayerFunctions : MonoBehaviour
         // moves player and updates walking animations based on change in X and Y axis
         if (change != Vector3.zero)
         {
-            transform.Translate(new Vector3(change.x, change.y));
             MoveCharacter();
             animator.SetFloat("MoveX", change.x);
             animator.SetFloat("MoveY", change.y);
@@ -92,7 +95,7 @@ public class PlayerFunctions : MonoBehaviour
         else
         {
             animator.SetBool("Moving", false);
-            currentState = PlayerState.walk;
+            currentState = PlayerState.idle;
         }
     }
 
