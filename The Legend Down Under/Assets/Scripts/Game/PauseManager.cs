@@ -8,8 +8,9 @@ public class PauseManager : MonoBehaviour
 
     private bool isPaused;
     public GameObject pausePanel;
-    //public GameObject inventoryPanel;
+    public GameObject inventoryPanel;
     public bool usingPausePanel;
+    public GameObject playerCanvas; 
     public string mainMenu;
 
     // Start is called before the first frame update
@@ -17,7 +18,7 @@ public class PauseManager : MonoBehaviour
     {
         isPaused = false;
         pausePanel.SetActive(false);
-        //inventoryPanel.SetActive(false);
+        inventoryPanel.SetActive(false);
         usingPausePanel = false;
     }
 
@@ -37,13 +38,15 @@ public class PauseManager : MonoBehaviour
         if (isPaused)
         {
             pausePanel.SetActive(true);
+            playerCanvas.SetActive(false);
             Time.timeScale = 0f;
             usingPausePanel = true;
         }
         else
         {
-            //inventoryPanel.SetActive(false);
+            inventoryPanel.SetActive(false);
             pausePanel.SetActive(false);
+            playerCanvas.SetActive(true);
             usingPausePanel = false;
             Time.timeScale = 1f;
         }
@@ -61,12 +64,14 @@ public class PauseManager : MonoBehaviour
         if (usingPausePanel)
         {
             pausePanel.SetActive(true);
-            //inventoryPanel.SetActive(false);
+            playerCanvas.SetActive(false);
+            inventoryPanel.SetActive(false);
         }
         else
         {
-            //inventoryPanel.SetActive(true);
+            inventoryPanel.SetActive(true);
             pausePanel.SetActive(false);
+            playerCanvas.SetActive(false);
         }
     }
 

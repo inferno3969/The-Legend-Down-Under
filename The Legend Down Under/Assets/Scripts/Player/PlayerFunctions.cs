@@ -31,6 +31,12 @@ public class PlayerFunctions : MonoBehaviour
     private Rigidbody2D playerRigidBody;
     private Vector3 change;
 
+    [Header("Player Inventory")]
+    public PlayerInventory playerInventory;
+
+    [Header("Weapons")]
+    public InventoryItem soldierSword;
+
     // Start is called before the first frame update
     void Start()
     {
