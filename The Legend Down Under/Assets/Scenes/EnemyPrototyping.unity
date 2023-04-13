@@ -179,6 +179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589158, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -200,6 +204,8 @@ GameObject:
   - component: {fileID: 1241839092}
   - component: {fileID: 1241839091}
   - component: {fileID: 1241839093}
+  - component: {fileID: 1241839096}
+  - component: {fileID: 1241839095}
   - component: {fileID: 1241839094}
   m_Layer: 0
   m_Name: Octorok
@@ -268,7 +274,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241839090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5.4, y: 3.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -304,17 +310,91 @@ MonoBehaviour:
   m_GameObject: {fileID: 1241839090}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cf5c444a61754c8c9b2cdb8816352f7, type: 3}
+  m_Script: {fileID: 11500000, guid: c4f3c928a46ac4fb38508f47da63fc33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentState: 0
   health: 2
-  maxHealth: {fileID: 11400000, guid: c53a74ace97ee4332bbf2ec72a359778, type: 2}
-  baseAttack: 2
-  projectile: {fileID: 0}
+  enemyName: Octorok
+  baseAttack: 1
+  moveSpeed: 1.5
   target: {fileID: 286654904}
-  fireDelay: 2
-  fireDelaySeconds: 0
-  canFire: 1
+  chaseRadius: 4
+  attackRadius: 2
+  homePosition: {fileID: 0}
+  animator: {fileID: 1241839093}
+--- !u!61 &1241839095
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241839090}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.0074467063, y: 0.044680476}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 2}
+    newSize: {x: 2, y: 2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.031926, y: 0.927672}
+  m_EdgeRadius: 0
+--- !u!50 &1241839096
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241839090}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 100
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1446838343
 GameObject:
   m_ObjectHideFlags: 0
@@ -340,7 +420,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446838343}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1446838345
 Camera:
   m_ObjectHideFlags: 0

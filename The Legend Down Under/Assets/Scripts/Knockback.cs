@@ -24,7 +24,7 @@ public class Knockback : MonoBehaviour
                 if (other.gameObject.CompareTag("Enemy") && other.isTrigger)
                 {
                     Debug.Log(damage);
-                    other.GetComponent<Enemy>().Knock(damage);
+                    //other.GetComponent<Enemy>().Knock(damage);
                 }
                 if (other.gameObject.CompareTag("Player"))
                 {
