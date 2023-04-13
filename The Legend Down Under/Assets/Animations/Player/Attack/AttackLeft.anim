@@ -43,7 +43,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Left Hitboxes/Left Hitbox 1
+    path: Hitboxes/Sword Hitboxes/Left Hitboxes/Left Hitbox 1
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -82,7 +82,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Left Hitboxes/Left Hitbox 2
+    path: Hitboxes/Sword Hitboxes/Left Hitboxes/Left Hitbox 2
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -121,7 +121,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Left Hitboxes/Left Hitbox 3
+    path: Hitboxes/Sword Hitboxes/Left Hitboxes/Left Hitbox 3
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -160,7 +160,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Left Hitboxes/Left Hitbox 4
+    path: Hitboxes/Sword Hitboxes/Left Hitboxes/Left Hitbox 4
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -199,7 +199,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Left Hitboxes/Left Hitbox 5
+    path: Hitboxes/Sword Hitboxes/Left Hitboxes/Left Hitbox 5
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -238,7 +238,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Left Hitboxes/Left Hitbox 6
+    path: Hitboxes/Sword Hitboxes/Left Hitboxes/Left Hitbox 6
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -277,7 +277,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Left Hitboxes/Left Hitbox 7
+    path: Hitboxes/Sword Hitboxes/Left Hitboxes/Left Hitbox 7
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -440,7 +440,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Left Hitboxes/Left Hitbox 1
+    path: Hitboxes/Sword Hitboxes/Left Hitboxes/Left Hitbox 1
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -479,7 +479,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Left Hitboxes/Left Hitbox 2
+    path: Hitboxes/Sword Hitboxes/Left Hitboxes/Left Hitbox 2
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -518,7 +518,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Left Hitboxes/Left Hitbox 3
+    path: Hitboxes/Sword Hitboxes/Left Hitboxes/Left Hitbox 3
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -557,7 +557,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Left Hitboxes/Left Hitbox 4
+    path: Hitboxes/Sword Hitboxes/Left Hitboxes/Left Hitbox 4
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -596,7 +596,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Left Hitboxes/Left Hitbox 5
+    path: Hitboxes/Sword Hitboxes/Left Hitboxes/Left Hitbox 5
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -635,7 +635,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Left Hitboxes/Left Hitbox 6
+    path: Hitboxes/Sword Hitboxes/Left Hitboxes/Left Hitbox 6
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -674,7 +674,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: Left Hitboxes/Left Hitbox 7
+    path: Hitboxes/Sword Hitboxes/Left Hitboxes/Left Hitbox 7
     classID: 1
     script: {fileID: 0}
     flags: 0

@@ -508,8 +508,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e9bf365dcff4793b0c0b7e7b3dab86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 0
-  knockTime: 0
+  thrust: 2
+  knockTime: 0.25
   damage: 0.4
 --- !u!66 &6347956275587673745
 CompositeCollider2D:
@@ -1338,8 +1338,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e9bf365dcff4793b0c0b7e7b3dab86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 0
-  knockTime: 0
+  thrust: 2
+  knockTime: 0.25
   damage: 0.5
 --- !u!1 &6347956276002369448
 GameObject:
@@ -2511,8 +2511,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e9bf365dcff4793b0c0b7e7b3dab86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 0
-  knockTime: 0
+  thrust: 2
+  knockTime: 0.25
   damage: 0.5
 --- !u!1 &6347956276470979819
 GameObject:
@@ -4102,8 +4102,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e9bf365dcff4793b0c0b7e7b3dab86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 0
-  knockTime: 0
+  thrust: 2
+  knockTime: 0.25
   damage: 0.5
 --- !u!1 &6347956277411589158
 GameObject:
@@ -4134,7 +4134,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6347956277411589158}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4142,7 +4142,7 @@ Transform:
   - {fileID: 6347956276818155382}
   - {fileID: 6347956275863942622}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6347956277411589157
 SpriteRenderer:

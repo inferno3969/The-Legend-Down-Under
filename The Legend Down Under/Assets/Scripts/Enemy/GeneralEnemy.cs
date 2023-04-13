@@ -13,20 +13,49 @@ public enum EnemyState
 public class GeneralEnemy : MonoBehaviour
 {
     public EnemyState currentState;
-    public int health;
+    public float health;
+    public FloatValue maxHealth;
     public string enemyName;
+    public Vector2 homePosition;
     public int baseAttack;
     public float moveSpeed;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-
+        health = maxHealth.initialValue;
+        homePosition = transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        transform.position = homePosition;
+        health = maxHealth.initialValue;
+        currentState = EnemyState.idle;
+    }
+
+    private void TakeDamage(float damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            this.gameObject.SetActive(false);
+        }
+    }
+
+    public void Knock(Rigidbody2D rigidbody, float knockTime, float damage)
+    {
+        StartCoroutine(KnockCo(rigidbody, knockTime));
+        TakeDamage(damage);
+    }
+
+    private IEnumerator KnockCo(Rigidbody2D rigidbody, float knockTime)
+    {
+        if (rigidbody != null)
+        {
+            yield return new WaitForSeconds(knockTime);
+            rigidbody.velocity = Vector2.zero;
+            currentState = EnemyState.idle;
+            rigidbody.velocity = Vector2.zero;
+        }
     }
 }

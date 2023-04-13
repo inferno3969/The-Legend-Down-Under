@@ -136,7 +136,7 @@ public class PlayerFunctions : MonoBehaviour
     {
         currentHealth.RuntimeValue -= damage;
         playerHealthSignal.RaiseSignal();
-        if (currentHealth.RuntimeValue > 0)
+        if (currentHealth.RuntimeValue > 0 && this.gameObject != null)
         {
             StartCoroutine(KnockCo(knockTime));
         }

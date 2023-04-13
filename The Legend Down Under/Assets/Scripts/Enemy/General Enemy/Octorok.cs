@@ -8,7 +8,6 @@ public class Octorok : GeneralEnemy
     public Transform target;
     public float chaseRadius;
     public float attackRadius;
-    public Transform homePosition;
     public Animator animator;
 
     // Start is called before the first frame update
