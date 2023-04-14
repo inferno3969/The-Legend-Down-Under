@@ -622,8 +622,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pausePanel: {fileID: 2727840746533413082}
   inventoryPanel: {fileID: 2727840745938122215}
+  playerCanvas: {fileID: 9002354015117284626, guid: 9f7bbd42373394a6183530924d955305, type: 3}
   usingPausePanel: 0
-  playerCanvas: {fileID: 9104513531444972477, guid: 9f7bbd42373394a6183530924d955305, type: 3}
   mainMenu: MainMenu
 --- !u!1 &2727840746715803364
 GameObject:

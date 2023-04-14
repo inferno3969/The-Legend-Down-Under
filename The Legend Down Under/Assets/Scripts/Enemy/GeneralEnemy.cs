@@ -20,19 +20,6 @@ public class GeneralEnemy : MonoBehaviour
     public int baseAttack;
     public float moveSpeed;
 
-    private void Awake()
-    {
-        health = maxHealth.initialValue;
-        homePosition = transform.position;
-    }
-
-    private void OnEnable()
-    {
-        transform.position = homePosition;
-        health = maxHealth.initialValue;
-        currentState = EnemyState.idle;
-    }
-
     private void TakeDamage(float damage)
     {
         health -= damage;
