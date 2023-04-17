@@ -8,11 +8,14 @@ public class Knockback : MonoBehaviour
     public float knockTime;
     public float damage;
 
+    private bool isPlayer;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Hitboxes"))
         {
             Rigidbody2D hit = other.GetComponent<Rigidbody2D>();
+
             if (hit != null)
             {
                 Vector2 difference = hit.transform.position - transform.position;
@@ -21,8 +24,11 @@ public class Knockback : MonoBehaviour
 
                 if (other.gameObject.CompareTag("Enemy"))
                 {
+                    // stores the player's hitboxes in a bool to pass throug
+                    // enemy knock function
+                    bool player = gameObject.CompareTag("Hitboxes");
                     hit.GetComponent<GeneralEnemy>().currentState = EnemyState.stagger;
-                    other.GetComponent<GeneralEnemy>().Knock(hit, knockTime, damage);
+                    other.GetComponent<GeneralEnemy>().Knock(hit, player, knockTime, damage);
                 }
                 if (other.gameObject.CompareTag("Player"))
                 {

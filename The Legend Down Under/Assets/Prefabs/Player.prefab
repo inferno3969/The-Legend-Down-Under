@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 6347956275587673745}
   m_Layer: 7
   m_Name: Down Hitboxes
-  m_TagString: Untagged
+  m_TagString: Hitboxes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1242,7 +1242,7 @@ GameObject:
   - component: {fileID: 6347956275993099062}
   m_Layer: 7
   m_Name: Left Hitboxes
-  m_TagString: Untagged
+  m_TagString: Hitboxes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2428,7 +2428,7 @@ GameObject:
   - component: {fileID: 6347956276427032754}
   m_Layer: 7
   m_Name: Right Hitboxes
-  m_TagString: Untagged
+  m_TagString: Hitboxes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4045,7 +4045,7 @@ GameObject:
   - component: {fileID: 6347956277375403464}
   m_Layer: 7
   m_Name: Up Hitboxes
-  m_TagString: Untagged
+  m_TagString: Hitboxes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4194,7 +4194,7 @@ Transform:
   - {fileID: 6347956276818155382}
   - {fileID: 6347956275863942622}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6347956277411589157
 SpriteRenderer:
@@ -4333,12 +4333,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
-  speed: 6
+  speed: 4
   currentHealth: {fileID: 11400000, guid: 5ec9b721c3bff440d8ddb9bf0d620e60, type: 2}
   playerHealthSignal: {fileID: 11400000, guid: ffc32fd7680dc44d492217dce9d5731c, type: 2}
   animator: {fileID: 0}
   playerInventory: {fileID: 11400000, guid: 5f791cf00fd5d46e5835285875fdd4d1, type: 2}
   soldierSword: {fileID: 0}
+  isPlayer: 1
 --- !u!95 &6347956277411589152
 Animator:
   serializedVersion: 5
