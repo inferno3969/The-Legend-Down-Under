@@ -239,6 +239,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589153, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: playerHit
+      value: 
+      objectReference: {fileID: 11400000, guid: dea8065a57fe5464298aa91063e9b360, type: 2}
     - target: {fileID: 6347956277411589156, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -570,7 +574,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1241839091
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1054,7 +1058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e9bf365dcff4793b0c0b7e7b3dab86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 2
+  thrust: 4
   knockTime: 0.2
   damage: 1
 --- !u!114 &1348509708
@@ -1203,6 +1207,9 @@ GameObject:
   - component: {fileID: 1446838346}
   - component: {fileID: 1446838345}
   - component: {fileID: 1446838344}
+  - component: {fileID: 1446838347}
+  - component: {fileID: 1446838349}
+  - component: {fileID: 1446838348}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1253,7 +1260,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.997175
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1284,6 +1291,71 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1446838347
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446838343}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0b8f8ebb8f1df496c9a840e1f8f41c5e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &1446838348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446838343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62b30988a0dc449c79a6a43f9b972df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 286654904}
+  smoothing: 0
+  maxPosition: {x: 0, y: 0}
+  minPosition: {x: 0, y: 0}
+  animator: {fileID: 0}
+--- !u!114 &1446838349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446838343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d6423b8fcb834eb686180eb858dbd72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  signal: {fileID: 11400000, guid: dea8065a57fe5464298aa91063e9b360, type: 2}
+  signalEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1446838348}
+        m_TargetAssemblyTypeName: CameraMovement, Assembly-CSharp
+        m_MethodName: BeginKick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &2082287503
 PrefabInstance:
   m_ObjectHideFlags: 0

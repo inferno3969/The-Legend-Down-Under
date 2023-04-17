@@ -38,6 +38,9 @@ public class PlayerFunctions : MonoBehaviour
     [Header("Weapons")]
     public InventoryItem soldierSword;
 
+    [Header("Player Hit")]
+    public SignalSender playerHit;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -151,6 +154,7 @@ public class PlayerFunctions : MonoBehaviour
 
     private IEnumerator KnockCo(float knockTime)
     {
+        playerHit.RaiseSignal();
         if (playerRigidBody != null)
         {
             yield return new WaitForSeconds(knockTime);
