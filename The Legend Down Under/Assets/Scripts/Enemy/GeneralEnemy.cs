@@ -19,6 +19,9 @@ public class GeneralEnemy : MonoBehaviour
     public Vector2 homePosition;
     public int baseAttack;
     public float moveSpeed;
+    // prevent enemy from attacking other enemies
+    // while still staying true to the collision matrix
+    public bool isEnemy = true;
 
     private void TakeDamage(float damage)
     {
@@ -31,8 +34,19 @@ public class GeneralEnemy : MonoBehaviour
 
     public void Knock(Rigidbody2D rigidbody, float knockTime, float damage)
     {
-        StartCoroutine(KnockCo(rigidbody, knockTime));
-        TakeDamage(damage);
+        // only deal damage if object isn't an enemy
+        if (isEnemy != true)
+        {
+            StartCoroutine(KnockCo(rigidbody, knockTime));
+            TakeDamage(damage);
+        }
+        else
+        {
+            /* still want the enemy to produce knock back
+            when colliding with an enemy to prevent
+            then from overlapping */
+            StartCoroutine(KnockCo(rigidbody, knockTime));
+        }
     }
 
     private IEnumerator KnockCo(Rigidbody2D rigidbody, float knockTime)
