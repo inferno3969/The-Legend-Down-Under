@@ -243,6 +243,62 @@ PrefabInstance:
       propertyPath: playerHit
       value: 
       objectReference: {fileID: 11400000, guid: dea8065a57fe5464298aa91063e9b360, type: 2}
+    - target: {fileID: 6347956277411589153, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: flashColor.a
+      value: 0.59607846
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589153, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: flashColor.r
+      value: 0.9529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589153, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: playerSprite
+      value: 
+      objectReference: {fileID: 626506377}
+    - target: {fileID: 6347956277411589153, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: flashDuration
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589153, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: regularColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589153, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: regularColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589153, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: regularColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589153, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: regularColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589153, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: numberOfFlashes
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589153, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: triggerCollider
+      value: 
+      objectReference: {fileID: 626506372}
+    - target: {fileID: 6347956277411589154, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: m_Mass
+      value: 0.6475447
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589155, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589155, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: a64c2d344253a4acda3b52edbc838c02, type: 2}
+    - target: {fileID: 6347956277411589155, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6347956277411589156, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -290,6 +346,38 @@ PrefabInstance:
     - target: {fileID: 6347956277411589158, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589167, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: m_Size.x
+      value: 0.8772364
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589167, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2480056
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589167, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589167, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589167, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0028608143
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589167, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.15253651
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589167, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589167, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6347956277506721103, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
@@ -551,6 +639,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b31c9eaab7a8e4237b135173e9968c22, type: 3}
+--- !u!61 &626506372 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6347956277411589167, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+  m_PrefabInstance: {fileID: 86460684}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &626506377 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6347956277411589157, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+  m_PrefabInstance: {fileID: 86460684}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1241839090
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,7 +1131,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.02534771, y: -0.19058967}
+  m_Offset: {x: -0.01663417, y: -0.4319851}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1044,7 +1142,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.80682135, y: 1.1105161}
+  m_Size: {x: 0.7228576, y: 0.6277251}
   m_EdgeRadius: 0
 --- !u!114 &1348509707
 MonoBehaviour:
@@ -1058,7 +1156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76e9bf365dcff4793b0c0b7e7b3dab86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 4
+  thrust: 3
   knockTime: 0.2
   damage: 1
 --- !u!114 &1348509708
@@ -1080,7 +1178,7 @@ MonoBehaviour:
   homePosition: {x: 0, y: 0}
   baseAttack: 1
   moveSpeed: 1.5
-  myRigidbody: {fileID: 0}
+  myRigidbody: {fileID: 1348509709}
   target: {fileID: 286654904}
   chaseRadius: 4
   attackRadius: 0.5

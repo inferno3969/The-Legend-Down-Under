@@ -41,6 +41,14 @@ public class PlayerFunctions : MonoBehaviour
     [Header("Player Hit")]
     public SignalSender playerHit;
 
+    [Header("Invulnerability Frame")]
+    public Color flashColor;
+    public Color regularColor;
+    public float flashDuration;
+    public int numberOfFlashes;
+    public Collider2D triggerCollider;
+    public SpriteRenderer playerSprite;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -157,10 +165,28 @@ public class PlayerFunctions : MonoBehaviour
         playerHit.RaiseSignal();
         if (playerRigidBody != null)
         {
+            StartCoroutine(FlashCo());
             yield return new WaitForSeconds(knockTime);
             playerRigidBody.velocity = Vector2.zero;
             currentState = PlayerState.idle;
             playerRigidBody.velocity = Vector2.zero;
         }
+    }
+
+    private IEnumerator FlashCo()
+    {
+        int tempFlashes;
+        // turn off player trigger collider to prevent from taking damage
+        triggerCollider.enabled = false;
+        // go through numberOfFlashes while iterating tempFlashes
+        for (tempFlashes = 0; tempFlashes < numberOfFlashes; tempFlashes++)
+        {
+            playerSprite.color = flashColor;
+            yield return new WaitForSeconds(flashDuration);
+            playerSprite.color = regularColor;
+            yield return new WaitForSeconds(flashDuration);
+        }
+        // set trigger collider back on when for loop is finished
+        triggerCollider.enabled = true; 
     }
 }
