@@ -12,12 +12,14 @@ public class ProjectileOcotorok : Octorok
 
     private void Update()
     {
-        fireDelaySeconds -= Time.deltaTime;
-
-        if (fireDelaySeconds <= 0)
+        if (!canFire)
         {
-            canFire = true;
-            fireDelaySeconds = fireDelay;
+            fireDelaySeconds -= Time.deltaTime;
+            if (fireDelaySeconds <= 0)
+            {
+                canFire = true;
+                fireDelaySeconds = fireDelay;
+            }
         }
     }
 
