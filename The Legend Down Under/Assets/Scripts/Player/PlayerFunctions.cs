@@ -179,6 +179,8 @@ public class PlayerFunctions : MonoBehaviour
         int tempFlashes;
         // turn off player trigger collider to prevent from taking damage
         triggerCollider.enabled = false;
+        // prevent player from sliding when hit by an enemy
+        playerRigidBody.mass = 2;
         // go through numberOfFlashes while iterating tempFlashes
         for (tempFlashes = 0; tempFlashes < numberOfFlashes; tempFlashes++)
         {
@@ -187,6 +189,8 @@ public class PlayerFunctions : MonoBehaviour
             playerSprite.color = regularColor;
             yield return new WaitForSeconds(flashDuration);
         }
+        // reset mass to initial value
+        playerRigidBody.mass = 0.6475447f;
         // set trigger collider back on when for loop is finished
         triggerCollider.enabled = true; 
     }
