@@ -430,7 +430,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 3831
+    m_Bits: 3575
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -473,6 +473,7 @@ MonoBehaviour:
   smoothing: 2
   maxPosition: {x: 0, y: 0}
   minPosition: {x: 0, y: 0}
+  animator: {fileID: 0}
 --- !u!1 &726769595
 GameObject:
   m_ObjectHideFlags: 0
