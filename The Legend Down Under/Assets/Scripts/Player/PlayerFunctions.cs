@@ -156,6 +156,7 @@ public class PlayerFunctions : MonoBehaviour
         else
         {
             this.gameObject.SetActive(false);
+            SceneManager.LoadScene("GameOver");
         }
 
     }
