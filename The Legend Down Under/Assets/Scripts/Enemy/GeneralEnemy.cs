@@ -31,7 +31,7 @@ public class GeneralEnemy : MonoBehaviour
 
     public void Knock(Rigidbody2D enemyRigidbody, bool player, bool rock, float knockTime, float damage)
     {
-        // only deal damage if player's hitbox
+        // only deal damage if player's hitbox or rock projectile
         // is true when colliding
         if (player || rock)
         {

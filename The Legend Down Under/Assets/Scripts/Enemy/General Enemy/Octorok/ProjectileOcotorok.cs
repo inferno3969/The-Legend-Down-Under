@@ -5,14 +5,14 @@ using UnityEngine;
 public class ProjectileOcotorok : Octorok
 {
     public GameObject projectile;
-    public PlayerFunctions player;
     public float fireDelay;
     private float fireDelaySeconds;
     public bool canFire = true;
 
     private void Update()
     {
-        if (!canFire)
+        // will count down if projectile has been fired
+        if (canFire == false)
         {
             fireDelaySeconds -= Time.deltaTime;
             if (fireDelaySeconds <= 0)
@@ -20,6 +20,11 @@ public class ProjectileOcotorok : Octorok
                 canFire = true;
                 fireDelaySeconds = fireDelay;
             }
+        }
+        // otherwise, check the distance between the player and the enemy
+        else 
+        {
+            CheckDistance();
         }
     }
 
@@ -39,6 +44,7 @@ public class ProjectileOcotorok : Octorok
                 if (canFire)
                 {
                     Vector3 tempVector = target.transform.position - transform.position;
+                    tempVector.Normalize();
                     if (Mathf.Abs(tempVector.x) > Mathf.Abs(tempVector.y))
                     {
                         tempVector.y = 0;

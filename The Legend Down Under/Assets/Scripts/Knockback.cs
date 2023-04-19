@@ -24,7 +24,7 @@ public class Knockback : MonoBehaviour
 
                 if (other.gameObject.CompareTag("Enemy"))
                 {
-                    // stores the player's hitboxes in a bool to pass throug
+                    // stores the player's hitboxes and rock projectile in a bool to pass through
                     // enemy knock function
                     bool player = gameObject.CompareTag("Hitboxes");
                     bool rockProjectile = gameObject.CompareTag("Enemy Projectile");

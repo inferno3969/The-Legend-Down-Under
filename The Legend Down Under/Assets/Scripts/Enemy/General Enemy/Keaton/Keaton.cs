@@ -1,20 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class Keaton : GeneralEnemy
 {
+    [Header("General Properties")]
     public Rigidbody2D generalEnemyRigidbody;
+    public Animator animator;
+    public Transform target;
+    public float chaseRadius;
+    public float attackRadius;
+
+    // random movement properties
     private float latestDirectionChangeTime;
     private readonly float directionChangeTime = 3f;
     private float characterVelocity = 2f;
     private Vector2 movementDirection;
     private Vector2 movementPerSecond;
-    public Animator animator;
-    public Transform target;
-    public float chaseRadius;
-    public float attackRadius;
 
 
     void Start()
@@ -25,10 +27,12 @@ public class Keaton : GeneralEnemy
         CalcuateNewMovementVector();
     }
 
+    // chooses random direction
     void CalcuateNewMovementVector()
     {
         int randomDirection = Random.Range(0, 4); // generates a random integer between 0 and 3
 
+        // switch statement to determine which direction to move in
         switch (randomDirection)
         {
             case 0:
@@ -44,10 +48,8 @@ public class Keaton : GeneralEnemy
                 movementDirection = Vector2.left;
                 break;
         }
-
         movementPerSecond = movementDirection * characterVelocity;
     }
-
 
     void FixedUpdate()
     {
@@ -56,6 +58,7 @@ public class Keaton : GeneralEnemy
 
     public virtual void CheckDistance()
     {
+        moveSpeed = 2;
         if (Vector3.Distance(target.position,
                             transform.position) <= chaseRadius
              && Vector3.Distance(target.position,
@@ -64,6 +67,7 @@ public class Keaton : GeneralEnemy
             if (currentState == EnemyState.idle || currentState == EnemyState.walk
                 && currentState != EnemyState.stagger)
             {
+                moveSpeed = 6;
                 Vector3 temp = Vector3.MoveTowards(transform.position,
                                                          target.position,
                                                          moveSpeed * Time.deltaTime);
@@ -74,7 +78,7 @@ public class Keaton : GeneralEnemy
         }
         else if (Vector3.Distance(target.position, transform.position) > chaseRadius)
         {
-
+            // changes animation based on the random movement direction
             ChangeAnimation(movementDirection);
             ChangeState(EnemyState.walk);
             if (Time.time - latestDirectionChangeTime > directionChangeTime)
@@ -105,6 +109,7 @@ public class Keaton : GeneralEnemy
         animator.SetFloat("MoveY", setVector.y);
     }
 
+    // changes animation based on the direction the enemy is moving
     private void ChangeAnimation(Vector2 direction)
     {
         if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
