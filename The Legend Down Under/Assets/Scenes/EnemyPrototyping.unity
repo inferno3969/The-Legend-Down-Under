@@ -404,7 +404,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6347956277202777873, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1231403139}
   m_SourcePrefab: {fileID: 100100000, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
 --- !u!1001 &203715316
 PrefabInstance:
@@ -727,13 +730,14 @@ GameObject:
   - component: {fileID: 1096504537}
   - component: {fileID: 1096504536}
   - component: {fileID: 1096504538}
+  - component: {fileID: 1096504539}
   m_Layer: 6
   m_Name: Keaton
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1096504533
 Animator:
   serializedVersion: 5
@@ -854,7 +858,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.02115488, y: -0.52643025}
+  m_Offset: {x: -0.02115488, y: -0.43036175}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -865,7 +869,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8103895, y: 0.20291781}
+  m_Size: {x: 0.8103895, y: 0.3950548}
   m_EdgeRadius: 0
 --- !u!50 &1096504537
 Rigidbody2D:
@@ -918,6 +922,83 @@ MonoBehaviour:
   target: {fileID: 286654904}
   chaseRadius: 3
   attackRadius: 1
+--- !u!61 &1096504539
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096504532}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.028820515, y: -0.019213736}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4, y: 4}
+    newSize: {x: 4, y: 4}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.983449, y: 1.3485094}
+  m_EdgeRadius: 0
+--- !u!1 &1231403135 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6347956277202777873, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+  m_PrefabInstance: {fileID: 86460684}
+  m_PrefabAsset: {fileID: 0}
+--- !u!50 &1231403139
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231403135}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1241839090
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,7 +1118,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241839090}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4f3c928a46ac4fb38508f47da63fc33, type: 3}
   m_Name: 
@@ -1192,7 +1273,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241839090}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 918f151986c2243689da42f00db4ea76, type: 3}
   m_Name: 
@@ -1234,7 +1315,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1348509702
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1447,7 +1528,7 @@ MonoBehaviour:
   homePosition: {x: 0, y: 0}
   baseAttack: 1
   moveSpeed: 1.5
-  myRigidbody: {fileID: 0}
+  generalEnemyRigidbody: {fileID: 0}
   target: {fileID: 286654904}
   chaseRadius: 4
   attackRadius: 0.5

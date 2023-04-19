@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 1548373387168347116}
   - component: {fileID: 1548373387168347115}
   - component: {fileID: 1548373387168347114}
-  - component: {fileID: 2575572877984965611}
   m_Layer: 10
   m_Name: Rock Projectile
   m_TagString: Enemy Projectile
@@ -78,7 +77,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 2008537764, guid: 2b5930ecd9ada49c2a0ed362520a5bfc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -203,15 +202,3 @@ MonoBehaviour:
   directionToMove: {x: 0, y: 0}
   lifetime: 2
   myRigidbody: {fileID: 1548373387168347116}
---- !u!114 &2575572877984965611
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1548373387168347125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f6a7103ae5ab4baeb3413c9134dd968, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -12,7 +12,7 @@ public class Knockback : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Hitboxes"))
+        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Hitboxes") || other.gameObject.CompareTag("Enemy Projectile"))
         {
             Rigidbody2D hit = other.GetComponent<Rigidbody2D>();
 
@@ -27,8 +27,9 @@ public class Knockback : MonoBehaviour
                     // stores the player's hitboxes in a bool to pass throug
                     // enemy knock function
                     bool player = gameObject.CompareTag("Hitboxes");
+                    bool rockProjectile = gameObject.CompareTag("Enemy Projectile");
                     hit.GetComponent<GeneralEnemy>().currentState = EnemyState.stagger;
-                    other.GetComponent<GeneralEnemy>().Knock(hit, player, knockTime, damage);
+                    other.GetComponent<GeneralEnemy>().Knock(hit, player, rockProjectile, knockTime, damage);
                 }
                 if (other.gameObject.CompareTag("Player"))
                 {

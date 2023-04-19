@@ -180,7 +180,7 @@ public class PlayerFunctions : MonoBehaviour
         // turn off player trigger collider to prevent from taking damage
         triggerCollider.enabled = false;
         // prevent player from sliding when hit by an enemy
-        playerRigidBody.mass = 4;
+        playerRigidBody.mass = 2;
         // go through numberOfFlashes while iterating tempFlashes
         for (tempFlashes = 0; tempFlashes < numberOfFlashes; tempFlashes++)
         {

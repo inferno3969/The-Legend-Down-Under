@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class Shield : MonoBehaviour
 {
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    // enemy projectile to be reflected when entering shield trigger
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.CompareTag("Enemy Projectile"))
+        // if projectile is enemy projectile
+        // reflect projectile
+        if (other.gameObject.CompareTag("Enemy Projectile"))
         {
-            Destroy(collision.gameObject);
+            // get projectile's rigidbody
+            Rigidbody2D projectileRigidBody = other.GetComponent<Rigidbody2D>();
+            projectileRigidBody.excludeLayers = 0;
+            // get projectile's direction
+            Vector2 projectileDirection = projectileRigidBody.velocity;
+            // reflect projectile
+            projectileRigidBody.velocity = -projectileDirection;
         }
     }
 }
