@@ -59,36 +59,4 @@ public class ProjectileOcotorok : Octorok
             animator.SetBool("InRange", false);
         }
     }
-
-    private void SetAnimatorFloat(Vector2 setVector)
-    {
-        animator.SetFloat("MoveX", setVector.x);
-        animator.SetFloat("MoveY", setVector.y);
-    }
-
-    private void ChangeAnimation(Vector2 direction)
-    {
-        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
-        {
-            if (direction.x > 0)
-            {
-                SetAnimatorFloat(Vector2.right);
-            }
-            else if (direction.x < 0)
-            {
-                SetAnimatorFloat(Vector2.left);
-            }
-        }
-        else if (Mathf.Abs(direction.x) < Mathf.Abs(direction.y))
-        {
-            if (direction.y > 0)
-            {
-                SetAnimatorFloat(Vector2.up);
-            }
-            else if (direction.y < 0)
-            {
-                SetAnimatorFloat(Vector2.down);
-            }
-        }
-    }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Octorok : GeneralEnemy
@@ -53,7 +51,7 @@ public class Octorok : GeneralEnemy
         animator.SetFloat("MoveY", setVector.y);
     }
 
-    private void ChangeAnimation(Vector2 direction)
+    public void ChangeAnimation(Vector2 direction)
     {
         if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
         {

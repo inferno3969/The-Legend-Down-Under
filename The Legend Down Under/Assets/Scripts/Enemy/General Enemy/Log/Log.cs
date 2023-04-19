@@ -6,22 +6,22 @@ public class Log : GeneralEnemy
 {
 
 
-    public Rigidbody2D myRigidbody;
+    public Rigidbody2D generalEnemyRigidbody;
     [Header("Target Variables")]
     public Transform target;
     public float chaseRadius;
     public float attackRadius;
 
     [Header("Animator")]
-    public Animator anim;
+    public Animator animator;
 
 
     // Use this for initialization
     void Start()
     {
         currentState = EnemyState.idle;
-        myRigidbody = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        generalEnemyRigidbody = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         target = GameObject.FindWithTag("Player").transform;
     }
 
@@ -44,52 +44,52 @@ public class Log : GeneralEnemy
                 Vector3 temp = Vector3.MoveTowards(transform.position,
                                                          target.position,
                                                          moveSpeed * Time.deltaTime);
-                changeAnim(temp - transform.position);
-                myRigidbody.MovePosition(temp);
+                ChangeAnimation(temp - transform.position);
+                generalEnemyRigidbody.MovePosition(temp);
                 ChangeState(EnemyState.walk);
-                anim.SetBool("WakeUp", true);
+                animator.SetBool("WakeUp", true);
             }
         }
         else if (Vector3.Distance(target.position,
                             transform.position) > chaseRadius)
         {
-            anim.SetBool("WakeUp", false);
+            animator.SetBool("WakeUp", false);
         }
     }
 
-    public void SetAnimFloat(Vector2 setVector)
+    private void SetAnimationFloat(Vector2 setVector)
     {
-        anim.SetFloat("MoveX", setVector.x);
-        anim.SetFloat("MoveY", setVector.y);
+        animator.SetFloat("MoveX", setVector.x);
+        animator.SetFloat("MoveY", setVector.y);
     }
 
-    public void changeAnim(Vector2 direction)
+    private void ChangeAnimation(Vector2 direction)
     {
         if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
         {
             if (direction.x > 0)
             {
-                SetAnimFloat(Vector2.right);
+                SetAnimationFloat(Vector2.right);
             }
             else if (direction.x < 0)
             {
-                SetAnimFloat(Vector2.left);
+                SetAnimationFloat(Vector2.left);
             }
         }
         else if (Mathf.Abs(direction.x) < Mathf.Abs(direction.y))
         {
             if (direction.y > 0)
             {
-                SetAnimFloat(Vector2.up);
+                SetAnimationFloat(Vector2.up);
             }
             else if (direction.y < 0)
             {
-                SetAnimFloat(Vector2.down);
+                SetAnimationFloat(Vector2.down);
             }
         }
     }
 
-    public void ChangeState(EnemyState newState)
+    private void ChangeState(EnemyState newState)
     {
         if (currentState != newState)
         {
