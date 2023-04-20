@@ -100,7 +100,6 @@ public class Keaton : GeneralEnemy
                 StartCoroutine(AttackCo());
             }
         }
-
     }
 
     private void SetAnimatorFloat(Vector2 setVector)
