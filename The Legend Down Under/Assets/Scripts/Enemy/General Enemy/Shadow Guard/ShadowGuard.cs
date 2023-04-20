@@ -56,14 +56,14 @@ public class ShadowGuard : PatrolEnemy
                     transform.position) <= attackRadius)
         {
             if (currentState == EnemyState.walk
-                && currentState != EnemyState.stagger)
+                && currentState != EnemyState.stagger && generalEnemyRigidbody != null)
             {
                 StartCoroutine(AttackCo());
             }
         }
     }
 
-        private IEnumerator AttackCo()
+    private IEnumerator AttackCo()
     {
         currentState = EnemyState.attack;
         animator.SetBool("Attacking", true);

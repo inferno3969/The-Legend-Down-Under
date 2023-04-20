@@ -49,6 +49,9 @@ public class PlayerFunctions : MonoBehaviour
     public Collider2D triggerCollider;
     public SpriteRenderer playerSprite;
 
+    [Header("Enemy Hitboxes")]
+    public GeneralEnemy[] enemies; // best way to store enemy hitboxes in order to disable them after first hit
+
     // Start is called before the first frame update
     void Start()
     {
@@ -147,10 +150,12 @@ public class PlayerFunctions : MonoBehaviour
 
     public void Knock(float knockTime, float damage)
     {
+        // gameobject that stores any gameobject from enemy Rigidbody that has the tag "Hitboxes"
         currentHealth.RuntimeValue -= damage;
         playerHealthSignal.RaiseSignal();
         if (currentHealth.RuntimeValue > 0 && this.gameObject != null)
         {
+
             StartCoroutine(KnockCo(knockTime));
         }
         else
@@ -158,7 +163,6 @@ public class PlayerFunctions : MonoBehaviour
             this.gameObject.SetActive(false);
             SceneManager.LoadScene("GameOver");
         }
-
     }
 
     private IEnumerator KnockCo(float knockTime)
@@ -176,6 +180,10 @@ public class PlayerFunctions : MonoBehaviour
 
     private IEnumerator FlashCo()
     {
+        if (enemies != null)
+        {
+            DisableEnemyHitboxes();
+        }
         int tempFlashes;
         // turn off player trigger collider to prevent from taking damage
         triggerCollider.enabled = false;
@@ -192,6 +200,26 @@ public class PlayerFunctions : MonoBehaviour
         // reset mass to initial value
         playerRigidBody.mass = 0.6475447f;
         // set trigger collider back on when for loop is finished
-        triggerCollider.enabled = true; 
+        triggerCollider.enabled = true;
+        if (enemies != null)
+        {
+            EnableEnemyHitboxes();
+        }
+    }
+
+    private void DisableEnemyHitboxes()
+    {
+        foreach (GeneralEnemy enemy in enemies)
+        {
+            enemy.enemyHitboxes.SetActive(false);
+        }
+    }
+
+    private void EnableEnemyHitboxes()
+    {
+        foreach (GeneralEnemy enemy in enemies)
+        {
+            enemy.enemyHitboxes.SetActive(true);
+        }
     }
 }
