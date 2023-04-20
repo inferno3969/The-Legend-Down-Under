@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volume: 1
   pitch: 1
-  audioClip: {fileID: 8300000, guid: a828baabcdb61411698f9afd46366b54, type: 3}
-  introBoundary: 0
-  loopingBoundary: 22.86
+  audioClip: {fileID: 8300000, guid: 5c2ee8edc062d438eb90e6ec0abc2c54, type: 3}
+  introBoundary: 0.07
+  loopingBoundary: 22.967
   nonLooping: 0
   loopWholeAudio: 0
