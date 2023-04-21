@@ -47,9 +47,13 @@ public class PlayerFunctions : MonoBehaviour
     public float flashDuration;
     public int numberOfFlashes;
     public Collider2D triggerCollider;
+    public Collider2D nonTriggerCollider;
     public SpriteRenderer playerSprite;
 
-    [Header("Enemy Hitboxes")]
+    [Header("Player Sword Hitboxes")]
+    public GameObject playerSwordHitboxes;
+
+    [Header("Enemy Hitboxes References")]
     public GeneralEnemy[] enemies; // best way to store enemy hitboxes in order to disable them after first hit
 
     // Start is called before the first frame update
@@ -150,13 +154,12 @@ public class PlayerFunctions : MonoBehaviour
 
     public void Knock(float knockTime, float damage)
     {
-        // gameobject that stores any gameobject from enemy Rigidbody that has the tag "Hitboxes"
         currentHealth.RuntimeValue -= damage;
         playerHealthSignal.RaiseSignal();
         if (currentHealth.RuntimeValue > 0 && this.gameObject != null)
         {
 
-            StartCoroutine(KnockCo(knockTime));
+            StartCoroutine(KnockCo(knockTime, damage));
         }
         else
         {
@@ -165,12 +168,15 @@ public class PlayerFunctions : MonoBehaviour
         }
     }
 
-    private IEnumerator KnockCo(float knockTime)
+    private IEnumerator KnockCo(float knockTime, float damage)
     {
         playerHit.RaiseSignal();
         if (playerRigidBody != null)
         {
-            StartCoroutine(FlashCo());
+            if (damage > 0)
+            {
+                StartCoroutine(FlashCo());
+            }
             yield return new WaitForSeconds(knockTime);
             playerRigidBody.velocity = Vector2.zero;
             currentState = PlayerState.idle;
@@ -188,7 +194,7 @@ public class PlayerFunctions : MonoBehaviour
         // turn off player trigger collider to prevent from taking damage
         triggerCollider.enabled = false;
         // prevent player from sliding when hit by an enemy
-        playerRigidBody.mass = 2;
+        nonTriggerCollider.enabled = false;
         // go through numberOfFlashes while iterating tempFlashes
         for (tempFlashes = 0; tempFlashes < numberOfFlashes; tempFlashes++)
         {
@@ -197,10 +203,10 @@ public class PlayerFunctions : MonoBehaviour
             playerSprite.color = regularColor;
             yield return new WaitForSeconds(flashDuration);
         }
-        // reset mass to initial value
-        playerRigidBody.mass = 0.6475447f;
         // set trigger collider back on when for loop is finished
         triggerCollider.enabled = true;
+        nonTriggerCollider.enabled = true;
+
         if (enemies != null)
         {
             EnableEnemyHitboxes();

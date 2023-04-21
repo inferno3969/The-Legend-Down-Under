@@ -7,28 +7,31 @@ public class Knockback : MonoBehaviour
     public float thrust;
     public float knockTime;
     public float damage;
-
     private bool isPlayer;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Hitboxes") || other.gameObject.CompareTag("Enemy Projectile") || other.gameObject.CompareTag("Enemy Hitboxes"))
+        if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Hitboxes") || other.gameObject.CompareTag("Enemy Projectile"))
         {
             Rigidbody2D hit = other.GetComponent<Rigidbody2D>();
-
             if (hit != null)
             {
                 Vector2 difference = hit.transform.position - transform.position;
                 difference = difference.normalized * thrust;
                 hit.AddForce(difference, ForceMode2D.Impulse);
-
-                if (other.gameObject.CompareTag("Enemy"))
+                if (other.gameObject.CompareTag("Enemy") && other.isTrigger)
                 {
-                    // stores the player's hitboxes and rock projectile in a bool to pass through
-                    // enemy knock function
-                    bool rockProjectile = gameObject.CompareTag("Enemy Projectile");
-                    hit.GetComponent<GeneralEnemy>().currentState = EnemyState.stagger;
-                    other.GetComponent<GeneralEnemy>().Knock(hit, rockProjectile, knockTime, damage);
+                    if (gameObject.CompareTag("Hitboxes") || gameObject.CompareTag("Enemy Projectile"))
+                    {
+                        hit.GetComponent<GeneralEnemy>().currentState = EnemyState.stagger;
+                        other.GetComponent<GeneralEnemy>().Knock(hit, knockTime, damage);
+                    }
+                    else if (gameObject.CompareTag("Enemy"))
+                    {
+                        Debug.Log("Enemy hit enemy");
+                        hit.GetComponent<GeneralEnemy>().currentState = EnemyState.stagger;
+                        other.GetComponent<GeneralEnemy>().KnockNoDamage(hit, knockTime);
+                    }
                 }
                 if (other.gameObject.CompareTag("Player"))
                 {

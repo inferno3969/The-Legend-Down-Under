@@ -26,11 +26,21 @@ public class GeneralEnemy : MonoBehaviour
     public float flashDuration;
     public int numberOfFlashes;
     public Collider2D triggerCollider;
+    public Collider2D nonTriggerCollider;
     public SpriteRenderer enemySprite;
-
+    public GameObject enemyHitboxes;
     public GameObject playerHitboxes;
 
-    public GameObject enemyHitboxes;
+    void Awake()
+    {
+        playerHitboxes = GameObject.FindGameObjectWithTag("Hitboxes");
+    }
+
+    void Start()
+    {
+        playerHitboxes = GetComponent<PlayerFunctions>().playerSwordHitboxes;
+    }
+
     private void TakeDamage(float damage)
     {
         health -= damage;
@@ -41,21 +51,27 @@ public class GeneralEnemy : MonoBehaviour
         }
     }
 
-    public void Knock(Rigidbody2D enemyRigidbody, bool rock, float knockTime, float damage)
+    public void Knock(Rigidbody2D enemyRigidbody, float knockTime, float damage)
     {
-        // only deal damage if player's hitbox or rock projectile
-        // is true when colliding
-        if (playerHitboxes.CompareTag("Hitboxes") || rock)
         {
             StartCoroutine(KnockCo(enemyRigidbody, knockTime));
             TakeDamage(damage);
         }
-        else
+    }
+
+    public void KnockNoDamage(Rigidbody2D enemyRigidbody, float knockTime)
+    {
+        StartCoroutine(KnockCoNoDamage(enemyRigidbody, knockTime));
+    }
+
+    private IEnumerator KnockCoNoDamage(Rigidbody2D rigidbody, float knockTime)
+    {
+        if (rigidbody != null)
         {
-            /* still want the enemy to produce knock back
-            when colliding with an enemy to prevent
-            then from overlapping */
-            StartCoroutine(KnockCo(enemyRigidbody, knockTime));
+            yield return new WaitForSeconds(knockTime);
+            rigidbody.velocity = Vector2.zero;
+            currentState = EnemyState.idle;
+            rigidbody.velocity = Vector2.zero;
         }
     }
 
@@ -63,10 +79,7 @@ public class GeneralEnemy : MonoBehaviour
     {
         if (rigidbody != null)
         {
-            if (playerHitboxes.CompareTag("Hitboxes"))
-            {
-                StartCoroutine(FlashCo());
-            }
+            StartCoroutine(FlashCo());
             yield return new WaitForSeconds(knockTime);
             rigidbody.velocity = Vector2.zero;
             currentState = EnemyState.idle;
@@ -80,6 +93,7 @@ public class GeneralEnemy : MonoBehaviour
         int tempFlashes;
         // turn off player trigger collider to prevent from taking damage
         triggerCollider.enabled = false;
+        nonTriggerCollider.enabled = false;
         // prevent player from sliding when hit by an enemy
         // go through numberOfFlashes while iterating tempFlashes
         for (tempFlashes = 0; tempFlashes < numberOfFlashes; tempFlashes++)
@@ -91,6 +105,7 @@ public class GeneralEnemy : MonoBehaviour
         }
         // set trigger collider back on when for loop is finished
         triggerCollider.enabled = true;
+        nonTriggerCollider.enabled = true;
         playerHitboxes.SetActive(true);
     }
 }

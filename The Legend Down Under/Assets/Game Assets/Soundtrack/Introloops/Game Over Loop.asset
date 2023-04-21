@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Game Over Loop
   m_EditorClassIdentifier: 
   volume: 1
-  pitch: 1
+  pitch: 0.74
   audioClip: {fileID: 8300000, guid: 895c53e7d87974f4d9142dde301c1693, type: 3}
   introBoundary: 1.5
   loopingBoundary: 33.696

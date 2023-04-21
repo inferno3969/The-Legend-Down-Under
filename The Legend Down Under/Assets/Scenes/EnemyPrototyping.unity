@@ -718,11 +718,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6347956275455446818, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956275469638952, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956275469639382, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_UsedByComposite
@@ -734,11 +734,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6347956275533667810, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956275570035569, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956275570035583, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_UsedByComposite
@@ -762,7 +762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6347956275627639309, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956275708289173, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_UsedByComposite
@@ -770,11 +770,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6347956275708289175, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956275771927881, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956275771927927, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_UsedByComposite
@@ -786,7 +786,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6347956275871349159, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956275944489884, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_UsedByComposite
@@ -794,7 +794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6347956275944489886, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956275993099016, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_Layer
@@ -810,7 +810,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276002369448, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276009564860, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_IsTrigger
@@ -822,7 +822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276009564862, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276126271653, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_UsedByComposite
@@ -830,7 +830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276126271655, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276139347146, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_UsedByComposite
@@ -838,11 +838,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276139347148, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276163177024, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276163177038, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_UsedByComposite
@@ -854,7 +854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276272904857, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276313993419, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_UsedByComposite
@@ -862,7 +862,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276313993421, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276347417354, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_UsedByComposite
@@ -870,7 +870,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276347417356, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276427032756, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_Layer
@@ -886,7 +886,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276470979819, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276506695314, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_UsedByComposite
@@ -894,7 +894,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276506695316, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276562629569, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_UsedByComposite
@@ -902,7 +902,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276562629571, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276702828145, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_UsedByComposite
@@ -910,7 +910,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276702828147, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276726928065, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_UsedByComposite
@@ -918,11 +918,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276726928067, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276861682385, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276861682399, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_UsedByComposite
@@ -934,11 +934,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6347956276895036109, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956277069385161, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956277069385207, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_UsedByComposite
@@ -954,7 +954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6347956277264332146, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956277317434097, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_UsedByComposite
@@ -962,7 +962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6347956277317434099, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     - target: {fileID: 6347956277375403466, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_Layer
@@ -977,9 +977,37 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1407364026}
     - target: {fileID: 6347956277411589153, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: flashColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589153, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: flashColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589153, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: flashColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589153, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: playerHitboxes
+      value: 
+      objectReference: {fileID: 2013523678}
+    - target: {fileID: 6347956277411589153, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: numberOfFlashes
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589153, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: enemies.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589153, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: nonTriggerCollider
+      value: 
+      objectReference: {fileID: 1853919765}
+    - target: {fileID: 6347956277411589153, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: playerSwordHitboxes
+      value: 
+      objectReference: {fileID: 2013523678}
     - target: {fileID: 6347956277411589153, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: enemies.Array.data[0]
       value: 
@@ -991,7 +1019,7 @@ PrefabInstance:
     - target: {fileID: 6347956277411589153, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: enemies.Array.data[2]
       value: 
-      objectReference: {fileID: 1700206474}
+      objectReference: {fileID: 1700206473}
     - target: {fileID: 6347956277411589154, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_CollisionDetection
       value: 1
@@ -1054,7 +1082,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6347956277506721103, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Hitboxes
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6347956275587673745, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
@@ -4474,7 +4502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 2
   knockTime: 0.2
-  damage: 0.5
+  damage: 1
 --- !u!1 &872218947
 GameObject:
   m_ObjectHideFlags: 0
@@ -4692,11 +4720,18 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: -0.19079328, y: -0.25612378}
-      - {x: -0.91209894, y: -0.25586697}
-      - {x: -0.91627765, y: -0.41878557}
-      - {x: -0.72862357, y: -0.49836004}
-      - {x: -0.15240729, y: -0.4973569}
-      - {x: -0.12975919, y: -0.2583652}
+      - {x: -0.87533075, y: -0.24820706}
+      - {x: -0.874933, y: -0.31323242}
+      - {x: -0.9374778, y: -0.3131342}
+      - {x: -0.9365401, y: -0.37375903}
+      - {x: -0.872483, y: -0.3748331}
+      - {x: -0.8749137, y: -0.4356377}
+      - {x: -0.7502949, y: -0.43747187}
+      - {x: -0.75007147, y: -0.49836004}
+      - {x: -0.18764365, y: -0.49429297}
+      - {x: -0.18455124, y: -0.43861818}
+      - {x: -0.13080215, y: -0.4350655}
+      - {x: -0.12669551, y: -0.25223714}
   m_UseDelaunayMesh: 0
 --- !u!1 &904087200
 GameObject:
@@ -5424,9 +5459,10 @@ MonoBehaviour:
   flashDuration: 0.1
   numberOfFlashes: 2
   triggerCollider: {fileID: 1096504539}
+  nonTriggerCollider: {fileID: 0}
   enemySprite: {fileID: 0}
-  playerHitboxes: {fileID: 1880821118}
   enemyHitboxes: {fileID: 1779286356}
+  playerHitboxes: {fileID: 0}
   generalEnemyRigidbody: {fileID: 0}
   animator: {fileID: 0}
   target: {fileID: 286654904}
@@ -6060,7 +6096,6 @@ GameObject:
   - component: {fileID: 1241839093}
   - component: {fileID: 1241839096}
   - component: {fileID: 1241839095}
-  - component: {fileID: 1241839094}
   - component: {fileID: 1241839097}
   - component: {fileID: 1241839098}
   - component: {fileID: 1241839099}
@@ -6159,37 +6194,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &1241839094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1241839090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4f3c928a46ac4fb38508f47da63fc33, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentState: 0
-  health: 2
-  maxHealth: {fileID: 11400000, guid: c53a74ace97ee4332bbf2ec72a359778, type: 2}
-  enemyName: Octorok
-  homePosition: {x: 0, y: 0}
-  baseAttack: 1
-  moveSpeed: 1.5
-  flashColor: {r: 0, g: 0, b: 0, a: 0}
-  regularColor: {r: 0, g: 0, b: 0, a: 0}
-  flashDuration: 0
-  numberOfFlashes: 0
-  triggerCollider: {fileID: 0}
-  enemySprite: {fileID: 0}
-  playerHitboxes: {fileID: 0}
-  enemyHitboxes: {fileID: 0}
-  target: {fileID: 286654904}
-  chaseRadius: 4
-  attackRadius: 0.5
-  animator: {fileID: 1241839093}
 --- !u!61 &1241839095
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6341,14 +6345,15 @@ MonoBehaviour:
   homePosition: {x: 0, y: 0}
   baseAttack: 1
   moveSpeed: 1.5
-  flashColor: {r: 0, g: 0, b: 0, a: 0}
-  regularColor: {r: 0, g: 0, b: 0, a: 0}
-  flashDuration: 0
-  numberOfFlashes: 0
-  triggerCollider: {fileID: 0}
-  enemySprite: {fileID: 0}
-  playerHitboxes: {fileID: 0}
+  flashColor: {r: 0.9529412, g: 0, b: 0, a: 0.59607846}
+  regularColor: {r: 1, g: 1, b: 1, a: 1}
+  flashDuration: 0.2
+  numberOfFlashes: 3
+  triggerCollider: {fileID: 1241839097}
+  nonTriggerCollider: {fileID: 0}
+  enemySprite: {fileID: 1241839091}
   enemyHitboxes: {fileID: 0}
+  playerHitboxes: {fileID: 0}
   target: {fileID: 286654904}
   chaseRadius: 6
   attackRadius: 0.5
@@ -6770,7 +6775,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1348509702
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6983,14 +6988,15 @@ MonoBehaviour:
   homePosition: {x: 0, y: 0}
   baseAttack: 1
   moveSpeed: 1.5
-  flashColor: {r: 0, g: 0, b: 0, a: 0}
-  regularColor: {r: 0, g: 0, b: 0, a: 0}
-  flashDuration: 0
-  numberOfFlashes: 0
-  triggerCollider: {fileID: 0}
-  enemySprite: {fileID: 0}
-  playerHitboxes: {fileID: 0}
+  flashColor: {r: 0.9529412, g: 0, b: 0, a: 0.59607846}
+  regularColor: {r: 1, g: 1, b: 1, a: 1}
+  flashDuration: 0.1
+  numberOfFlashes: 3
+  triggerCollider: {fileID: 1348509706}
+  nonTriggerCollider: {fileID: 1348509705}
+  enemySprite: {fileID: 1348509702}
   enemyHitboxes: {fileID: 0}
+  playerHitboxes: {fileID: 0}
   generalEnemyRigidbody: {fileID: 0}
   target: {fileID: 286654904}
   chaseRadius: 4
@@ -7591,9 +7597,10 @@ MonoBehaviour:
   flashDuration: 0.1
   numberOfFlashes: 2
   triggerCollider: {fileID: 1407364022}
+  nonTriggerCollider: {fileID: 0}
   enemySprite: {fileID: 1407364024}
-  playerHitboxes: {fileID: 2013523678}
   enemyHitboxes: {fileID: 139157839}
+  playerHitboxes: {fileID: 0}
   generalEnemyRigidbody: {fileID: 0}
   target: {fileID: 286654904}
   chaseRadius: 4
@@ -9123,7 +9130,6 @@ GameObject:
   - component: {fileID: 1700206477}
   - component: {fileID: 1700206476}
   - component: {fileID: 1700206475}
-  - component: {fileID: 1700206474}
   - component: {fileID: 1700206473}
   m_Layer: 6
   m_Name: Shadow Guard (Darkness) (1)
@@ -9152,13 +9158,14 @@ MonoBehaviour:
   baseAttack: 2
   moveSpeed: 2
   flashColor: {r: 0.9529412, g: 0, b: 0, a: 0.59607846}
-  regularColor: {r: 0, g: 0, b: 0, a: 0}
+  regularColor: {r: 1, g: 1, b: 1, a: 1}
   flashDuration: 0.1
-  numberOfFlashes: 2
+  numberOfFlashes: 3
   triggerCollider: {fileID: 1700206477}
+  nonTriggerCollider: {fileID: 1700206476}
   enemySprite: {fileID: 1700206479}
-  playerHitboxes: {fileID: 2013523678}
   enemyHitboxes: {fileID: 193329285}
+  playerHitboxes: {fileID: 0}
   generalEnemyRigidbody: {fileID: 0}
   target: {fileID: 286654904}
   chaseRadius: 4
@@ -9167,43 +9174,6 @@ MonoBehaviour:
   patrolPoints:
   - {fileID: 793337651}
   - {fileID: 1887830902}
-  currentPatrolPoint: 0
-  currentPatrolTarget: {fileID: 0}
-  roundingDistance: 0
---- !u!114 &1700206474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1700206472}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e12b2915799e749edab0595e92e5847e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentState: 0
-  health: 2
-  maxHealth: {fileID: 11400000, guid: c53a74ace97ee4332bbf2ec72a359778, type: 2}
-  enemyName: 
-  homePosition: {x: 0, y: 0}
-  baseAttack: 2
-  moveSpeed: 2
-  flashColor: {r: 0.9529412, g: 0, b: 0, a: 0.59607846}
-  regularColor: {r: 1, g: 1, b: 1, a: 1}
-  flashDuration: 0.1
-  numberOfFlashes: 2
-  triggerCollider: {fileID: 1700206477}
-  enemySprite: {fileID: 1700206479}
-  playerHitboxes: {fileID: 2013523678}
-  enemyHitboxes: {fileID: 193329285}
-  generalEnemyRigidbody: {fileID: 0}
-  target: {fileID: 286654904}
-  chaseRadius: 4
-  attackRadius: 0.97
-  animator: {fileID: 0}
-  patrolPoints:
-  - {fileID: 465101149}
   currentPatrolPoint: 0
   currentPatrolTarget: {fileID: 0}
   roundingDistance: 0
@@ -9941,9 +9911,9 @@ MonoBehaviour:
   thrust: 2
   knockTime: 0.2
   damage: 0.5
---- !u!1 &1880821118 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6347956276818155383, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+--- !u!61 &1853919765 stripped
+BoxCollider2D:
+  m_CorrespondingSourceObject: {fileID: 6347956277411589155, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
   m_PrefabInstance: {fileID: 86460684}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1885535810
