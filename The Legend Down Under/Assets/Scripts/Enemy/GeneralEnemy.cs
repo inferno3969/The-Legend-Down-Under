@@ -41,11 +41,11 @@ public class GeneralEnemy : MonoBehaviour
         }
     }
 
-    public void Knock(Rigidbody2D enemyRigidbody, bool player, bool rock, float knockTime, float damage)
+    public void Knock(Rigidbody2D enemyRigidbody, bool rock, float knockTime, float damage)
     {
         // only deal damage if player's hitbox or rock projectile
         // is true when colliding
-        if (player || rock)
+        if (playerHitboxes.CompareTag("Hitboxes") || rock)
         {
             StartCoroutine(KnockCo(enemyRigidbody, knockTime));
             TakeDamage(damage);
@@ -63,7 +63,10 @@ public class GeneralEnemy : MonoBehaviour
     {
         if (rigidbody != null)
         {
-            StartCoroutine(FlashCo());
+            if (playerHitboxes.CompareTag("Hitboxes"))
+            {
+                StartCoroutine(FlashCo());
+            }
             yield return new WaitForSeconds(knockTime);
             rigidbody.velocity = Vector2.zero;
             currentState = EnemyState.idle;

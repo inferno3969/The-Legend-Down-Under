@@ -26,10 +26,9 @@ public class Knockback : MonoBehaviour
                 {
                     // stores the player's hitboxes and rock projectile in a bool to pass through
                     // enemy knock function
-                    bool player = gameObject.CompareTag("Hitboxes");
                     bool rockProjectile = gameObject.CompareTag("Enemy Projectile");
                     hit.GetComponent<GeneralEnemy>().currentState = EnemyState.stagger;
-                    other.GetComponent<GeneralEnemy>().Knock(hit, player, rockProjectile, knockTime, damage);
+                    other.GetComponent<GeneralEnemy>().Knock(hit, rockProjectile, knockTime, damage);
                 }
                 if (other.gameObject.CompareTag("Player"))
                 {
