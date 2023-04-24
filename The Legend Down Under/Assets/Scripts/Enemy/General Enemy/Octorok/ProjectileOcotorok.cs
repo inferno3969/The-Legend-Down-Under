@@ -7,7 +7,13 @@ public class ProjectileOcotorok : Octorok
     public GameObject projectile;
     public float fireDelay;
     private float fireDelaySeconds;
-    public bool canFire = true;
+    public bool canFire;
+
+    void Start()
+    {
+        canFire = true;
+        fireDelaySeconds = fireDelay;
+    }
 
     private void Update()
     {
@@ -43,6 +49,7 @@ public class ProjectileOcotorok : Octorok
             {
                 if (canFire)
                 {
+                    GameObject current = Instantiate(projectile, transform.position, Quaternion.identity);
                     Vector3 tempVector = target.transform.position - transform.position;
                     tempVector.Normalize();
                     if (Mathf.Abs(tempVector.x) > Mathf.Abs(tempVector.y))
@@ -53,9 +60,16 @@ public class ProjectileOcotorok : Octorok
                     {
                         tempVector.x = 0;
                     }
-                    GameObject current = Instantiate(projectile, transform.position, Quaternion.identity);
                     current.GetComponent<Projectile>().Launch(tempVector);
                     canFire = false;
+                }
+                else
+                {
+                    fireDelaySeconds -= Time.deltaTime;
+                    if (fireDelaySeconds <= 0)
+                    {
+                        canFire = true;
+                    }
                 }
             }
         }

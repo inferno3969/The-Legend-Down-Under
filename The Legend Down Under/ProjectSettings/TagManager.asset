@@ -9,6 +9,7 @@ TagManager:
   - Enemy Projectile
   - EnemyProjectile
   - Enemy Hitboxes
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Minimap
   - Enemy Projectiles
   - Projectiles
-  - 
+  - Boss
   - 
   - 
   - 

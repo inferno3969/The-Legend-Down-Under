@@ -20,7 +20,7 @@ public class MainMenu : MonoBehaviour
 
     public void NewGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("EnemyPrototyping");
     }
 
     public void QuitToDesktop()

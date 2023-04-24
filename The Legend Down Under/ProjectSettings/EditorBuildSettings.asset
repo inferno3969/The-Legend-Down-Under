@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 17b651588700443a39198755e5eff5f2
+  - enabled: 1
+    path: Assets/Scenes/EnemyPrototyping.unity
+    guid: 62043c2a54682420ab01df657dc392f9
   m_configObjects: {}

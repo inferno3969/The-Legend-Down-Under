@@ -30,14 +30,14 @@ public class Projectile : MonoBehaviour
         }
     }
 
-    public void Launch(Vector2 initialVel)
+    public virtual void Launch(Vector2 initialVel)
     {
         myRigidbody.velocity = initialVel * moveSpeed;
     }
 
     public void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") || other.CompareTag("Enemy"))
+        if (other.CompareTag("Player") || other.CompareTag("Enemy") || other.CompareTag("Boss"))
         {
             Destroy(this.gameObject);
         }
