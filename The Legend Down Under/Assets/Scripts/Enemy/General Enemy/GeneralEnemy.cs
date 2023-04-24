@@ -31,7 +31,7 @@ public class GeneralEnemy : MonoBehaviour
     public GameObject enemyHitboxes;
     public GameObject playerHitboxes;
 
-    void Awake()
+    void OnAwake()
     {
         playerHitboxes = GameObject.FindGameObjectWithTag("Hitboxes");
     }
@@ -48,6 +48,7 @@ public class GeneralEnemy : MonoBehaviour
         {
             this.gameObject.SetActive(false);
             playerHitboxes.SetActive(true);
+            Debug.Log("s");
         }
     }
 

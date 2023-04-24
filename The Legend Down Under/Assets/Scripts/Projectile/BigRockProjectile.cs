@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class BigRockProjectile : Projectile
 {
-    public override void Launch(Vector2 initialVel)
+    public void Launch(Vector2 initialVel, int random)
     {
-        // randomize velocity of moveSpeed to make it more fair
-        // to prevent Player from just holding down the Shield button
-        moveSpeed = Random.Range(5, 8);
+        // if (random == 1)
+        // {
+        //     moveSpeed = 6;
+        // }
+        // else if (random == 2)
+        // {
+        //     moveSpeed = 4;
+        // }
+        moveSpeed = Random.Range(5, 10);
         myRigidbody.velocity = initialVel * moveSpeed;
     }
 }

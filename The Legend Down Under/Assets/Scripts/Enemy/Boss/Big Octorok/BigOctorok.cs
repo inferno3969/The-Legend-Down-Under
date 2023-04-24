@@ -13,6 +13,11 @@ public class BigOctorok : BossEnemy
     private float fireDelaySeconds;
     public bool canFire;
 
+    private bool octorokMinionDefeated = true;
+
+    [SerializeField]
+    private GameObject[] octoroks;
+
     void Start()
     {
         canFire = true;
@@ -25,6 +30,7 @@ public class BigOctorok : BossEnemy
     private void Update()
     {
         CheckDistance();
+        SpawnOctoroks();
     }
 
     public void CheckDistance()
@@ -39,16 +45,18 @@ public class BigOctorok : BossEnemy
             if (currentState == BossEnemyState.idle || currentState != BossEnemyState.walk
                 && currentState != BossEnemyState.stagger)
             {
-                if (canFire)
+                if (canFire && octorokMinionDefeated == true)
                 {
                     Vector3 tempVector = target.transform.position - transform.position;
                     tempVector.Normalize();
                     GameObject current = Instantiate(projectile, transform.position, Quaternion.identity);
-                    current.GetComponent<Projectile>().Launch(tempVector);
+                    // int random = Random.Range(1, 3);
+                    // current.transform.localScale = new Vector3(random, random, 0);
+                    current.GetComponent<BigRockProjectile>().Launch(tempVector, 0);
                     canFire = false;
                     fireDelaySeconds = fireDelay; // Reset fire delay timer
                 }
-                else
+                else if (canFire == false && octorokMinionDefeated == true)
                 {
                     fireDelaySeconds -= Time.deltaTime;
                     if (fireDelaySeconds <= 0)
@@ -56,6 +64,41 @@ public class BigOctorok : BossEnemy
                         canFire = true;
                     }
                 }
+            }
+        }
+    }
+
+    private void SpawnOctoroks()
+    {
+        // spawn octoroks
+        if (health == 6)
+        {
+            octoroks[0].SetActive(true);
+            octorokMinionDefeated = false;
+            if (octoroks[0].GetComponent<Octorok>().health <= 0)
+            {
+                octoroks[0].SetActive(false);
+                octorokMinionDefeated = true;
+            }
+        }
+        if (health == 4)
+        {
+            octoroks[1].SetActive(true);
+            octorokMinionDefeated = false;
+            if (octoroks[1].GetComponent<Octorok>().health <= 0)
+            {
+                octoroks[1].SetActive(false);
+                octorokMinionDefeated = true;
+            }
+        }
+        if (health == 2)
+        {
+            octoroks[2].SetActive(true);
+            octorokMinionDefeated = false;
+            if (octoroks[2].GetComponent<Octorok>().health <= 0)
+            {
+                octoroks[2].SetActive(false);
+                octorokMinionDefeated = true;
             }
         }
     }
