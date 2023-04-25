@@ -9,7 +9,7 @@ public class Keaton : GeneralEnemy
     public Animator animator;
     public Transform target;
     public float chaseRadius;
-    public float attackRadius;
+    public float AttackRadius;
 
     // random movement properties
     private float latestDirectionChangeTime;
@@ -62,10 +62,10 @@ public class Keaton : GeneralEnemy
         if (Vector3.Distance(target.position,
                             transform.position) <= chaseRadius
              && Vector3.Distance(target.position,
-                               transform.position) > attackRadius)
+                               transform.position) > AttackRadius)
         {
-            if (currentState == EnemyState.idle || currentState == EnemyState.walk
-                && currentState != EnemyState.stagger)
+            if (currentState == EnemyState.Idle || currentState == EnemyState.Walk
+                && currentState != EnemyState.Stagger)
             {
                 moveSpeed = 6;
                 Vector3 temp = Vector3.MoveTowards(transform.position,
@@ -73,14 +73,14 @@ public class Keaton : GeneralEnemy
                                                          moveSpeed * Time.deltaTime);
                 ChangeAnimation(temp - transform.position);
                 generalEnemyRigidbody.MovePosition(temp);
-                ChangeState(EnemyState.walk);
+                ChangeState(EnemyState.Walk);
             }
         }
         else if (Vector3.Distance(target.position, transform.position) > chaseRadius)
         {
             // changes animation based on the random movement direction
             ChangeAnimation(movementDirection);
-            ChangeState(EnemyState.walk);
+            ChangeState(EnemyState.Walk);
             if (Time.time - latestDirectionChangeTime > directionChangeTime)
             {
                 latestDirectionChangeTime = Time.time;
@@ -92,10 +92,10 @@ public class Keaton : GeneralEnemy
         else if (Vector3.Distance(target.position,
                     transform.position) <= chaseRadius
                     && Vector3.Distance(target.position,
-                    transform.position) <= attackRadius)
+                    transform.position) <= AttackRadius)
         {
-            if (currentState == EnemyState.walk
-                && currentState != EnemyState.stagger)
+            if (currentState == EnemyState.Walk
+                && currentState != EnemyState.Stagger)
             {
                 StartCoroutine(AttackCo());
             }
@@ -145,10 +145,10 @@ public class Keaton : GeneralEnemy
 
     private IEnumerator AttackCo()
     {
-        currentState = EnemyState.attack;
+        currentState = EnemyState.Attack;
         animator.SetBool("Attack", true);
         yield return new WaitForSeconds(1f);
-        currentState = EnemyState.walk;
+        currentState = EnemyState.Walk;
         animator.SetBool("Attack", false);
     }
 }

@@ -6,17 +6,26 @@ using UnityEngine.SceneManagement;
 // state machine for player
 public enum PlayerState
 {
-    idle,
-    walk,
-    attack,
-    stagger,
-    interact,
-    shield
+    Idle,
+    Walk,
+    Attack,
+    Stagger,
+    Interact,
+    Shield
+}
+
+public enum PlayerDirection
+{
+    Up,
+    Down,
+    Left,
+    Right
 }
 
 public class PlayerFunctions : MonoBehaviour
 {
     public PlayerState currentState;
+    public PlayerDirection currentDirection;
     public float speed;
 
     [Header("Player Health")]
@@ -37,6 +46,7 @@ public class PlayerFunctions : MonoBehaviour
 
     [Header("Weapons")]
     public InventoryItem soldierSword;
+    public GameObject projectile;
 
     [Header("Player Hit")]
     public SignalSender playerHit;
@@ -59,8 +69,8 @@ public class PlayerFunctions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // set current state if player to idle
-        currentState = PlayerState.walk;
+        // set current state if player to Idle
+        currentState = PlayerState.Walk;
         playerRigidBody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         animator.SetFloat("MoveX", 0);
@@ -79,18 +89,22 @@ public class PlayerFunctions : MonoBehaviour
 
     void Update()
     {
-         // initiate attack coroutine when attack Input is pressed and player current state doesn't
-        // equal attack
-        if (Input.GetButtonDown("Attack") && currentState != PlayerState.attack && currentState != PlayerState.stagger)
+        // initiate Attack coroutine when Attack Input is pressed and player current state doesn't
+        // equal Attack
+        if (Input.GetButtonDown("Attack") && currentState != PlayerState.Attack && currentState != PlayerState.Stagger)
         {
             StartCoroutine(AttackCo());
         }
-        else if (Input.GetButton("Shield") && currentState != PlayerState.attack && currentState != PlayerState.stagger)
+        else if (Input.GetButtonDown("Second Attack") && currentState != PlayerState.Attack && currentState != PlayerState.Stagger)
+        {
+            StartCoroutine(SecondAttackCo());
+        }
+        else if (Input.GetButton("Shield") && currentState != PlayerState.Attack && currentState != PlayerState.Stagger)
         {
             StartCoroutine(ShieldCo());
         }
-        // updates animation and moves when player current state equals walk or equals idle
-        else if (currentState == PlayerState.walk || currentState == PlayerState.idle)
+        // updates animation and moves when player current state equals Walk or equals Idle
+        else if (currentState == PlayerState.Walk || currentState == PlayerState.Idle)
         {
             UpdateAnimationAndMove();
         }
@@ -102,11 +116,38 @@ public class PlayerFunctions : MonoBehaviour
     {
         change.Normalize();
         playerRigidBody.MovePosition(transform.position + change.normalized * speed * Time.deltaTime);
+        PlayerCurrentDirection(change);
+    }
+
+    public void PlayerCurrentDirection(Vector3 direction)
+    {
+        if (Mathf.Abs(direction.x) > Mathf.Abs(direction.y))
+        {
+            if (direction.x > 0)
+            {
+                currentDirection = PlayerDirection.Right;
+            }
+            else if (direction.x < 0)
+            {
+                currentDirection = PlayerDirection.Left;
+            }
+        }
+        else if (Mathf.Abs(direction.x) < Mathf.Abs(direction.y))
+        {
+            if (direction.y > 0)
+            {
+                currentDirection = PlayerDirection.Up;
+            }
+            else if (direction.y < 0)
+            {
+                currentDirection = PlayerDirection.Down;
+            }
+        }
     }
 
     void UpdateAnimationAndMove()
     {
-        // moves player and updates walking animations based on change in X and Y axis
+        // moves player and updates Walking animations based on change in X and Y axis
         if (change != Vector3.zero)
         {
             MoveCharacter();
@@ -116,40 +157,81 @@ public class PlayerFunctions : MonoBehaviour
             animator.SetFloat("MoveY", change.y);
             animator.SetBool("Moving", true);
         }
-        // stops walking animations and player goes to walk state when not moving
+        // stops Walking animations and player goes to Walk state when not moving
         else
         {
             animator.SetBool("Moving", false);
-            currentState = PlayerState.idle;
+            currentState = PlayerState.Idle;
         }
     }
 
     private IEnumerator ShieldCo()
     {
         animator.SetBool("Shielding", true);
-        currentState = PlayerState.shield;
+        currentState = PlayerState.Shield;
         yield return null;
         if (!Input.GetButton("Shield"))
         {
             animator.SetBool("HoldingDown", false);
             animator.SetBool("Shielding", false);
-            currentState = PlayerState.walk;
+            currentState = PlayerState.Walk;
         }
         else
         {
             animator.SetBool("HoldingDown", true);
         }
     }
-    // coroutine for attack to play attack animation and reset to walk after animation
+    // coroutine for Attack to play Attack animation and reset to Walk after animation
     // and short delay
     private IEnumerator AttackCo()
     {
         animator.SetBool("Attacking", true);
-        currentState = PlayerState.attack;
+        currentState = PlayerState.Attack;
         yield return null;
         animator.SetBool("Attacking", false);
         yield return new WaitForSeconds(.3f);
-        currentState = PlayerState.walk;
+        if (currentState != PlayerState.Interact)
+        {
+            currentState = PlayerState.Walk;
+        }
+    }
+
+    private IEnumerator SecondAttackCo()
+    {
+        currentState = PlayerState.Attack;
+        yield return null;
+        MakeArrow();
+        yield return new WaitForSeconds(.3f);
+        if (currentState != PlayerState.Interact)
+        {
+            currentState = PlayerState.Walk;
+        }
+    }
+
+    private void MakeArrow()
+    {
+        Vector2 temp = new Vector2(animator.GetFloat("MoveX"), animator.GetFloat("MoveY"));
+        ChangeArrowRotation();
+        Arrow arrow = Instantiate(projectile, transform.position, Quaternion.identity).GetComponent<Arrow>();
+        arrow.Setup(temp, ChangeArrowRotation());
+    }
+
+    // function that rotates the new spawned arrow depending on the direction the player is facing
+    private Vector3 ChangeArrowRotation()
+    {
+        switch (currentDirection)
+        {
+            case PlayerDirection.Up:
+                return new Vector3(0, 0, 180);
+            case PlayerDirection.Down:
+                return new Vector3(0, 0, 0);
+            case PlayerDirection.Left:
+                return new Vector3(0, 0, -90);
+            case PlayerDirection.Right:
+                return new Vector3(0, 0, 90);
+            default:
+                return new Vector3(0, 0, 0);
+        }
     }
 
     public void Knock(float knockTime, float damage)
@@ -179,7 +261,7 @@ public class PlayerFunctions : MonoBehaviour
             }
             yield return new WaitForSeconds(knockTime);
             playerRigidBody.velocity = Vector2.zero;
-            currentState = PlayerState.idle;
+            currentState = PlayerState.Idle;
             playerRigidBody.velocity = Vector2.zero;
         }
     }

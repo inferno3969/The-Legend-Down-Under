@@ -17,26 +17,26 @@ public class PatrolShadowGuard : PatrolEnemy
         if (Vector3.Distance(target.position,
                             transform.position) <= chaseRadius
              && Vector3.Distance(target.position,
-                               transform.position) > attackRadius)
+                               transform.position) > AttackRadius)
         {
-            if (currentState == EnemyState.idle || currentState == EnemyState.walk
-                && currentState != EnemyState.stagger)
+            if (currentState == EnemyState.Idle || currentState == EnemyState.Walk
+                && currentState != EnemyState.Stagger)
             {
                 Vector3 temp = Vector3.MoveTowards(transform.position,
                                                          target.position,
                                                          moveSpeed * Time.deltaTime);
                 ChangeAnimation(temp - transform.position);
                 generalEnemyRigidbody.MovePosition(temp);
-                ChangeState(EnemyState.walk);
+                ChangeState(EnemyState.Walk);
             }
         }
         else if (Vector3.Distance(target.position,
             transform.position) <= chaseRadius
             && Vector3.Distance(target.position,
-            transform.position) <= attackRadius)
+            transform.position) <= AttackRadius)
         {
-            if (currentState == EnemyState.walk
-                && currentState != EnemyState.stagger && generalEnemyRigidbody != null)
+            if (currentState == EnemyState.Walk
+                && currentState != EnemyState.Stagger && generalEnemyRigidbody != null)
             {
                 StartCoroutine(AttackCo());
             }
@@ -61,10 +61,10 @@ public class PatrolShadowGuard : PatrolEnemy
 
     private IEnumerator AttackCo()
     {
-        currentState = EnemyState.attack;
+        currentState = EnemyState.Attack;
         animator.SetBool("Attacking", true);
         yield return new WaitForSeconds(1f);
-        currentState = EnemyState.walk;
+        currentState = EnemyState.Walk;
         animator.SetBool("Attacking", false);
     }
 }

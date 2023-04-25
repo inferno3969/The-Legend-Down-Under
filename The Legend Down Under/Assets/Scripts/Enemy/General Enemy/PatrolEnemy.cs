@@ -8,7 +8,7 @@ public class PatrolEnemy : GeneralEnemy
     [Header("Target Variables")]
     public Transform target;
     public float chaseRadius;
-    public float attackRadius;
+    public float AttackRadius;
 
     [Header("Animator")]
     public Animator animator;
@@ -36,17 +36,17 @@ public class PatrolEnemy : GeneralEnemy
         if (Vector3.Distance(target.position,
                             transform.position) <= chaseRadius
            && Vector3.Distance(target.position,
-                               transform.position) > attackRadius)
+                               transform.position) > AttackRadius)
         {
-            if (currentState == EnemyState.idle || currentState == EnemyState.walk
-                && currentState != EnemyState.stagger)
+            if (currentState == EnemyState.Idle || currentState == EnemyState.Walk
+                && currentState != EnemyState.Stagger)
             {
                 Vector3 temp = Vector3.MoveTowards(transform.position,
                                                          target.position,
                                                          moveSpeed * Time.deltaTime);
                 ChangeAnimation(temp - transform.position);
                 generalEnemyRigidbody.MovePosition(temp);
-                ChangeState(EnemyState.walk);
+                ChangeState(EnemyState.Walk);
                 animator.SetBool("WakeUp", true);
             }
         }

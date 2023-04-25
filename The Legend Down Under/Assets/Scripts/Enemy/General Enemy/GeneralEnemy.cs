@@ -4,10 +4,10 @@ using UnityEngine;
 
 public enum EnemyState
 {
-    idle,
-    walk,
-    attack,
-    stagger
+    Idle,
+    Walk,
+    Attack,
+    Stagger
 }
 
 public class GeneralEnemy : MonoBehaviour
@@ -71,7 +71,7 @@ public class GeneralEnemy : MonoBehaviour
         {
             yield return new WaitForSeconds(knockTime);
             rigidbody.velocity = Vector2.zero;
-            currentState = EnemyState.idle;
+            currentState = EnemyState.Idle;
             rigidbody.velocity = Vector2.zero;
         }
     }
@@ -83,7 +83,7 @@ public class GeneralEnemy : MonoBehaviour
             StartCoroutine(FlashCo());
             yield return new WaitForSeconds(knockTime);
             rigidbody.velocity = Vector2.zero;
-            currentState = EnemyState.idle;
+            currentState = EnemyState.Idle;
             rigidbody.velocity = Vector2.zero;
         }
     }

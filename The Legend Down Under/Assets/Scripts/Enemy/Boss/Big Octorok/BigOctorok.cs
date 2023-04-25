@@ -7,7 +7,7 @@ public class BigOctorok : BossEnemy
     private Rigidbody2D bigOctorokRigidbody;
     public Transform target;
     public float chaseRadius;
-    public float attackRadius;
+    public float AttackRadius;
     public GameObject projectile;
     public float fireDelay;
     private float fireDelaySeconds;
@@ -21,7 +21,7 @@ public class BigOctorok : BossEnemy
     void Start()
     {
         canFire = true;
-        currentState = BossEnemyState.idle;
+        currentState = BossEnemyState.Idle;
         bigOctorokRigidbody = GetComponent<Rigidbody2D>();
         target = GameObject.FindWithTag("Player").transform;
         fireDelaySeconds = fireDelay; // Initialize fire delay variable
@@ -38,18 +38,18 @@ public class BigOctorok : BossEnemy
         if (Vector3.Distance(target.position,
         transform.position) <= chaseRadius
            && Vector3.Distance(target.position,
-                               transform.position) > attackRadius)
+                               transform.position) > AttackRadius)
         {
             Vector3 temp = Vector3.MoveTowards(transform.position,
     target.position, moveSpeed * Time.deltaTime);
-            if (currentState == BossEnemyState.idle || currentState != BossEnemyState.walk
-                && currentState != BossEnemyState.stagger)
+            if (currentState == BossEnemyState.Idle || currentState != BossEnemyState.Walk
+                && currentState != BossEnemyState.Stagger)
             {
                 if (canFire && octorokMinionDefeated == true)
                 {
                     Vector3 tempVector = target.transform.position - transform.position;
                     tempVector.Normalize();
-                    GameObject current = Instantiate(projectile, transform.position, Quaternion.identity);
+                    GameObject current = Instantiate(projectile, transform.position + new Vector3(0, 2.5f, 0), Quaternion.identity);
                     // int random = Random.Range(1, 3);
                     // current.transform.localScale = new Vector3(random, random, 0);
                     current.GetComponent<BigRockProjectile>().Launch(tempVector, 0);

@@ -39,17 +39,17 @@ public class ProjectileOcotorok : Octorok
         if (Vector3.Distance(target.position,
         transform.position) <= chaseRadius
            && Vector3.Distance(target.position,
-                               transform.position) > attackRadius)
+                               transform.position) > AttackRadius)
         {
             Vector3 temp = Vector3.MoveTowards(transform.position,
     target.position, moveSpeed * Time.deltaTime);
             ChangeAnimation(temp - transform.position);
-            if (currentState == EnemyState.idle || currentState != EnemyState.walk
-                && currentState != EnemyState.stagger)
+            if (currentState == EnemyState.Idle || currentState != EnemyState.Walk
+                && currentState != EnemyState.Stagger)
             {
                 if (canFire)
                 {
-                    GameObject current = Instantiate(projectile, transform.position, Quaternion.identity);
+                    GameObject current = Instantiate(projectile, transform.position + GetProjectileOffset(), Quaternion.identity);
                     Vector3 tempVector = target.transform.position - transform.position;
                     tempVector.Normalize();
                     if (Mathf.Abs(tempVector.x) > Mathf.Abs(tempVector.y))
@@ -77,6 +77,23 @@ public class ProjectileOcotorok : Octorok
                            transform.position) > chaseRadius)
         {
             animator.SetBool("InRange", false);
+        }
+    }
+
+    private Vector3 GetProjectileOffset()
+    {
+        switch (direction)
+        {
+            case Direction.Up:
+                return new Vector3(0, 0.5f, 0);
+            case Direction.Down:
+                return new Vector3(0, -0.5f, 0);
+            case Direction.Left:
+                return new Vector3(-0.5f, 0, 0);
+            case Direction.Right:
+                return new Vector3(0.5f, 0, 0);
+            default:
+                return Vector3.zero;
         }
     }
 }

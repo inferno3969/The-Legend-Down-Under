@@ -24,26 +24,26 @@ public class Knockback : MonoBehaviour
                     {
                         if (other.gameObject.CompareTag("Boss"))
                         {
-                            hit.GetComponent<BossEnemy>().currentState = BossEnemyState.stagger;
+                            hit.GetComponent<BossEnemy>().currentState = BossEnemyState.Stagger;
                             other.GetComponent<BossEnemy>().Knock(hit, knockTime, damage);
                         }
                         else
                         {
-                            hit.GetComponent<GeneralEnemy>().currentState = EnemyState.stagger;
+                            hit.GetComponent<GeneralEnemy>().currentState = EnemyState.Stagger;
                             other.GetComponent<GeneralEnemy>().Knock(hit, knockTime, damage);
                         }
                     }
                     else if (gameObject.CompareTag("Enemy"))
                     {
-                        hit.GetComponent<GeneralEnemy>().currentState = EnemyState.stagger;
+                        hit.GetComponent<GeneralEnemy>().currentState = EnemyState.Stagger;
                         other.GetComponent<GeneralEnemy>().KnockNoDamage(hit, knockTime);
                     }
                 }
                 if (other.gameObject.CompareTag("Player"))
                 {
-                    if (other.GetComponent<PlayerFunctions>().currentState != PlayerState.stagger && other.isTrigger)
+                    if (other.GetComponent<PlayerFunctions>().currentState != PlayerState.Stagger && other.isTrigger)
                     {
-                        hit.GetComponent<PlayerFunctions>().currentState = PlayerState.stagger;
+                        hit.GetComponent<PlayerFunctions>().currentState = PlayerState.Stagger;
                         other.GetComponent<PlayerFunctions>().Knock(knockTime, damage);
                     }
                 }
