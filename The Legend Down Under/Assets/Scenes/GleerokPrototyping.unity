@@ -617,11 +617,11 @@ MonoBehaviour:
   enemySprite: {fileID: 955770215}
   enemyHitboxes: {fileID: 0}
   playerHitboxes: {fileID: 1439918446}
-  target: {fileID: 1198503214}
+  target: {fileID: 0}
   chaseRadius: 20
   AttackRadius: 1
   projectile: {fileID: 3016580315201390008, guid: abf8905b75cf84820bab1e99608a3b7d, type: 3}
-  fireDelay: 1
+  fireDelay: 5
   canFire: 0
 --- !u!1001 &1110561478
 PrefabInstance:
@@ -780,11 +780,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1198503214 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6347956277411589156, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
-  m_PrefabInstance: {fileID: 1110561478}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1439918446 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6347956277127069151, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}

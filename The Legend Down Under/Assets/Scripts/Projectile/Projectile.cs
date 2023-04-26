@@ -37,7 +37,7 @@ public class Projectile : MonoBehaviour
 
     public virtual void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") || other.CompareTag("Enemy") || other.CompareTag("Boss"))
+        if (other.CompareTag("Player") || other.CompareTag("Enemy") || other.CompareTag("Boss") || other.CompareTag("Boss Weakpoint"))
         {
             Destroy(this.gameObject);
         }

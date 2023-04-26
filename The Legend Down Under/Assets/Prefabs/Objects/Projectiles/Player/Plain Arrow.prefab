@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -4822549103504720747}
   m_Layer: 13
   m_Name: Plain Arrow
-  m_TagString: Untagged
+  m_TagString: Player Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,6 +175,7 @@ MonoBehaviour:
   speed: 8
   arrowRigidbody: {fileID: 8269123797582701413}
   lifetime: 2
+  weakpoint: {fileID: 0}
 --- !u!114 &-4822549103504720747
 MonoBehaviour:
   m_ObjectHideFlags: 0

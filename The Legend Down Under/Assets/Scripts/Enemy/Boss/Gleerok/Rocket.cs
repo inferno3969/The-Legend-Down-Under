@@ -8,7 +8,6 @@ public class Rocket : Projectile
 
     private void OnAwake()
     {
-        animator = GetComponent<Animator>();
         animator.SetBool("Explode", false);
     }
 
