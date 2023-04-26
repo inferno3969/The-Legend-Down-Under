@@ -425,7 +425,7 @@ GameObject:
   - component: {fileID: 955770217}
   m_Layer: 12
   m_Name: Gleerok
-  m_TagString: Boss
+  m_TagString: Boss Weakpoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -462,7 +462,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -610,8 +610,8 @@ MonoBehaviour:
   moveSpeed: 0
   flashColor: {r: 0.99215686, g: 0, b: 0, a: 0.59607846}
   regularColor: {r: 1, g: 1, b: 1, a: 1}
-  flashDuration: 0
-  numberOfFlashes: 0
+  flashDuration: 0.3
+  numberOfFlashes: 3
   triggerCollider: {fileID: 955770217}
   nonTriggerCollider: {fileID: 0}
   enemySprite: {fileID: 955770215}
@@ -621,8 +621,10 @@ MonoBehaviour:
   chaseRadius: 20
   AttackRadius: 1
   projectile: {fileID: 3016580315201390008, guid: abf8905b75cf84820bab1e99608a3b7d, type: 3}
-  fireDelay: 5
+  fireDelay: 1
   canFire: 0
+  firedThreeTimes: 0
+  fireCount: 0
 --- !u!1001 &1110561478
 PrefabInstance:
   m_ObjectHideFlags: 0

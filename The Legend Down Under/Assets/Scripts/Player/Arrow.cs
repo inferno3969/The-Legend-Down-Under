@@ -42,7 +42,7 @@ public class Arrow : MonoBehaviour
         || other.gameObject.CompareTag("Boss Weakpoint"))
         {
             Destroy(this.gameObject);
-            weakpoint.GetComponent<Animator>().SetBool("WeakpointSubmerge", false);
+            weakpoint.GetComponent<Animator>().SetBool("WeakpointSubmerge", true);
         }
     }
 }

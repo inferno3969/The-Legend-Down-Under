@@ -13,15 +13,14 @@ public class Gleerok : BossEnemy
     public float fireDelay;
     private float fireDelaySeconds;
     public bool canFire;
-    private bool firedThreeTimes;
+    [SerializeField]
+    private bool firedFiveTimes;
     [SerializeField]
     private int fireCount = 0;
 
 
     void Start()
     {
-        canFire = true;
-        firedThreeTimes = false;
         currentState = BossEnemyState.Idle;
         animator = GetComponent<Animator>();
         gleerokRigidbody = GetComponent<Rigidbody2D>();
@@ -44,47 +43,17 @@ public class Gleerok : BossEnemy
             if (currentState == BossEnemyState.Idle || currentState != BossEnemyState.Walk
                 && currentState != BossEnemyState.Stagger)
             {
-
-                if (animator.GetBool("OpenMouth") != false)
+                if (animator.GetBool("OpenMouth") == false && animator.GetBool("CloseMouth") == false)
                 {
                     OpenMouth();
-                    if (canFire && !firedThreeTimes)
-                    {
-                        if (animator.GetBool("OpenMouth") == true && animator.GetBool("CloseMouth") == false)
-                        {
-                            for (fireCount = 0; fireCount < 4; fireCount++)
-                            {
-                                Vector3 tempVector = target.transform.position - transform.position;
-                                tempVector.Normalize();
-                                GameObject current = Instantiate(projectile, transform.position, Quaternion.identity);
-                                StartCoroutine(Wait());
-                                current.GetComponent<Rocket>().Launch(tempVector);
-                                fireDelaySeconds = fireDelay;
-                                fireCount++;
-                            }
-                        }
-                        canFire = false;
-                        firedThreeTimes = true;
-                        animator.SetBool("OpenMouth", true);
-                        animator.SetBool("CloseMouth", false);
-                    }
-                    // Vector3 tempVector = target.transform.position - transform.position;
-                    // tempVector.Normalize();
-                    // GameObject current = Instantiate(projectile, transform.position, Quaternion.identity);
-                    // // int random = Random.Range(1, 3);
-                    // // current.transform.localScale = new Vector3(random, random, 0);
-                    // current.GetComponent<Rocket>().Launch(tempVector);
-                    // canFire = false;
-                    // fireDelaySeconds = fireDelay; // Reset fire delay timer
-
                 }
-                else if (canFire)
+                else if (animator.GetBool("OpenMouth") == true)
                 {
-                    fireDelaySeconds -= Time.deltaTime;
-                    if (fireDelaySeconds <= 0)
-                    {
-                        canFire = true;
-                    }
+                    StartCoroutine(AttackCo());
+                }
+                else if (animator.GetBool("CloseMouth") == true && animator.GetBool("OpenMouth") == false && animator.GetBool("Attacking") == false)
+                {
+                    StartCoroutine(CloseMouthCo());
                 }
             }
         }
@@ -97,14 +66,74 @@ public class Gleerok : BossEnemy
 
     private IEnumerator OpenMouthCo()
     {
-        yield return new WaitForSeconds(2f);
-        animator.SetBool("OpenMouth", false);
+        canFire = true;
+        fireCount = 0;
+        firedFiveTimes = false;
         yield return new WaitForSeconds(2f);
         animator.SetBool("OpenMouth", true);
+        StartCoroutine(AttackCo());
     }
 
-    private IEnumerator Wait()
+    private IEnumerator AttackCo()
+    {
+        yield return new WaitForSeconds(2f);
+        animator.SetBool("Attacking", true);
+        if (canFire && !firedFiveTimes)
+        {
+            if (animator.GetBool("Attacking") == true)
+            {
+                if (fireCount <= 4)
+                {
+                    Vector3 tempVector = target.transform.position - transform.position;
+                    tempVector.Normalize();
+                    GameObject current = Instantiate(projectile, transform.position, Quaternion.identity);
+                    current.GetComponent<Rocket>().Launch(tempVector);
+                    canFire = false;
+                    fireDelaySeconds = fireDelay; // Reset fire delay timer
+                    fireCount++;
+                }
+            }
+        }
+        else if (fireCount == 5)
+        {
+            animator.SetBool("Attacking", false);
+            animator.SetBool("OpenMouth", false);
+            animator.SetBool("CloseMouth", true);
+            canFire = false;
+            firedFiveTimes = true;
+        }
+        else if (canFire == false)
+        {
+            fireDelaySeconds -= Time.deltaTime;
+            if (fireDelaySeconds <= 0)
+            {
+                canFire = true;
+            }
+        }
+    }
+
+    private IEnumerator CloseMouthCo()
+    {
+        yield return new WaitForSeconds(2f);
+        if (animator.GetBool("WeakpointSubmerge") == true)
+        {
+            yield return new WaitForSeconds(2f);
+            animator.SetBool("WeakpointSubmerge", false);
+            yield return new WaitForSeconds(2f);
+            animator.SetBool("CloseMouth", false);
+        }
+    }
+
+    private IEnumerator WaitOneSecond()
     {
         yield return new WaitForSeconds(1f);
+    }
+    public IEnumerator WaitTwoSeconds()
+    {
+        yield return new WaitForSeconds(2f);
+    }
+    private IEnumerator WaitFourSeconds()
+    {
+        yield return new WaitForSeconds(4f);
     }
 }

@@ -299,8 +299,8 @@ TextureImporter:
       name: Gleerok Spritesheet_9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 384
+        x: 1152
+        y: 512
         width: 128
         height: 128
       alignment: 0
@@ -320,7 +320,7 @@ TextureImporter:
       name: Gleerok Spritesheet_10
       rect:
         serializedVersion: 2
-        x: 128
+        x: 0
         y: 384
         width: 128
         height: 128
@@ -341,7 +341,7 @@ TextureImporter:
       name: Gleerok Spritesheet_11
       rect:
         serializedVersion: 2
-        x: 256
+        x: 128
         y: 384
         width: 128
         height: 128
@@ -362,7 +362,7 @@ TextureImporter:
       name: Gleerok Spritesheet_12
       rect:
         serializedVersion: 2
-        x: 384
+        x: 256
         y: 384
         width: 128
         height: 128
@@ -383,7 +383,7 @@ TextureImporter:
       name: Gleerok Spritesheet_13
       rect:
         serializedVersion: 2
-        x: 512
+        x: 384
         y: 384
         width: 128
         height: 128
@@ -404,7 +404,7 @@ TextureImporter:
       name: Gleerok Spritesheet_14
       rect:
         serializedVersion: 2
-        x: 640
+        x: 512
         y: 384
         width: 128
         height: 128
@@ -425,7 +425,7 @@ TextureImporter:
       name: Gleerok Spritesheet_15
       rect:
         serializedVersion: 2
-        x: 768
+        x: 640
         y: 384
         width: 128
         height: 128
@@ -446,7 +446,7 @@ TextureImporter:
       name: Gleerok Spritesheet_16
       rect:
         serializedVersion: 2
-        x: 896
+        x: 768
         y: 384
         width: 128
         height: 128
@@ -467,7 +467,7 @@ TextureImporter:
       name: Gleerok Spritesheet_17
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 896
         y: 384
         width: 128
         height: 128
@@ -488,7 +488,7 @@ TextureImporter:
       name: Gleerok Spritesheet_18
       rect:
         serializedVersion: 2
-        x: 1152
+        x: 1024
         y: 384
         width: 128
         height: 128
@@ -509,8 +509,8 @@ TextureImporter:
       name: Gleerok Spritesheet_19
       rect:
         serializedVersion: 2
-        x: 0
-        y: 256
+        x: 1152
+        y: 384
         width: 128
         height: 128
       alignment: 0
@@ -530,7 +530,7 @@ TextureImporter:
       name: Gleerok Spritesheet_20
       rect:
         serializedVersion: 2
-        x: 128
+        x: 0
         y: 256
         width: 128
         height: 128
@@ -551,7 +551,7 @@ TextureImporter:
       name: Gleerok Spritesheet_21
       rect:
         serializedVersion: 2
-        x: 256
+        x: 128
         y: 256
         width: 128
         height: 128
@@ -572,8 +572,8 @@ TextureImporter:
       name: Gleerok Spritesheet_22
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
+        x: 256
+        y: 256
         width: 128
         height: 128
       alignment: 0
@@ -593,8 +593,8 @@ TextureImporter:
       name: Gleerok Spritesheet_23
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
+        x: 384
+        y: 256
         width: 128
         height: 128
       alignment: 0
@@ -614,8 +614,8 @@ TextureImporter:
       name: Gleerok Spritesheet_24
       rect:
         serializedVersion: 2
-        x: 256
-        y: 128
+        x: 512
+        y: 256
         width: 128
         height: 128
       alignment: 0
@@ -635,8 +635,8 @@ TextureImporter:
       name: Gleerok Spritesheet_25
       rect:
         serializedVersion: 2
-        x: 384
-        y: 128
+        x: 640
+        y: 256
         width: 128
         height: 128
       alignment: 0
@@ -656,8 +656,8 @@ TextureImporter:
       name: Gleerok Spritesheet_26
       rect:
         serializedVersion: 2
-        x: 512
-        y: 128
+        x: 768
+        y: 256
         width: 128
         height: 128
       alignment: 0
@@ -677,8 +677,8 @@ TextureImporter:
       name: Gleerok Spritesheet_27
       rect:
         serializedVersion: 2
-        x: 640
-        y: 128
+        x: 896
+        y: 256
         width: 128
         height: 128
       alignment: 0
@@ -698,8 +698,8 @@ TextureImporter:
       name: Gleerok Spritesheet_28
       rect:
         serializedVersion: 2
-        x: 768
-        y: 128
+        x: 1024
+        y: 256
         width: 128
         height: 128
       alignment: 0
@@ -719,8 +719,8 @@ TextureImporter:
       name: Gleerok Spritesheet_29
       rect:
         serializedVersion: 2
-        x: 896
-        y: 128
+        x: 1152
+        y: 256
         width: 128
         height: 128
       alignment: 0
@@ -740,7 +740,7 @@ TextureImporter:
       name: Gleerok Spritesheet_30
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 0
         y: 128
         width: 128
         height: 128
@@ -761,7 +761,7 @@ TextureImporter:
       name: Gleerok Spritesheet_31
       rect:
         serializedVersion: 2
-        x: 1152
+        x: 128
         y: 128
         width: 128
         height: 128
@@ -782,8 +782,8 @@ TextureImporter:
       name: Gleerok Spritesheet_32
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
+        x: 256
+        y: 128
         width: 128
         height: 128
       alignment: 0
@@ -803,8 +803,8 @@ TextureImporter:
       name: Gleerok Spritesheet_33
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
+        x: 384
+        y: 128
         width: 128
         height: 128
       alignment: 0
@@ -824,8 +824,8 @@ TextureImporter:
       name: Gleerok Spritesheet_34
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
+        x: 512
+        y: 128
         width: 128
         height: 128
       alignment: 0
@@ -845,8 +845,8 @@ TextureImporter:
       name: Gleerok Spritesheet_35
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
+        x: 640
+        y: 128
         width: 128
         height: 128
       alignment: 0
@@ -866,8 +866,8 @@ TextureImporter:
       name: Gleerok Spritesheet_36
       rect:
         serializedVersion: 2
-        x: 512
-        y: 0
+        x: 768
+        y: 128
         width: 128
         height: 128
       alignment: 0
@@ -887,8 +887,8 @@ TextureImporter:
       name: Gleerok Spritesheet_37
       rect:
         serializedVersion: 2
-        x: 640
-        y: 0
+        x: 896
+        y: 128
         width: 128
         height: 128
       alignment: 0
@@ -908,8 +908,8 @@ TextureImporter:
       name: Gleerok Spritesheet_38
       rect:
         serializedVersion: 2
-        x: 768
-        y: 0
+        x: 1024
+        y: 128
         width: 128
         height: 128
       alignment: 0
@@ -929,8 +929,8 @@ TextureImporter:
       name: Gleerok Spritesheet_39
       rect:
         serializedVersion: 2
-        x: 896
-        y: 0
+        x: 1152
+        y: 128
         width: 128
         height: 128
       alignment: 0
@@ -950,7 +950,7 @@ TextureImporter:
       name: Gleerok Spritesheet_40
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 0
         y: 0
         width: 128
         height: 128
@@ -971,7 +971,7 @@ TextureImporter:
       name: Gleerok Spritesheet_41
       rect:
         serializedVersion: 2
-        x: 1152
+        x: 128
         y: 0
         width: 128
         height: 128
@@ -984,6 +984,174 @@ TextureImporter:
       bones: []
       spriteID: 5a2f2695fcf7e42319c8e9a58a0a5053
       internalID: 1153304883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gleerok Spritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44bb28c7efa2c45cc82ee82d3d8938d6
+      internalID: -1601691931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gleerok Spritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5663f19415e34e1d98d0ef618baeaeb
+      internalID: 430115407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gleerok Spritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 588a7082cc14f4fcc996b68836a4e4b4
+      internalID: 1294206034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gleerok Spritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e10c33d554674a538e365c9fd87f43d
+      internalID: -1675838145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gleerok Spritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a3c5580b1664234ac373bb6b2a54e6
+      internalID: 144168846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gleerok Spritesheet_47
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dae1834d1dbae40dd9ae476089b170c0
+      internalID: 517320953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gleerok Spritesheet_48
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c2e8cbb3c4442129932868f2dd4d83
+      internalID: -1463229226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gleerok Spritesheet_49
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b99a9e27811ab40c29757da1e57405a3
+      internalID: 337486379
       vertices: []
       indices: 
       edges: []
@@ -1001,46 +1169,54 @@ TextureImporter:
     nameFileIdTable:
       Gleerok Spritesheet_1: -2046052752
       Gleerok Spritesheet_3: -1077689031
-      Gleerok Spritesheet_15: 526414362
-      Gleerok Spritesheet_30: 361537527
       Gleerok Spritesheet_21: -1593575165
-      Gleerok Spritesheet_33: 1506808079
-      Gleerok Spritesheet_38: 142994674
       Gleerok Spritesheet_13: 1087446339
-      Gleerok Spritesheet_37: -168804082
-      Gleerok Spritesheet_40: 273199173
-      Gleerok Spritesheet_27: -670482455
-      Gleerok Spritesheet_22: -1800396768
-      Gleerok Spritesheet_5: -708011178
-      Gleerok Spritesheet_14: 2057461420
-      Gleerok Spritesheet_31: 983733595
+      Gleerok Spritesheet_46: 144168846
+      Gleerok Spritesheet_42: -1601691931
       Gleerok Spritesheet_19: 174225150
-      Gleerok Spritesheet_29: 1544064280
-      Gleerok Spritesheet_25: 1710000372
       Gleerok Spritesheet_20: -1676695613
+      Gleerok Spritesheet_43: 430115407
       Gleerok Spritesheet_16: 940161867
       Gleerok Spritesheet_18: -231213513
-      Gleerok Spritesheet_34: -1661614409
       Gleerok Spritesheet_2: 1488413270
-      Gleerok Spritesheet_32: 194646677
       Gleerok Spritesheet_39: 404569119
       Gleerok Spritesheet_0: -372746157
-      Gleerok Spritesheet_10: 1514311875
-      Gleerok Spritesheet_17: 606060365
+      Gleerok Spritesheet_47: 517320953
       Gleerok Spritesheet_6: 1210165018
-      Gleerok Spritesheet_8: 1750610666
-      Gleerok Spritesheet_35: 459466760
-      Gleerok Spritesheet_9: -511438171
-      Gleerok Spritesheet_26: -1254045722
       Gleerok Spritesheet_36: 1530003924
-      Gleerok Spritesheet_24: 584372196
-      Gleerok Spritesheet_41: 1153304883
+      Gleerok Spritesheet_35: 459466760
+      Gleerok Spritesheet_48: -1463229226
+      Gleerok Spritesheet_9: -511438171
+      Gleerok Spritesheet_49: 337486379
       Gleerok Spritesheet_4: -1768079689
       Gleerok Spritesheet_28: -1343611394
       Gleerok Spritesheet_11: 1087433384
       Gleerok Spritesheet_7: 269759960
       Gleerok Spritesheet_23: -394425248
       Gleerok Spritesheet_12: -889988625
+      Gleerok Spritesheet_30: 361537527
+      Gleerok Spritesheet_15: 526414362
+      Gleerok Spritesheet_33: 1506808079
+      Gleerok Spritesheet_38: 142994674
+      Gleerok Spritesheet_37: -168804082
+      Gleerok Spritesheet_40: 273199173
+      Gleerok Spritesheet_44: 1294206034
+      Gleerok Spritesheet_27: -670482455
+      Gleerok Spritesheet_22: -1800396768
+      Gleerok Spritesheet_5: -708011178
+      Gleerok Spritesheet_14: 2057461420
+      Gleerok Spritesheet_31: 983733595
+      Gleerok Spritesheet_25: 1710000372
+      Gleerok Spritesheet_29: 1544064280
+      Gleerok Spritesheet_34: -1661614409
+      Gleerok Spritesheet_32: 194646677
+      Gleerok Spritesheet_10: 1514311875
+      Gleerok Spritesheet_24: 584372196
+      Gleerok Spritesheet_17: 606060365
+      Gleerok Spritesheet_45: -1675838145
+      Gleerok Spritesheet_8: 1750610666
+      Gleerok Spritesheet_26: -1254045722
+      Gleerok Spritesheet_41: 1153304883
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
