@@ -94,7 +94,10 @@ public class BossEnemy : MonoBehaviour
         int tempFlashes;
         // turn off player trigger collider to prevent from taking damage
         triggerCollider.enabled = false;
-        nonTriggerCollider.enabled = false;
+        if (nonTriggerCollider != null)
+        {
+            nonTriggerCollider.enabled = false;
+        }
         // prevent player from sliding when hit by an enemy
         // go through numberOfFlashes while iterating tempFlashes
         for (tempFlashes = 0; tempFlashes < numberOfFlashes; tempFlashes++)
@@ -106,7 +109,10 @@ public class BossEnemy : MonoBehaviour
         }
         // set trigger collider back on when for loop is finished
         triggerCollider.enabled = true;
-        nonTriggerCollider.enabled = true;
+        if (nonTriggerCollider != null)
+        {
+            nonTriggerCollider.enabled = true;
+        }
         playerHitboxes.SetActive(true);
     }
 }
