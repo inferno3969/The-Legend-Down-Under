@@ -4303,7 +4303,7 @@ Transform:
   - {fileID: 6347956276818155382}
   - {fileID: 6347956275863942622}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6347956277411589157
 SpriteRenderer:
@@ -4487,12 +4487,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
+  currentDirection: 0
   speed: 4
   currentHealth: {fileID: 11400000, guid: 5ec9b721c3bff440d8ddb9bf0d620e60, type: 2}
   playerHealthSignal: {fileID: 11400000, guid: ffc32fd7680dc44d492217dce9d5731c, type: 2}
   animator: {fileID: 0}
   playerInventory: {fileID: 11400000, guid: 5f791cf00fd5d46e5835285875fdd4d1, type: 2}
   soldierSword: {fileID: 0}
+  projectile: {fileID: 1972066825197807957, guid: ffa70a52c30354cac916c7283a31f5ca, type: 3}
   playerHit: {fileID: 11400000, guid: dea8065a57fe5464298aa91063e9b360, type: 2}
   flashColor: {r: 0.99215686, g: 0, b: 0, a: 0.59607846}
   regularColor: {r: 1, g: 1, b: 1, a: 1}

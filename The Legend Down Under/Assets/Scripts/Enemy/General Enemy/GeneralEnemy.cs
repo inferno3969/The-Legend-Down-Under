@@ -54,10 +54,8 @@ public class GeneralEnemy : MonoBehaviour
 
     public void Knock(Rigidbody2D enemyRigidbody, float knockTime, float damage)
     {
-        {
-            StartCoroutine(KnockCo(enemyRigidbody, knockTime));
-            TakeDamage(damage);
-        }
+        StartCoroutine(KnockCo(enemyRigidbody, knockTime));
+        TakeDamage(damage);
     }
 
     public void KnockNoDamage(Rigidbody2D enemyRigidbody, float knockTime)
