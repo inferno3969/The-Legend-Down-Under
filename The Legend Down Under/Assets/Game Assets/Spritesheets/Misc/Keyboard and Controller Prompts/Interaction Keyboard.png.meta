@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b984f9e6cd9224451a8e575281f2b6a9
+guid: ab804264a77f347918bc8c5e369239eb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -107,97 +107,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Small Treasure Chests Spritesheet_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 357901ff422df4e629c1940238afeb8e
-      internalID: -1463494110
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Small Treasure Chests Spritesheet_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e41025b9032146b4a3dc5cdb5f0136c
-      internalID: 224366562
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Small Treasure Chests Spritesheet_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3031500b153e84470a2762dafe08d55e
-      internalID: -1058671703
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Small Treasure Chests Spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0d492830af9124f0ebea7758a18ef97c
-      internalID: 27734582
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Small Treasure Chests Spritesheet_4
+      name: Interaction Keyboard_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a73392493ae394db49f8de98ff0e2638
-      internalID: -1088537910
+      spriteID: 2737837eac7474ccdbe337b66ad40786
+      internalID: 2052114111
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Small Treasure Chests Spritesheet_5
+      name: Interaction Keyboard_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 16
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,8 +142,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca862b5cc94354fbca68cd85651c08bb
-      internalID: 984831690
+      spriteID: 3b7d82cf5cd454115b41155f01ab9a13
+      internalID: -1828915069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interaction Keyboard_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6feae6759fde1420f919ef61d6900609
+      internalID: 201774233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Interaction Keyboard_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc15b9f4813da421b95cd8caf6a324e4
+      internalID: 357692108
       vertices: []
       indices: 
       edges: []
@@ -243,12 +201,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Small Treasure Chests Spritesheet_2: -1058671703
-      Small Treasure Chests Spritesheet_1: 224366562
-      Small Treasure Chests Spritesheet_5: 984831690
-      Small Treasure Chests Spritesheet_3: 27734582
-      Small Treasure Chests Spritesheet_0: -1463494110
-      Small Treasure Chests Spritesheet_4: -1088537910
+      Interaction Keyboard_1: -1828915069
+      Interaction Keyboard_3: 357692108
+      Interaction Keyboard_0: 2052114111
+      Interaction Keyboard_2: 201774233
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

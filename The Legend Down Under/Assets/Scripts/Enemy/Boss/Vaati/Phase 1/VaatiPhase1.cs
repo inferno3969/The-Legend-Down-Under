@@ -29,10 +29,6 @@ public class VaatiPhase1 : BossEnemy
         {
             SummonShadowGuards();
         }
-        // if (animator.GetBool("Summon") == false && animator.GetBool("Hit") == false && shadowGuardsDefeated)
-        // {
-        //     shadowGuardsDefeated = false;
-        // }
     }
 
     private void HandDownCo()

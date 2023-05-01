@@ -551,6 +551,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6347956275863942623, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6347956277411589153, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: enemies.Array.data[0]
       value: 
@@ -610,6 +614,10 @@ PrefabInstance:
     - target: {fileID: 6347956277411589158, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589158, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2093,7 +2101,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &465101149
 Transform:
   m_ObjectHideFlags: 0
@@ -3009,7 +3017,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   target: {fileID: 286654904}
   chaseRadius: 4
-  AttackRadius: 0
+  AttackRadius: 1
 --- !u!61 &1096504539
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3181,7 +3189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1241839091
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3242,7 +3250,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241839090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.53, y: -4.11, z: 0}
+  m_LocalPosition: {x: -5.61, y: -3.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3432,10 +3440,10 @@ MonoBehaviour:
   playerHitboxes: {fileID: 2013523678}
   target: {fileID: 286654904}
   chaseRadius: 6
-  AttackRadius: 0
+  AttackRadius: 1
   animator: {fileID: 1241839093}
   projectile: {fileID: 1548373387168347125, guid: 7a22cc4d7f58b473293bd6902cd97d9e, type: 3}
-  fireDelay: 1
+  fireDelay: 3
   canFire: 1
 --- !u!1 &1248356967
 GameObject:
@@ -3813,7 +3821,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1348509702
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4021,7 +4029,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 0
   health: 2
-  maxHealth: {fileID: 11400000, guid: c53a74ace97ee4332bbf2ec72a359778, type: 2}
+  maxHealth: {fileID: 11400000, guid: 3b84de9f65f764bbcbd1a13a801c711e, type: 2}
   enemyName: Loggy
   homePosition: {x: 0, y: 0}
   baseAttack: 1
@@ -4034,7 +4042,7 @@ MonoBehaviour:
   nonTriggerCollider: {fileID: 1348509705}
   enemySprite: {fileID: 1348509702}
   enemyHitboxes: {fileID: 0}
-  playerHitboxes: {fileID: 0}
+  playerHitboxes: {fileID: 2013523678}
   generalEnemyRigidbody: {fileID: 0}
   target: {fileID: 286654904}
   chaseRadius: 4
@@ -4052,7 +4060,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -4314,7 +4322,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 3319
+    m_Bits: 15863
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -6004,7 +6012,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1992495081
 Transform:
   m_ObjectHideFlags: 0
@@ -6175,6 +6183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Health and Minimap Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 9002354015117284626, guid: 9f7bbd42373394a6183530924d955305, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9002354015117284630, guid: 9f7bbd42373394a6183530924d955305, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -6258,6 +6270,18 @@ PrefabInstance:
     - target: {fileID: 9002354015117284630, guid: 9f7bbd42373394a6183530924d955305, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002354015614633813, guid: 9f7bbd42373394a6183530924d955305, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002354016202541508, guid: 9f7bbd42373394a6183530924d955305, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9002354016202541508, guid: 9f7bbd42373394a6183530924d955305, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6404,6 +6428,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Octorok
       objectReference: {fileID: 0}
+    - target: {fileID: 4689487166023955117, guid: 5cc9b46b7b0c748afad6e127901bbf6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4689487166023955125, guid: 5cc9b46b7b0c748afad6e127901bbf6d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -6520,6 +6548,10 @@ PrefabInstance:
     - target: {fileID: 7947530123212770093, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
       propertyPath: m_Name
       value: Shadow Guard
+      objectReference: {fileID: 0}
+    - target: {fileID: 7947530123212770093, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
