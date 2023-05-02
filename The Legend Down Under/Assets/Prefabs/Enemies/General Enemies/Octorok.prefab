@@ -72,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 1ac288b08a80342ca89a86c5b063df2b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -121,7 +121,7 @@ Transform:
   m_Children:
   - {fileID: 4689487165505266054}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4689487166023955126
 SpriteRenderer:
@@ -346,6 +346,7 @@ MonoBehaviour:
   homePosition: {x: 0, y: 0}
   baseAttack: 1
   moveSpeed: 1.5
+  thisLoot: {fileID: 0}
   flashColor: {r: 0.9529412, g: 0, b: 0, a: 0.59607846}
   regularColor: {r: 1, g: 1, b: 1, a: 1}
   flashDuration: 0.2
@@ -357,5 +358,5 @@ MonoBehaviour:
   playerHitboxes: {fileID: 0}
   target: {fileID: 0}
   chaseRadius: 6
-  attackRadius: 0.05
+  AttackRadius: 0
   animator: {fileID: 0}

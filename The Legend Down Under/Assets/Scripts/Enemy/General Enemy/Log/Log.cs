@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Log : GeneralEnemy
 {
-
-
     public Rigidbody2D generalEnemyRigidbody;
     [Header("Target Variables")]
     public Transform target;

@@ -971,10 +971,10 @@ TextureImporter:
       name: objects_2_41
       rect:
         serializedVersion: 2
-        x: 2
-        y: 258
-        width: 11
-        height: 11
+        x: 0
+        y: 256
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -992,10 +992,10 @@ TextureImporter:
       name: objects_2_42
       rect:
         serializedVersion: 2
-        x: 19
-        y: 258
-        width: 10
-        height: 11
+        x: 16
+        y: 256
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1013,10 +1013,10 @@ TextureImporter:
       name: objects_2_43
       rect:
         serializedVersion: 2
-        x: 36
-        y: 243
-        width: 9
-        height: 26
+        x: 32
+        y: 256
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1034,10 +1034,10 @@ TextureImporter:
       name: objects_2_44
       rect:
         serializedVersion: 2
-        x: 51
-        y: 258
-        width: 10
-        height: 11
+        x: 48
+        y: 256
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1055,10 +1055,10 @@ TextureImporter:
       name: objects_2_45
       rect:
         serializedVersion: 2
-        x: 65
+        x: 64
         y: 256
-        width: 13
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1076,10 +1076,10 @@ TextureImporter:
       name: objects_2_46
       rect:
         serializedVersion: 2
-        x: 81
+        x: 80
         y: 256
-        width: 14
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1097,9 +1097,9 @@ TextureImporter:
       name: objects_2_47
       rect:
         serializedVersion: 2
-        x: 97
+        x: 96
         y: 256
-        width: 14
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1118,10 +1118,10 @@ TextureImporter:
       name: objects_2_48
       rect:
         serializedVersion: 2
-        x: 113
+        x: 112
         y: 256
-        width: 14
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1141,8 +1141,8 @@ TextureImporter:
         serializedVersion: 2
         x: 128
         y: 256
-        width: 15
-        height: 18
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1181,10 +1181,10 @@ TextureImporter:
       name: objects_2_51
       rect:
         serializedVersion: 2
-        x: 161
+        x: 159
         y: 256
-        width: 14
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1202,10 +1202,10 @@ TextureImporter:
       name: objects_2_52
       rect:
         serializedVersion: 2
-        x: 179
-        y: 260
-        width: 8
-        height: 8
+        x: 175
+        y: 256
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1223,10 +1223,10 @@ TextureImporter:
       name: objects_2_53
       rect:
         serializedVersion: 2
-        x: 196
-        y: 260
-        width: 7
-        height: 7
+        x: 191
+        y: 256
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1244,10 +1244,10 @@ TextureImporter:
       name: objects_2_54
       rect:
         serializedVersion: 2
-        x: 213
-        y: 261
-        width: 20
-        height: 5
+        x: 207
+        y: 256
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3046,6 +3046,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: objects_2_140
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 256
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a13c9f4ecaa84305b68e471da0bded1
+      internalID: -1595990759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -3057,8 +3078,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      objects_2_64: -157765407
       objects_2_106: 883061268
-      objects_2_59: 1543897859
       objects_2_77: 210241248
       objects_2_133: -1951108965
       objects_2_135: -2095219239
@@ -3079,6 +3100,7 @@ TextureImporter:
       objects_2_130: -1017357065
       objects_2_41: -354386131
       objects_2_40: -2024685728
+      objects_2_140: -1595990759
       objects_2_31: -1192377777
       objects_2_8: -1606890730
       objects_2_44: -877149824
@@ -3090,11 +3112,11 @@ TextureImporter:
       objects_2_136: -1930728257
       objects_2_78: -933855416
       objects_2_134: 1971002339
+      objects_2_72: -1425045328
       objects_2_5: -628747395
-      objects_2_25: 659695031
       objects_2_122: 651797527
       objects_2_81: -235833330
-      objects_2_72: -1425045328
+      objects_2_25: 659695031
       objects_2_107: -735099832
       objects_2_46: 883885754
       objects_2_26: 941283711
@@ -3192,11 +3214,11 @@ TextureImporter:
       objects_2_20: 169229585
       objects_2_119: 773497264
       objects_2_0: 2017056400
+      objects_2_59: 1543897859
       objects_2_83: 689588607
-      objects_2_58: -1734179777
       objects_2_113: -223417968
+      objects_2_58: -1734179777
       objects_2_51: -1833694367
-      objects_2_64: -157765407
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

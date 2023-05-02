@@ -20,6 +20,10 @@ public class GeneralEnemy : MonoBehaviour
     public int baseAttack;
     public float moveSpeed;
 
+    [Header("Death Effects")]
+    public GameObject deathEffect;
+    public LootTable thisLoot;
+
     [Header("Invulnerability Frame")]
     public Color flashColor;
     public Color regularColor;
@@ -46,9 +50,10 @@ public class GeneralEnemy : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
+            DeathEffect();
+            MakeLoot();
             this.gameObject.SetActive(false);
             playerHitboxes.SetActive(true);
-            Debug.Log("s");
         }
     }
 
@@ -106,5 +111,26 @@ public class GeneralEnemy : MonoBehaviour
         triggerCollider.enabled = true;
         nonTriggerCollider.enabled = true;
         playerHitboxes.SetActive(true);
+    }
+
+    private void MakeLoot()
+    {
+        if (thisLoot != null)
+        {
+            PowerUp currentLoot = thisLoot.LootPowerUp();
+            if (currentLoot != null)
+            {
+                Instantiate(currentLoot.gameObject, transform.position, Quaternion.identity);
+            }
+        }
+    }
+
+    private void DeathEffect()
+    {
+        if (deathEffect != null)
+        {
+            GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
+            Destroy(effect, 1f);
+        }
     }
 }

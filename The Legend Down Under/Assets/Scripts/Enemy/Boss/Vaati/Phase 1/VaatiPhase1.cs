@@ -146,7 +146,7 @@ public class VaatiPhase1 : BossEnemy
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Hitboxes"))
+        if (other.gameObject.CompareTag("Hitboxes") || other.gameObject.CompareTag("Player Projectile"))
         {
             animator.SetBool("Summon", true);
         }
