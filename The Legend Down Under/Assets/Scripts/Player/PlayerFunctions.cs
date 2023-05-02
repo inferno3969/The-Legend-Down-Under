@@ -43,6 +43,8 @@ public class PlayerFunctions : MonoBehaviour
 
     [Header("Player Inventory")]
     public PlayerInventory playerInventory;
+    public SpriteRenderer receivedNormalItemSprite;
+    public SpriteRenderer receivedSpecialItemSprite;
 
     [Header("Weapons")]
     public InventoryItem soldierSword;
@@ -89,8 +91,11 @@ public class PlayerFunctions : MonoBehaviour
 
     void Update()
     {
-        // initiate Attack coroutine when Attack Input is pressed and player current state doesn't
-        // equal Attack
+        // is the player in an interaction
+        if (currentState == PlayerState.Interact)
+        {
+            return;
+        }
         if (Input.GetButtonDown("Attack") && currentState != PlayerState.Attack && currentState != PlayerState.Stagger)
         {
             StartCoroutine(AttackCo());
@@ -308,6 +313,27 @@ public class PlayerFunctions : MonoBehaviour
         foreach (GeneralEnemy enemy in enemies)
         {
             enemy.enemyHitboxes.SetActive(true);
+        }
+    }
+
+    public void RaiseItem()
+    {
+        if (playerInventory.currentItem != null)
+        {
+            if (currentState != PlayerState.Interact)
+            {
+                if (playerInventory.currentItem.unique == false)
+                {
+                    animator.SetBool("NormalReceive", true);
+                    receivedNormalItemSprite.sprite = playerInventory.currentItem.itemImage;
+                }
+                else if (playerInventory.currentItem.unique == true)
+                {
+                    animator.SetBool("SpecialReceive", true);
+                    receivedSpecialItemSprite.sprite = playerInventory.currentItem.itemImage;
+                }
+                currentState = PlayerState.Interact;
+            }
         }
     }
 }

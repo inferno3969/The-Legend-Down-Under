@@ -7,7 +7,7 @@ public class Interactable : MonoBehaviour
     public SignalSender context;
     public bool playerInRange;
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !other.isTrigger)
         {
@@ -16,7 +16,7 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    public virtual void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !other.isTrigger)
         {
