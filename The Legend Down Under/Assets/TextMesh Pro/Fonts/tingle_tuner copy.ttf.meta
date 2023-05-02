@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 15d0706e02da04a4b99e217aa4e6d2b0
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Tingle Tuner
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 86459776b4b414a33925ccdf0e576370, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

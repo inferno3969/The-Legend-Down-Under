@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: c3e7ad3d607eb4646ac65950b0db09f4
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - MinishCap | v1.0
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: cbe38e294760c48c9919a5e983147f17, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

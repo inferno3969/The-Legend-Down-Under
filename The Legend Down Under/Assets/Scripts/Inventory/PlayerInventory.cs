@@ -9,6 +9,7 @@ public class PlayerInventory : ScriptableObject
     public List<InventoryItem> myInventory = new List<InventoryItem>();
     public int numberOfKeys;
     public int numberOfBossKeys;
+    public int coins;
 
     public bool CheckForItem(InventoryItem item)
     {
