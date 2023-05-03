@@ -10,6 +10,7 @@ public class StoreItem : Interactable
     public PlayerInventory playerInventory;
     public Phil phil;
     public PlayerFunctions player;
+    public SignalSender coinSignal;
 
     [Header("Dialog")]
     public GameObject dialogBox;
@@ -69,6 +70,7 @@ public class StoreItem : Interactable
         dialogBox.SetActive(true);
         dialogText.text = "Thank you for your purchase!";
         playerInventory.coins -= 1;
+        coinSignal.RaiseSignal();
     }
 
     public void Fail()

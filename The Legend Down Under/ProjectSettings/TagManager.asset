@@ -13,6 +13,7 @@ TagManager:
   - Boss Weakpoint
   - Player Projectile
   - Phil
+  - CoinText
   layers:
   - Default
   - TransparentFX
