@@ -35,9 +35,10 @@ public class GeneralEnemy : MonoBehaviour
     public GameObject enemyHitboxes;
     public GameObject playerHitboxes;
 
-    void OnAwake()
+    void Awake()
     {
         playerHitboxes = GameObject.FindGameObjectWithTag("Hitboxes");
+        health = maxHealth.initialValue;
     }
 
     void Start()
@@ -48,10 +49,21 @@ public class GeneralEnemy : MonoBehaviour
     private void TakeDamage(float damage)
     {
         health -= damage;
-        if (health <= 0)
+        if (health < 0)
         {
-            DeathEffect();
+            health = 0;
+            if (health == 0)
+            {
+                MakeLoot();
+                DeathEffect();
+                this.gameObject.SetActive(false);
+                playerHitboxes.SetActive(true);
+            }
+        }
+        else if (health == 0)
+        {
             MakeLoot();
+            DeathEffect();
             this.gameObject.SetActive(false);
             playerHitboxes.SetActive(true);
         }
@@ -59,7 +71,14 @@ public class GeneralEnemy : MonoBehaviour
 
     public void Knock(Rigidbody2D enemyRigidbody, float knockTime, float damage)
     {
-        StartCoroutine(KnockCo(enemyRigidbody, knockTime));
+        if (enemyRigidbody != null)
+        {
+            StartCoroutine(KnockCo(enemyRigidbody, knockTime, damage));
+        }
+        if (damage > 0)
+        {
+            playerHitboxes.SetActive(false);
+        }
         TakeDamage(damage);
     }
 
@@ -79,11 +98,11 @@ public class GeneralEnemy : MonoBehaviour
         }
     }
 
-    private IEnumerator KnockCo(Rigidbody2D rigidbody, float knockTime)
+    private IEnumerator KnockCo(Rigidbody2D rigidbody, float knockTime, float damage)
     {
         if (rigidbody != null)
         {
-            StartCoroutine(FlashCo());
+            StartCoroutine(FlashCo(damage));
             yield return new WaitForSeconds(knockTime);
             rigidbody.velocity = Vector2.zero;
             currentState = EnemyState.Idle;
@@ -91,9 +110,8 @@ public class GeneralEnemy : MonoBehaviour
         }
     }
 
-    private IEnumerator FlashCo()
+    private IEnumerator FlashCo(float damage)
     {
-        playerHitboxes.SetActive(false);
         int tempFlashes;
         // turn off player trigger collider to prevent from taking damage
         triggerCollider.enabled = false;
@@ -111,6 +129,7 @@ public class GeneralEnemy : MonoBehaviour
         triggerCollider.enabled = true;
         nonTriggerCollider.enabled = true;
         playerHitboxes.SetActive(true);
+        damage = 2;
     }
 
     private void MakeLoot()

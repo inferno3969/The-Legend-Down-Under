@@ -18,3 +18,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3bf965778e58242dbbf3345a5a732136, type: 2}
   numberOfKeys: 1
   numberOfBossKeys: 0
+  coins: 0

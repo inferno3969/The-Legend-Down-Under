@@ -313,7 +313,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1629122770
+      path: 400898140
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -322,7 +322,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 4162003304
+      path: 2397858278
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -331,7 +331,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 2400457214
+      path: 4192950640
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -340,7 +340,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 292586589
+      path: 1737477331
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -349,7 +349,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 1719121099
+      path: 277412933
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -358,7 +358,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 4286506353
+      path: 2306977279
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -367,7 +367,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 2289685991
+      path: 4270234985
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1

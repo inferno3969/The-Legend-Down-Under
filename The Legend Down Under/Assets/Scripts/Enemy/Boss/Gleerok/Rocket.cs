@@ -6,7 +6,7 @@ public class Rocket : Projectile
 {
     public Animator animator;
 
-    private void OnAwake()
+    private void Awake()
     {
         animator.SetBool("Explode", false);
     }

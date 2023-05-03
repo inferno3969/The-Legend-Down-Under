@@ -12,6 +12,7 @@ TagManager:
   - Boss
   - Boss Weakpoint
   - Player Projectile
+  - Phil
   layers:
   - Default
   - TransparentFX

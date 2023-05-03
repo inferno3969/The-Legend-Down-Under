@@ -96,7 +96,7 @@ public class PlayerFunctions : MonoBehaviour
         {
             return;
         }
-        if (Input.GetButtonDown("Attack") && currentState != PlayerState.Attack && currentState != PlayerState.Stagger)
+        if (Input.GetButtonDown("Attack") && currentState != PlayerState.Attack && currentState != PlayerState.Stagger && currentState != PlayerState.Walk)
         {
             StartCoroutine(AttackCo());
         }
