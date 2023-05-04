@@ -1811,10 +1811,10 @@ TextureImporter:
       name: objects_2_81
       rect:
         serializedVersion: 2
-        x: 73
-        y: 201
-        width: 12
-        height: 13
+        x: 64
+        y: 192
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2021,7 +2021,7 @@ TextureImporter:
       name: objects_2_91
       rect:
         serializedVersion: 2
-        x: 136
+        x: 137
         y: 202
         width: 8
         height: 5
@@ -2084,10 +2084,10 @@ TextureImporter:
       name: objects_2_94
       rect:
         serializedVersion: 2
-        x: 163
-        y: 193
-        width: 14
-        height: 18
+        x: 160
+        y: 192
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3088,6 +3088,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: objects_2_141
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a9347dc323542ca96414004a859877
+      internalID: -1301725948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objects_2_142
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8608d714afd2145009bdb1a0771bc62b
+      internalID: 1240034469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: objects_2_143
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e4c482dd5d3a47a19e3e8cd67a0a764
+      internalID: 1390337428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -3099,8 +3162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      objects_2_64: -157765407
       objects_2_106: 883061268
+      objects_2_58: -1734179777
       objects_2_77: 210241248
       objects_2_133: -1951108965
       objects_2_135: -2095219239
@@ -3132,21 +3195,23 @@ TextureImporter:
       objects_2_68: 88467342
       objects_2_136: -1930728257
       objects_2_78: -933855416
-      objects_2_72: -1425045328
       objects_2_134: 1971002339
       objects_2_5: -628747395
+      objects_2_25: 659695031
       objects_2_122: 651797527
       objects_2_81: -235833330
-      objects_2_25: 659695031
+      objects_2_72: -1425045328
       objects_2_107: -735099832
       objects_2_46: 883885754
       objects_2_26: 941283711
       objects_2_45: -919756858
       objects_2_129: 733662494
+      objects_2_143: 1390337428
       objects_2_60: -1423062813
       objects_2_82: -609665231
       objects_2_112: -1829196222
       objects_2_21: -323186160
+      objects_2_141: -1301725948
       objects_2_38: 493825383
       objects_2_116: 685512075
       objects_2_108: 929073219
@@ -3183,6 +3248,7 @@ TextureImporter:
       objects_2_39: 1521124886
       objects_2_14: -231833491
       objects_2_80: -703878386
+      objects_2_142: 1240034469
       objects_2_121: 1288186263
       objects_2_70: -247798413
       objects_2_50: -1252817693
@@ -3236,11 +3302,11 @@ TextureImporter:
       objects_2_20: 169229585
       objects_2_119: 773497264
       objects_2_0: 2017056400
-      objects_2_83: 689588607
-      objects_2_58: -1734179777
-      objects_2_113: -223417968
       objects_2_59: 1543897859
+      objects_2_83: 689588607
+      objects_2_113: -223417968
       objects_2_51: -1833694367
+      objects_2_64: -157765407
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -10,6 +10,10 @@ public class Knockback : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.CompareTag("Breakable") && this.gameObject.CompareTag("Hitboxes"))
+        {
+            other.GetComponent<Pot>().Smash();
+        }
         if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Boss") || other.gameObject.CompareTag("Hitboxes") || other.gameObject.CompareTag("Enemy Projectile") || other.gameObject.CompareTag("Boss Weakpoint") || other.gameObject.CompareTag("Player Projectile"))
         {
             Rigidbody2D hit = other.GetComponent<Rigidbody2D>();

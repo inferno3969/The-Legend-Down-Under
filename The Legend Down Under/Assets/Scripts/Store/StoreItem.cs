@@ -11,12 +11,16 @@ public class StoreItem : Interactable
     public Phil phil;
     public PlayerFunctions player;
     public SignalSender coinSignal;
+    public InventoryItem item;
+    public GameObject itemObject;
 
     [Header("Dialog")]
     public GameObject dialogBox;
     public TextMeshProUGUI dialogText;
 
     bool attemptPurchase = false;
+    bool successfullPurchase = false;
+    public bool isPlant = false;
 
     private void Awake()
     {
@@ -42,6 +46,11 @@ public class StoreItem : Interactable
             }
             else if (attemptPurchase == true && player.currentState == PlayerState.Interact)
             {
+                if (successfullPurchase == true)
+                {
+                    Destroy(itemObject);
+                    successfullPurchase = false;
+                }
                 phil.GetComponent<Animator>().SetBool("BoughtSomething", false);
                 phil.GetComponent<Animator>().SetBool("FailedPurchase", false);
                 dialogBox.SetActive(false);
@@ -68,9 +77,19 @@ public class StoreItem : Interactable
     {
         phil.GetComponent<Animator>().SetBool("BoughtSomething", true);
         dialogBox.SetActive(true);
-        dialogText.text = "Thank you for your purchase!";
-        playerInventory.coins -= 1;
+        if (isPlant == false)
+        {
+            dialogText.text = "Thank you for your purchase!";
+        }
+        else
+        {
+            dialogText.text = "Be careful with that plant...";
+            isPlant = false;
+        }
+        playerInventory.coins -= cost;
         coinSignal.RaiseSignal();
+        playerInventory.AddItem(item);
+        successfullPurchase = true;
     }
 
     public void Fail()

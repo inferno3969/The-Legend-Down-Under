@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9473c73f7d61418db14352a42c2e865, type: 3}
+  m_Name: Pihrana Plant
+  m_EditorClassIdentifier: 
+  itemName: Mysterious Plant
+  itemDescription: A mysterious plant found by Phil, the PMoney shop owner, while
+    conducting his garden data research...
+  itemImage: {fileID: 21300000, guid: 6f4d208cb1cdb4f4f9ea3efe9fff32c6, type: 3}
+  numberHeld: 1
+  usable: 0
+  unique: 1
+  isKey: 0
+  isBossKey: 0
+  thisEvent:
+    m_PersistentCalls:
+      m_Calls: []

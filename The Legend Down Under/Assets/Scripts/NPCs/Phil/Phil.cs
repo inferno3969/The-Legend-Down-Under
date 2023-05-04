@@ -9,6 +9,7 @@ public class Phil : GeneralNPC
     private Animator animator;
 
     public bool nothingBought = true;
+    public bool interactedOnce = false;
     public bool boughtSomething = false;
     public bool failPurchase = false;
 
@@ -45,7 +46,16 @@ public class Phil : GeneralNPC
     public override void Dialog()
     {
         dialogBox.SetActive(true);
-        dialogText.text = "If you have the PMoney coins, you can buy items from me!";
+        if (interactedOnce == false)
+        {
+            dialogText.text = "If you have the PMoney coins, you can buy items from me!";
+            interactedOnce = true;
+        }
+        else
+        {
+            dialogText.text = "Say... there are four plants hidden around the map. If you find them all, I'll give you a special prize!";
+            interactedOnce = false;
+        }
         player.currentState = PlayerState.Interact;
     }
 }

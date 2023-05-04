@@ -14,6 +14,8 @@ TagManager:
   - Player Projectile
   - Phil
   - CoinText
+  - Pot
+  - Breakable
   layers:
   - Default
   - TransparentFX
