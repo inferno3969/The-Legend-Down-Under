@@ -16,6 +16,7 @@ TagManager:
   - CoinText
   - Pot
   - Breakable
+  - NPC
   layers:
   - Default
   - TransparentFX
