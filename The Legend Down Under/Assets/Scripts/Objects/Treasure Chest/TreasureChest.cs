@@ -33,7 +33,6 @@ public class TreasureChest : Interactable
     {
         animator = GetComponent<Animator>();
         isOpen = storedOpen.RuntimeValue;
-
         if (isOpen)
         {
             animator.SetBool("Opened", true);
