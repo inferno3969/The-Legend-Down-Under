@@ -2005,7 +2005,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6347956276113791960
 Transform:
   m_ObjectHideFlags: 0
@@ -4525,14 +4525,13 @@ GameObject:
   - component: {fileID: 6347956277346837362}
   - component: {fileID: 6347956277346837360}
   - component: {fileID: 6347956277346837361}
-  - component: {fileID: 6347956277346837375}
   m_Layer: 0
   m_Name: Minimap Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6347956277346837362
 Transform:
   m_ObjectHideFlags: 0
@@ -4607,23 +4606,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6347956277346837363}
   m_Enabled: 1
---- !u!114 &6347956277346837375
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6347956277346837363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62b30988a0dc449c79a6a43f9b972df7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 6347956277411589156}
-  smoothing: 0
-  maxPosition: {x: 0, y: 0}
-  minPosition: {x: 0, y: 0}
-  animator: {fileID: 0}
 --- !u!1 &6347956277375403466
 GameObject:
   m_ObjectHideFlags: 0
@@ -4703,7 +4685,7 @@ Transform:
   - {fileID: 1759849149}
   - {fileID: 2144117523}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6347956277411589157
 SpriteRenderer:
@@ -4889,6 +4871,7 @@ MonoBehaviour:
   currentState: 0
   currentDirection: 0
   speed: 4
+  startingPosition: {fileID: 11400000, guid: 4f0481c7e2a9c449bb5c7fd974d9a1ee, type: 2}
   currentHealth: {fileID: 11400000, guid: 5ec9b721c3bff440d8ddb9bf0d620e60, type: 2}
   playerHealthSignal: {fileID: 11400000, guid: ffc32fd7680dc44d492217dce9d5731c, type: 2}
   animator: {fileID: 0}

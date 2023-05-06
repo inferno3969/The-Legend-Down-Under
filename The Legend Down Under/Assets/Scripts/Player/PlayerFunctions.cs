@@ -27,6 +27,7 @@ public class PlayerFunctions : MonoBehaviour
     public PlayerState currentState;
     public PlayerDirection currentDirection;
     public float speed;
+    public VectorValue startingPosition;
 
     [Header("Player Health")]
     public FloatValue currentHealth;
@@ -77,6 +78,10 @@ public class PlayerFunctions : MonoBehaviour
         animator = GetComponent<Animator>();
         animator.SetFloat("MoveX", 0);
         animator.SetFloat("MoveY", -1);
+        if (startingPosition != null)
+        {
+            transform.position = startingPosition.initialValue;
+        }
     }
 
     // Update is called once per frame

@@ -96,7 +96,15 @@ public class StoreItem : Interactable
     {
         phil.GetComponent<Animator>().SetBool("FailedPurchase", true);
         dialogBox.SetActive(true);
-        dialogText.text = "You don't have enough PMoney coins!";
+        int costDifference = cost - playerInventory.coins;
+        if (costDifference > 1)
+        {
+            dialogText.text = "You don't have enough PMoney coins! You need " + costDifference + " coins to buy this item.";
+        }
+        else
+        {
+            dialogText.text = "You don't have enough PMoney coins! You need " + costDifference + " coin to buy this item.";
+        }
     }
 
     public override void OnTriggerEnter2D(Collider2D other)

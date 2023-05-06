@@ -20,6 +20,8 @@ public class SceneTransition : MonoBehaviour
     public GameObject fadeOutPanel;
     public float fadeWait;
 
+    public PlayerFunctions player;
+
     private void Awake()
     {
         if (fadeInPanel != null)
@@ -33,13 +35,15 @@ public class SceneTransition : MonoBehaviour
     {
         if (other.CompareTag("Player") && !other.isTrigger)
         {
-            playerStorage.initialValue = playerPosition;
+            playerStorage.runtimeValue = playerPosition;
+            player.animator.SetBool("Moving", false);
             StartCoroutine(FadeCo());
         }
     }
 
     public IEnumerator FadeCo()
     {
+        player.currentState = PlayerState.Interact;
         if (fadeOutPanel != null)
         {
             Instantiate(fadeOutPanel, Vector3.zero, Quaternion.identity);
@@ -58,5 +62,4 @@ public class SceneTransition : MonoBehaviour
         cameraMax.initialValue = cameraNewMax;
         cameraMin.initialValue = cameraNewMin;
     }
-
 }
