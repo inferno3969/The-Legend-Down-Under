@@ -80,7 +80,7 @@ public class PlayerFunctions : MonoBehaviour
         animator.SetFloat("MoveY", -1);
         if (startingPosition != null)
         {
-            transform.position = startingPosition.initialValue;
+            transform.position = startingPosition.runtimeValue;
         }
     }
 
