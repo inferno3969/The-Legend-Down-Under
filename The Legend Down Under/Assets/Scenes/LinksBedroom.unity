@@ -2647,6 +2647,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6347956277411589157, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6347956277411589158, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_Name
       value: Player
@@ -4166,6 +4170,8 @@ MonoBehaviour:
   fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
   fadeWait: 1
   player: {fileID: 771809151}
+  lastPositionStorage: {fileID: 11400000, guid: 7ea79ce5ed8f74a9d873c997982ec173, type: 2}
+  lastPositon: {x: 0, y: 0}
 --- !u!61 &1770817015
 BoxCollider2D:
   m_ObjectHideFlags: 0

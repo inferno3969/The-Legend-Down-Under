@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LinksHouseSmithsRoom.unity
     guid: 78f237ca6a1cb40a599c0720a861140c
+  - enabled: 1
+    path: Assets/Scenes/KennysHouse.unity
+    guid: 273ba41052f434a4fa6048fa875cbda2
   m_configObjects: {}

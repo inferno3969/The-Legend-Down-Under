@@ -49,6 +49,7 @@ public class PlayerFunctions : MonoBehaviour
 
     [Header("Weapons")]
     public InventoryItem soldierSword;
+    public InventoryItem shield;
     public GameObject projectile;
 
     [Header("Player Hit")]
@@ -111,7 +112,10 @@ public class PlayerFunctions : MonoBehaviour
         }
         else if (Input.GetButton("Shield") && currentState != PlayerState.Attack && currentState != PlayerState.Stagger)
         {
-            StartCoroutine(ShieldCo());
+            if (playerInventory.CheckForItem(shield))
+            {
+                StartCoroutine(ShieldCo());
+            }
         }
         // updates animation and moves when player current state equals Walk or equals Idle
         else if (currentState == PlayerState.Walk || currentState == PlayerState.Idle)

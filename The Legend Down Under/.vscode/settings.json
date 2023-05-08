@@ -51,7 +51,8 @@
         "temp/": true,
         "Temp/": true
     },
-    "editor.formatOnPaste": true,
+    "editor.formatOnPaste": false,
     "editor.formatOnSaveMode": "modifications",
-    "csharp.referencesCodeLens.enabled": false
+    "csharp.referencesCodeLens.enabled": false,
+    "editor.formatOnSave": true
 }
