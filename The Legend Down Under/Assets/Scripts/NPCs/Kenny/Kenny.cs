@@ -48,7 +48,7 @@ public class Kenny : GeneralNPC
         }
         else if (interactedOnce == true && insult == false)
         {
-            dialogText.text = "Behind me is the shield of the royal family. It's been passed down for generations, and is said to be unbreakable. I'm not sure if that's true, but I'm not going to test it.";
+            dialogText.text = "Behind me is the shield of the royal family. It's been passed down for generations, and is said to be unbreakable. I'm not sure if that's true, but I'm not going to test it. You can try it out for yourself if you want.";
             insult = true;
             interactedTwice = true;
         }
