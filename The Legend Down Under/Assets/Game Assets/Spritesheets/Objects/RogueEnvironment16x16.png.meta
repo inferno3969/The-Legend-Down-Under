@@ -2591,7 +2591,7 @@ TextureImporter:
         x: 16
         y: 112
         width: 16
-        height: 16
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -4521,11 +4521,11 @@ TextureImporter:
       RogueEnvironment16x16_19: 1175153428
       RogueEnvironment16x16_174: 1476233290
       RogueEnvironment16x16_38: -1515164391
-      RogueEnvironment16x16_83: 1058142550
-      RogueEnvironment16x16_173: -811211621
-      RogueEnvironment16x16_122: 1042491034
       RogueEnvironment16x16_35: 857465942
+      RogueEnvironment16x16_173: -811211621
       RogueEnvironment16x16_140: 226561644
+      RogueEnvironment16x16_122: 1042491034
+      RogueEnvironment16x16_83: 1058142550
       RogueEnvironment16x16_167: 1590173149
       RogueEnvironment16x16_104: -865820315
       RogueEnvironment16x16_64: 941670985

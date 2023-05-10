@@ -24,6 +24,7 @@ public class CameraMovement : MonoBehaviour
     {
         maxPosition = camMax.initialValue;
         minPosition = camMin.initialValue;
+
         animator = GetComponent<Animator>();
         if (target != null)
         {
