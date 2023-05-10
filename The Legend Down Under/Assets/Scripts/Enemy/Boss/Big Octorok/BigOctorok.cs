@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class BigOctorok : BossEnemy
 {
@@ -12,6 +13,7 @@ public class BigOctorok : BossEnemy
     public float fireDelay;
     private float fireDelaySeconds;
     public bool canFire;
+    public Tilemap tilemap;
 
     private bool octorokMinionDefeated = true;
 
@@ -98,6 +100,10 @@ public class BigOctorok : BossEnemy
                 octoroks[2].SetActive(false);
                 octorokMinionDefeated = true;
             }
+        }
+        if (health == 0)
+        {
+            tilemap.enabled = true;
         }
     }
 }
