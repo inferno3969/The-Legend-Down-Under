@@ -23,6 +23,7 @@ public class GeneralEnemy : MonoBehaviour
     [Header("Death Effects")]
     public GameObject deathEffect;
     public LootTable thisLoot;
+    public SignalSender roomSignal;
 
     [Header("Invulnerability Frame")]
     public Color flashColor;
@@ -37,8 +38,19 @@ public class GeneralEnemy : MonoBehaviour
 
     void Awake()
     {
+        homePosition = transform.position;
         playerHitboxes = GameObject.FindGameObjectWithTag("Hitboxes");
         health = maxHealth.initialValue;
+    }
+
+    private void OnEnable()
+    {
+        transform.position = homePosition;
+        health = maxHealth.initialValue;
+        currentState = EnemyState.Idle;
+        triggerCollider.enabled = true;
+        nonTriggerCollider.enabled = true;
+        enemySprite.color = regularColor;
     }
 
     void Start()
@@ -49,21 +61,16 @@ public class GeneralEnemy : MonoBehaviour
     private void TakeDamage(float damage)
     {
         health -= damage;
-        if (health < 0)
+        if (health <= 0)
         {
-            health = 0;
-            if (health == 0)
-            {
-                MakeLoot();
-                DeathEffect();
-                this.gameObject.SetActive(false);
-                playerHitboxes.SetActive(true);
-            }
-        }
-        else if (health == 0)
-        {
-            MakeLoot();
             DeathEffect();
+            MakeLoot();
+            // if we don't want the enemy to send out a signal,
+            // we leave the roomSignal raise optional 
+            if (roomSignal != null)
+            {
+                roomSignal.RaiseSignal();
+            }
             this.gameObject.SetActive(false);
             playerHitboxes.SetActive(true);
         }

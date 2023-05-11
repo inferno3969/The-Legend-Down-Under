@@ -28,7 +28,11 @@ public class CameraMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         if (target != null)
         {
-            transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
+            // only move the camera at start if there is supposed to be an initial camera change
+            if (maxPosition != new Vector2(0, 0) && minPosition != new Vector2(0, 0))
+            {
+                transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
+            }
         }
     }
 
@@ -51,6 +55,10 @@ public class CameraMovement : MonoBehaviour
                 transform.position = Vector3.Lerp(transform.position,
                                                  targetPosition, smoothing);
             }
+        }
+        else
+        {
+
         }
     }
 

@@ -34,41 +34,29 @@ public class Door : Interactable
     {
         if (Input.GetButtonDown("Interact") && playerInRange)
         {
-            if (playerInRange && thisDoorType == DoorType.key && player.currentState != PlayerState.Interact)
+            if (player.currentState != PlayerState.Interact)
             {
                 player.currentState = PlayerState.Interact;
-                // does the player have a key?
-                if (playerInventory.numberOfKeys > 0)
+                if (playerInRange && thisDoorType == DoorType.key && !open)
                 {
-                    // temove a player key
-                    playerInventory.numberOfKeys--;
-                    // if so, then call the open method
-                    Open();
+                    // does the player have a key?
+                    if (playerInventory.numberOfKeys > 0)
+                    {
+                        // temove a player key
+                        playerInventory.numberOfKeys--;
+                        // if so, then call the open method
+                        Open();
+                    }
+                    else if (playerInventory.numberOfKeys <= 0)
+                    {
+                        dialogBox.SetActive(true);
+                        dialogText.text = "You need a key to open this door.";
+                    }
                 }
-                else if (playerInventory.numberOfKeys <= 0)
+                else if (playerInRange && thisDoorType == DoorType.button && !open)
                 {
                     dialogBox.SetActive(true);
-                    dialogText.text = "You need a key to open this door.";
-                }
-            }
-            if (playerInRange && thisDoorType == DoorType.button && player.currentState != PlayerState.Interact)
-            {
-                player.currentState = PlayerState.Interact;
-                // does the player have a key?
-                if (playerInventory.numberOfKeys > 0)
-                {
-                    // temove a player key
-                    playerInventory.numberOfKeys--;
-                    // if so, then call the open method
-                    Open();
-                    context.RaiseSignal();
-                    playerInRange = false;
-                    player.currentState = PlayerState.Idle;
-                }
-                else if (playerInventory.numberOfKeys <= 0)
-                {
-                    dialogBox.SetActive(true);
-                    dialogText.text = "You need a key to open this door.";
+                    dialogText.text = "A switch needs to be pushed to open this door.";
                 }
             }
             else if (player.currentState == PlayerState.Interact)
