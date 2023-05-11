@@ -6127,14 +6127,13 @@ MonoBehaviour:
   playerStorage: {fileID: 11400000, guid: 4f0481c7e2a9c449bb5c7fd974d9a1ee, type: 2}
   cameraNewMax: {x: 0, y: 0}
   cameraNewMin: {x: 0, y: 0}
-  cameraMin: {fileID: 11400000, guid: 2adef77d68b6f4456b12780c59415529, type: 2}
-  cameraMax: {fileID: 11400000, guid: 368727ec244c2450280a2d12c7900fb4, type: 2}
+  cameraMin: {fileID: 11400000, guid: b470aec255e48435f8b641490f8f8798, type: 2}
+  cameraMax: {fileID: 11400000, guid: 1b956119627554ff08f9656d358109dc, type: 2}
   fadeInPanel: {fileID: 0}
   fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
   fadeWait: 1
+  newAudio: 0
   player: {fileID: 771809151}
-  lastPositionStorage: {fileID: 11400000, guid: 7ea79ce5ed8f74a9d873c997982ec173, type: 2}
-  lastPositon: {x: 0, y: 0}
 --- !u!61 &2002353760
 BoxCollider2D:
   m_ObjectHideFlags: 0

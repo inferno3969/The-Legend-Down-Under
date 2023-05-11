@@ -14,7 +14,7 @@ public class Gleerok : BossEnemy
     private float fireDelaySeconds;
     public bool canFire;
     [SerializeField]
-    private bool firedFiveTimes;
+    private bool firedTwoTimes;
     [SerializeField]
     private int fireCount = 0;
 
@@ -68,7 +68,7 @@ public class Gleerok : BossEnemy
     {
         canFire = true;
         fireCount = 0;
-        firedFiveTimes = false;
+        firedTwoTimes = false;
         yield return new WaitForSeconds(2f);
         animator.SetBool("OpenMouth", true);
         StartCoroutine(AttackCo());
@@ -78,11 +78,11 @@ public class Gleerok : BossEnemy
     {
         yield return new WaitForSeconds(2f);
         animator.SetBool("Attacking", true);
-        if (canFire && !firedFiveTimes)
+        if (canFire && !firedTwoTimes)
         {
             if (animator.GetBool("Attacking") == true)
             {
-                if (fireCount <= 4)
+                if (fireCount <= 1)
                 {
                     Vector3 tempVector = target.transform.position - transform.position;
                     tempVector.Normalize();
@@ -94,13 +94,13 @@ public class Gleerok : BossEnemy
                 }
             }
         }
-        else if (fireCount == 5)
+        else if (fireCount == 2)
         {
             animator.SetBool("Attacking", false);
             animator.SetBool("OpenMouth", false);
             animator.SetBool("CloseMouth", true);
             canFire = false;
-            firedFiveTimes = true;
+            firedTwoTimes = true;
         }
         else if (canFire == false)
         {

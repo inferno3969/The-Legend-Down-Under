@@ -67,5 +67,6 @@ public class DungeonEnemyRoom : DungeonRoom
         {
             doors[i].Open();
         }
+        this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
     }
 }

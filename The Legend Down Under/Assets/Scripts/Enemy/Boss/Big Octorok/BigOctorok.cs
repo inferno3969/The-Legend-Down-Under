@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Tilemaps;
-
 public class BigOctorok : BossEnemy
 {
     private Rigidbody2D bigOctorokRigidbody;
@@ -13,7 +11,6 @@ public class BigOctorok : BossEnemy
     public float fireDelay;
     private float fireDelaySeconds;
     public bool canFire;
-    public Tilemap tilemap;
 
     private bool octorokMinionDefeated = true;
 
@@ -74,6 +71,7 @@ public class BigOctorok : BossEnemy
         if (health == 6)
         {
             octoroks[0].SetActive(true);
+            octoroks[0].GetComponent<Octorok>().playerHitboxes = GameObject.FindGameObjectWithTag("Hitboxes");
             octorokMinionDefeated = false;
             if (octoroks[0].GetComponent<Octorok>().health <= 0)
             {
@@ -84,6 +82,7 @@ public class BigOctorok : BossEnemy
         if (health == 4)
         {
             octoroks[1].SetActive(true);
+            octoroks[1].GetComponent<Octorok>().playerHitboxes = GameObject.FindGameObjectWithTag("Hitboxes");
             octorokMinionDefeated = false;
             if (octoroks[1].GetComponent<Octorok>().health <= 0)
             {
@@ -94,16 +93,13 @@ public class BigOctorok : BossEnemy
         if (health == 2)
         {
             octoroks[2].SetActive(true);
+            octoroks[2].GetComponent<Octorok>().playerHitboxes = GameObject.FindGameObjectWithTag("Hitboxes");
             octorokMinionDefeated = false;
             if (octoroks[2].GetComponent<Octorok>().health <= 0)
             {
                 octoroks[2].SetActive(false);
                 octorokMinionDefeated = true;
             }
-        }
-        if (health == 0)
-        {
-            tilemap.enabled = true;
         }
     }
 }

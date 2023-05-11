@@ -18,18 +18,20 @@ public class CameraMovement : MonoBehaviour
     public VectorValue camMin;
     public VectorValue camMax;
 
+    public bool isDungeon;
+
 
     // Use this for initialization
     private void Start()
     {
-        maxPosition = camMax.initialValue;
-        minPosition = camMin.initialValue;
+        maxPosition = camMax.runtimeValue;
+        minPosition = camMin.runtimeValue;
 
         animator = GetComponent<Animator>();
         if (target != null)
         {
             // only move the camera at start if there is supposed to be an initial camera change
-            if (maxPosition != new Vector2(0, 0) && minPosition != new Vector2(0, 0))
+            if (!isDungeon)
             {
                 transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
             }

@@ -156,9 +156,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  smoothing: 0
-  maxPosition: {x: 0, y: 0}
-  minPosition: {x: 0, y: 0}
+  smoothing: 0.5
+  maxPosition: {x: 13.99, y: 20.01}
+  minPosition: {x: -18.01, y: -13}
   animator: {fileID: 0}
-  camMin: {fileID: 0}
-  camMax: {fileID: 0}
+  camMin: {fileID: 11400000, guid: b470aec255e48435f8b641490f8f8798, type: 2}
+  camMax: {fileID: 11400000, guid: 1b956119627554ff08f9656d358109dc, type: 2}

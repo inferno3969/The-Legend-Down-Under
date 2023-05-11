@@ -35,6 +35,7 @@ public class GeneralEnemy : MonoBehaviour
     public SpriteRenderer enemySprite;
     public GameObject enemyHitboxes;
     public GameObject playerHitboxes;
+    public GameObject treasureChest;
 
     void Awake()
     {
@@ -71,6 +72,10 @@ public class GeneralEnemy : MonoBehaviour
             {
                 roomSignal.RaiseSignal();
             }
+            if (treasureChest != null)
+            {
+                treasureChest.SetActive(true);
+            }
             this.gameObject.SetActive(false);
             playerHitboxes.SetActive(true);
         }
@@ -81,10 +86,6 @@ public class GeneralEnemy : MonoBehaviour
         if (enemyRigidbody != null)
         {
             StartCoroutine(KnockCo(enemyRigidbody, knockTime, damage));
-        }
-        if (damage > 0)
-        {
-            playerHitboxes.SetActive(false);
         }
         TakeDamage(damage);
     }
@@ -119,6 +120,7 @@ public class GeneralEnemy : MonoBehaviour
 
     private IEnumerator FlashCo(float damage)
     {
+        playerHitboxes.SetActive(false);
         int tempFlashes;
         // turn off player trigger collider to prevent from taking damage
         triggerCollider.enabled = false;

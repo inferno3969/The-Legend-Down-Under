@@ -236,13 +236,13 @@ public class PlayerFunctions : MonoBehaviour
         switch (currentDirection)
         {
             case PlayerDirection.Up:
-                return new Vector3(0, 0, 180);
-            case PlayerDirection.Down:
                 return new Vector3(0, 0, 0);
+            case PlayerDirection.Down:
+                return new Vector3(0, 0, 180);
             case PlayerDirection.Left:
-                return new Vector3(0, 0, -90);
-            case PlayerDirection.Right:
                 return new Vector3(0, 0, 90);
+            case PlayerDirection.Right:
+                return new Vector3(0, 0, -90);
             default:
                 return new Vector3(0, 0, 0);
         }

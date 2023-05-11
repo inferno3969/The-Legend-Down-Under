@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e82362f0c02cd405a80b8156f3e99721, type: 3}
   m_Name: SmallKey
   m_EditorClassIdentifier: 
-  initialValue: 1
+  initialValue: 0
   RuntimeValue: 0

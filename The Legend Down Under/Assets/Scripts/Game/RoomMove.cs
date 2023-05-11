@@ -40,11 +40,6 @@ public class RoomMove : MonoBehaviour
             cam.minPosition += cameraChange;
             cam.maxPosition += cameraChange;
             other.transform.position += playerChange;
-            // if (this.GetComponent<MusicChange>() != null)
-            // {
-            //     // stop current sound track and play next one when we hit the trigger
-            //     this.GetComponent<MusicChange>().ChangeMusic();
-            // }
             if (text != null)
             {
                 if (needText == true)
@@ -64,7 +59,7 @@ public class RoomMove : MonoBehaviour
     {
         text.SetActive(true);
         placeText.text = placeName;
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(2f);
         text.SetActive(false);
     }
 }

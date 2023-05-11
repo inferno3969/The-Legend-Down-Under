@@ -5,10 +5,11 @@ using TMPro;
 
 public enum DoorType
 {
-    key,
-    enemy,
-    button,
-    lever
+    Key,
+    Enemy,
+    Button,
+    Lever,
+    Boss
 }
 
 public class Door : Interactable
@@ -18,7 +19,7 @@ public class Door : Interactable
     public bool open = false;
     public PlayerInventory playerInventory;
     public SpriteRenderer doorSprite;
-    public BoxCollider2D physicsCollider;
+    public Collider2D physicsCollider;
     public PlayerFunctions player;
 
     [Header("Dialog")]
@@ -37,7 +38,7 @@ public class Door : Interactable
             if (player.currentState != PlayerState.Interact)
             {
                 player.currentState = PlayerState.Interact;
-                if (playerInRange && thisDoorType == DoorType.key && !open)
+                if (playerInRange && thisDoorType == DoorType.Key && !open)
                 {
                     // does the player have a key?
                     if (playerInventory.numberOfKeys > 0)
@@ -46,17 +47,39 @@ public class Door : Interactable
                         playerInventory.numberOfKeys--;
                         // if so, then call the open method
                         Open();
+                        context.RaiseSignal();
+                        playerInRange = false;
+                        player.currentState = PlayerState.Idle;
                     }
                     else if (playerInventory.numberOfKeys <= 0)
                     {
                         dialogBox.SetActive(true);
-                        dialogText.text = "You need a key to open this door.";
+                        dialogText.text = "You need a small key to open this door.";
                     }
                 }
-                else if (playerInRange && thisDoorType == DoorType.button && !open)
+                else if (playerInRange && thisDoorType == DoorType.Button && !open)
                 {
                     dialogBox.SetActive(true);
                     dialogText.text = "A switch needs to be pushed to open this door.";
+                }
+                else if (playerInRange && thisDoorType == DoorType.Boss && !open)
+                {
+                    // does the player have a key?
+                    if (playerInventory.numberOfBossKeys > 0)
+                    {
+                        // temove a player key
+                        playerInventory.numberOfBossKeys--;
+                        // if so, then call the open method
+                        Open();
+                        context.RaiseSignal();
+                        playerInRange = false;
+                        player.currentState = PlayerState.Idle;
+                    }
+                    else if (playerInventory.numberOfBossKeys <= 0)
+                    {
+                        dialogBox.SetActive(true);
+                        dialogText.text = "You need a boss key to open this door.";
+                    }
                 }
             }
             else if (player.currentState == PlayerState.Interact)

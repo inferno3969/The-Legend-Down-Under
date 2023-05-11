@@ -21,6 +21,8 @@ public class Shield : MonoBehaviour
             Vector2 projectileDirection = projectileRigidBody.velocity;
             // reflect projectile
             projectileRigidBody.velocity = -projectileDirection;
+
+            projectileRigidBody.GetComponent<Knockback>().damage = 2;
         }
     }
 }

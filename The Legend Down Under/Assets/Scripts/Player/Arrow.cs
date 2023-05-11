@@ -13,7 +13,10 @@ public class Arrow : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        weakpoint = GameObject.FindGameObjectWithTag("Boss Weakpoint").GetComponent<Animator>();
+        if (GameObject.FindGameObjectWithTag("Boss Weakpoint") != null)
+        {
+            weakpoint = GameObject.FindGameObjectWithTag("Boss Weakpoint").GetComponent<Animator>();
+        }
     }
 
     void Start()

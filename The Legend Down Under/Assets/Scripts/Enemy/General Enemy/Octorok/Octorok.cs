@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public enum Direction
@@ -10,7 +12,7 @@ public enum Direction
 
 public class Octorok : GeneralEnemy
 {
-    private Rigidbody2D generalEnemyRigidbody;
+    public Rigidbody2D generalEnemyRigidbody;
     public Transform target;
     public float chaseRadius;
     public float AttackRadius;
@@ -22,9 +24,20 @@ public class Octorok : GeneralEnemy
     void Start()
     {
         currentState = EnemyState.Idle;
-        generalEnemyRigidbody = GetComponent<Rigidbody2D>();
+        if (generalEnemyRigidbody != null)
+        {
+            generalEnemyRigidbody = GetComponent<Rigidbody2D>();
+        }
         animator = GetComponent<Animator>();
         target = GameObject.FindWithTag("Player").transform;
+    }
+
+    void OnEnable()
+    {
+        if (playerHitboxes == null)
+        {
+            playerHitboxes = GetComponent<PlayerFunctions>().playerSwordHitboxes;
+        }
     }
 
     // Update is called once per frame
@@ -91,7 +104,7 @@ public class Octorok : GeneralEnemy
         }
     }
 
-    private void ChangeState(EnemyState newState)
+    public void ChangeState(EnemyState newState)
     {
         if (currentState != newState)
         {

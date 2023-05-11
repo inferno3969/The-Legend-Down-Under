@@ -13,6 +13,18 @@ public class ProjectileOcotorok : Octorok
     {
         canFire = true;
         fireDelaySeconds = fireDelay;
+        animator = GetComponent<Animator>();
+        generalEnemyRigidbody = GetComponent<Rigidbody2D>();
+    }
+
+    private void OnEnable()
+    {
+        transform.position = homePosition;
+        health = maxHealth.initialValue;
+        currentState = EnemyState.Idle;
+        triggerCollider.enabled = true;
+        nonTriggerCollider.enabled = true;
+        enemySprite.color = regularColor;
     }
 
     private void Update()
@@ -27,49 +39,53 @@ public class ProjectileOcotorok : Octorok
                 fireDelaySeconds = fireDelay;
             }
         }
-        // otherwise, check the distance between the player and the enemy
-        else 
-        {
-            CheckDistance();
-        }
+        CheckDistance();
     }
 
     public override void CheckDistance()
     {
         if (Vector3.Distance(target.position,
-        transform.position) <= chaseRadius
-           && Vector3.Distance(target.position,
-                               transform.position) > AttackRadius)
+        transform.position) <= chaseRadius)
         {
-            Vector3 temp = Vector3.MoveTowards(transform.position,
-    target.position, moveSpeed * Time.deltaTime);
-            ChangeAnimation(temp - transform.position);
-            if (currentState == EnemyState.Idle || currentState != EnemyState.Walk
-                && currentState != EnemyState.Stagger)
+            if (currentState == EnemyState.Idle || currentState == EnemyState.Walk && currentState != EnemyState.Stagger)
             {
-                if (canFire)
+                Vector3 temp = Vector3.MoveTowards(transform.position,
+                    target.position,
+                    moveSpeed * Time.deltaTime);
+                ChangeAnimation(temp - transform.position);
+                generalEnemyRigidbody.MovePosition(temp);
+                ChangeState(EnemyState.Walk);
+                animator.SetBool("InRange", true);
+            }
+        }
+        else if (Vector3.Distance(target.position,
+            transform.position) > chaseRadius && Vector3.Distance(target.position, transform.position) <= AttackRadius)
+        {
+            animator.SetBool("InRange", true);
+            if (canFire)
+            {
+                Vector3 temp = Vector3.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+                ChangeAnimation(temp - transform.position);
+                GameObject current = Instantiate(projectile, transform.position + GetProjectileOffset(), Quaternion.identity);
+                Vector3 tempVector = target.transform.position - transform.position;
+                tempVector.Normalize();
+                if (Mathf.Abs(tempVector.x) > Mathf.Abs(tempVector.y))
                 {
-                    GameObject current = Instantiate(projectile, transform.position + GetProjectileOffset(), Quaternion.identity);
-                    Vector3 tempVector = target.transform.position - transform.position;
-                    tempVector.Normalize();
-                    if (Mathf.Abs(tempVector.x) > Mathf.Abs(tempVector.y))
-                    {
-                        tempVector.y = 0;
-                    }
-                    else
-                    {
-                        tempVector.x = 0;
-                    }
-                    current.GetComponent<Projectile>().Launch(tempVector);
-                    canFire = false;
+                    tempVector.y = 0;
                 }
                 else
                 {
-                    fireDelaySeconds -= Time.deltaTime;
-                    if (fireDelaySeconds <= 0)
-                    {
-                        canFire = true;
-                    }
+                    tempVector.x = 0;
+                }
+                current.GetComponent<Projectile>().Launch(tempVector);
+                canFire = false;
+            }
+            else
+            {
+                fireDelaySeconds -= Time.deltaTime;
+                if (fireDelaySeconds <= 0)
+                {
+                    canFire = true;
                 }
             }
         }

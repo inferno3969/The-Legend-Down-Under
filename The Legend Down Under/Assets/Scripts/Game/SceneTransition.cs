@@ -65,7 +65,7 @@ public class SceneTransition : MonoBehaviour
 
     public void ResetCameraBounds()
     {
-        cameraMax.initialValue = cameraNewMax;
-        cameraMin.initialValue = cameraNewMin;
+        cameraMax.runtimeValue = cameraNewMax;
+        cameraMin.runtimeValue = cameraNewMin;
     }
 }

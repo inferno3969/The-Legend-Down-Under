@@ -17,6 +17,7 @@ TagManager:
   - Pot
   - Breakable
   - NPC
+  - Gleerocket
   layers:
   - Default
   - TransparentFX

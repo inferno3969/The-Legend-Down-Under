@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using E7.Introloop;
 
 public enum BossEnemyState
 {
@@ -20,6 +21,9 @@ public class BossEnemy : MonoBehaviour
     public Vector2 homePosition;
     public int baseAttack;
     public float moveSpeed;
+    public GameObject teleport;
+    public bool newAudio;
+    public IntroloopAudio clipToChangeTo;
 
     [Header("Invulnerability Frame")]
     public Color flashColor;
@@ -47,6 +51,15 @@ public class BossEnemy : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
+            if (newAudio)
+            {
+                BGSoundScript.Instance.gameObject.GetComponent<IntroloopPlayer>().Stop();
+                BGSoundScript.Instance.gameObject.GetComponent<IntroloopPlayer>().Play(clipToChangeTo);
+            }
+            if (teleport != null)
+            {
+                teleport.SetActive(true);
+            }
             this.gameObject.SetActive(false);
             playerHitboxes.SetActive(true);
         }

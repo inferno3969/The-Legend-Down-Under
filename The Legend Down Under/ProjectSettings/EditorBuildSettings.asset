@@ -32,4 +32,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/KennysHouse.unity
     guid: 273ba41052f434a4fa6048fa875cbda2
+  - enabled: 1
+    path: Assets/Scenes/Dungeon2Entrance.unity
+    guid: 797e06ba34be64b6f8aeb975bd646ff3
+  - enabled: 1
+    path: Assets/Scenes/Dungeon1Entrance.unity
+    guid: c519b896df5a64586861cd500e8ae07a
+  - enabled: 1
+    path: Assets/Scenes/Dungeon1.unity
+    guid: 35b5941e2d4fd4544b5eb570e5404a31
+  - enabled: 1
+    path: Assets/Scenes/RoyalValley.unity
+    guid: 2144b51b913a24fedb3fce63b20f5772
+  - enabled: 1
+    path: Assets/Scenes/Dungeon2.unity
+    guid: 381f31d71e1654e07a68333a4c7768a8
   m_configObjects: {}
