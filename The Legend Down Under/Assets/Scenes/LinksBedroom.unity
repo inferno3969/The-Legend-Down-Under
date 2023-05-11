@@ -123,6 +123,68 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &98645626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 98645628}
+  - component: {fileID: 98645627}
+  - component: {fileID: 98645629}
+  m_Layer: 0
+  m_Name: BG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &98645627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98645626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a7388d8fdce4c7ab77523e3ae4307a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &98645628
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98645626}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.0083685, y: 46.59311, z: 0.033925407}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &98645629
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98645626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc8c8251623b924ca09b54361e5db47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultIntroloopAudio: {fileID: 11400000, guid: dee917f52ff3540e3a9b9003a22e3481, type: 2}
+  templateSource: {fileID: 0}
+  playOnAwake: 1
+  introloopSettings:
+    logInformation: 0
 --- !u!1 &134221983
 GameObject:
   m_ObjectHideFlags: 0
@@ -4170,8 +4232,6 @@ MonoBehaviour:
   fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
   fadeWait: 1
   player: {fileID: 771809151}
-  lastPositionStorage: {fileID: 11400000, guid: 7ea79ce5ed8f74a9d873c997982ec173, type: 2}
-  lastPositon: {x: 0, y: 0}
 --- !u!61 &1770817015
 BoxCollider2D:
   m_ObjectHideFlags: 0

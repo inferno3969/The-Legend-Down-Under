@@ -31009,7 +31009,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 8a8a912cfacce40abb4e39141c8d05ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -31493,6 +31493,8 @@ MonoBehaviour:
   placeName: 
   text: {fileID: 0}
   placeText: {fileID: 0}
+  clipToChangeTo: {fileID: 11400000, guid: b93a3f851236f4b379911f379282960e, type: 2}
+  newAudio: 1
 --- !u!61 &1053082312
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -105067,6 +105069,7 @@ MonoBehaviour:
   fadeInPanel: {fileID: 0}
   fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
   fadeWait: 1
+  newAudio: 1
   player: {fileID: 848848869}
 --- !u!1 &1609617871
 GameObject:
@@ -105233,6 +105236,7 @@ MonoBehaviour:
   fadeInPanel: {fileID: 0}
   fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
   fadeWait: 1
+  newAudio: 0
   player: {fileID: 848848869}
 --- !u!61 &1640691354
 BoxCollider2D:
@@ -105607,7 +105611,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 8a8a912cfacce40abb4e39141c8d05ae, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -105877,6 +105881,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879851032}
   m_CullTransparentMesh: 1
+--- !u!1 &1925390494
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1925390496}
+  - component: {fileID: 1925390495}
+  - component: {fileID: 1925390497}
+  m_Layer: 0
+  m_Name: BG
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1925390495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925390494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cc8c8251623b924ca09b54361e5db47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultIntroloopAudio: {fileID: 11400000, guid: b93a3f851236f4b379911f379282960e, type: 2}
+  templateSource: {fileID: 0}
+  playOnAwake: 1
+  introloopSettings:
+    logInformation: 0
+--- !u!4 &1925390496
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925390494}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.0083685, y: 46.59311, z: 0.033925407}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1925390497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1925390494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a7388d8fdce4c7ab77523e3ae4307a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1960043546
 GameObject:
   m_ObjectHideFlags: 0
@@ -105973,6 +106039,8 @@ MonoBehaviour:
   placeName: Royal Garden
   text: {fileID: 1879851032}
   placeText: {fileID: 1879851034}
+  clipToChangeTo: {fileID: 11400000, guid: 04edccdaade054d4988d76453a4a1eb0, type: 2}
+  newAudio: 1
 --- !u!1 &1965362229
 GameObject:
   m_ObjectHideFlags: 0

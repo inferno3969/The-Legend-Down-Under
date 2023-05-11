@@ -47,6 +47,7 @@ public class DungeonEnemyRoom : DungeonRoom
         }
     }
 
+    // empty override to prevent the base class from doing anything
     public override void OnTriggerExit2D(Collider2D other)
     {
 

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using E7.Introloop;
 
 public class InteractableSceneTransition : Interactable
 {
@@ -19,6 +20,8 @@ public class InteractableSceneTransition : Interactable
     public GameObject fadeInPanel;
     public GameObject fadeOutPanel;
     public float fadeWait;
+
+    public bool newAudio;
 
     public PlayerFunctions player;
 
@@ -49,6 +52,10 @@ public class InteractableSceneTransition : Interactable
             Instantiate(fadeOutPanel, Vector3.zero, Quaternion.identity);
         }
         yield return new WaitForSeconds(fadeWait);
+        if (newAudio)
+        {
+            Destroy(BGSoundScript.Instance.gameObject);
+        }
         ResetCameraBounds();
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneToLoad);
         while (!asyncOperation.isDone)

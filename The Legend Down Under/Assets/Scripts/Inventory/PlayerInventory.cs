@@ -26,7 +26,7 @@ public class PlayerInventory : ScriptableObject
         // is the item a key?
         if (itemToAdd.isKey)
         {
-            numberOfKeys++;
+            numberOfKeys += currentItem.numberHeld;
             currentItem.numberHeld = numberOfKeys;
             if (!myInventory.Contains(currentItem))
             {

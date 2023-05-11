@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using E7.Introloop;
 
 public class RoomMove : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class RoomMove : MonoBehaviour
     public string placeName;
     public GameObject text;
     public TextMeshProUGUI placeText;
+    [SerializeField] private IntroloopAudio clipToChangeTo;
+    public bool newAudio;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +32,11 @@ public class RoomMove : MonoBehaviour
     {
         if (other.CompareTag("Player") && !other.isTrigger)
         {
+            if (newAudio)
+            {
+                BGSoundScript.Instance.gameObject.GetComponent<IntroloopPlayer>().Stop();
+                BGSoundScript.Instance.gameObject.GetComponent<IntroloopPlayer>().Play(clipToChangeTo);
+            }
             cam.minPosition += cameraChange;
             cam.maxPosition += cameraChange;
             other.transform.position += playerChange;
