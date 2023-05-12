@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1785143579c5e435ab86b586eb7c7136, type: 3}
-  m_Name: Camera Min
+  m_Name: Royal Valley Min
   m_EditorClassIdentifier: 
-  initialValue: {x: -18.01, y: -13}
-  defaultValue: {x: -18.01, y: -13}
+  initialValue: {x: 0, y: 0}
+  runtimeValue: {x: 15, y: 0}

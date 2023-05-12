@@ -23392,6 +23392,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraChange: {x: 0, y: 0}
   playerChange: {x: 15.02, y: 5.93, z: 0}
+  cam: {fileID: 0}
+  moveCamera: 0
+  enemyRoom: {fileID: 0}
 --- !u!212 &1997135961
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -24663,11 +24666,11 @@ PrefabInstance:
     - target: {fileID: 1768708173409780253, guid: 157a30ee88630406c9a4ce1480bab52b, type: 3}
       propertyPath: camMax
       value: 
-      objectReference: {fileID: 11400000, guid: 1b956119627554ff08f9656d358109dc, type: 2}
+      objectReference: {fileID: 11400000, guid: d7410ecdffea74c4abf521fada0b55cf, type: 2}
     - target: {fileID: 1768708173409780253, guid: 157a30ee88630406c9a4ce1480bab52b, type: 3}
       propertyPath: camMin
       value: 
-      objectReference: {fileID: 11400000, guid: b470aec255e48435f8b641490f8f8798, type: 2}
+      objectReference: {fileID: 11400000, guid: 9f830a7c82676452e87dbec3a8110b44, type: 2}
     - target: {fileID: 1768708173409780253, guid: 157a30ee88630406c9a4ce1480bab52b, type: 3}
       propertyPath: target
       value: 

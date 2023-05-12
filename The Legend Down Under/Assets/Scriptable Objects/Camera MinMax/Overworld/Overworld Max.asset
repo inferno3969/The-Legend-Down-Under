@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1785143579c5e435ab86b586eb7c7136, type: 3}
-  m_Name: Player Last Position
+  m_Name: Overworld Max
   m_EditorClassIdentifier: 
-  initialValue: {x: 0, y: 0}
-  runtimeValue: {x: 0, y: 0}
+  initialValue: {x: 13.99, y: 20.01}
+  defaultValue: {x: 13.99, y: 20.01}

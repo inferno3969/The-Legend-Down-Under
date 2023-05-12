@@ -30,11 +30,10 @@ public class CameraMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         if (target != null)
         {
-            // only move the camera at start if there is supposed to be an initial camera change
-            if (!isDungeon)
-            {
-                transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
-            }
+
+
+            transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
+
         }
     }
 

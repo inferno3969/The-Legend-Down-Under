@@ -2672,11 +2672,11 @@ PrefabInstance:
     - target: {fileID: 7628628771734128453, guid: eba91ac3f30d247839785a2b07c8279e, type: 3}
       propertyPath: camMax
       value: 
-      objectReference: {fileID: 11400000, guid: 1b956119627554ff08f9656d358109dc, type: 2}
+      objectReference: {fileID: 11400000, guid: 81c2399be556f4e72bf3a796d27b5e5f, type: 2}
     - target: {fileID: 7628628771734128453, guid: eba91ac3f30d247839785a2b07c8279e, type: 3}
       propertyPath: camMin
       value: 
-      objectReference: {fileID: 11400000, guid: b470aec255e48435f8b641490f8f8798, type: 2}
+      objectReference: {fileID: 11400000, guid: e98fa8447626145c4af79a11a80f1583, type: 2}
     - target: {fileID: 7628628771734128453, guid: eba91ac3f30d247839785a2b07c8279e, type: 3}
       propertyPath: target
       value: 
