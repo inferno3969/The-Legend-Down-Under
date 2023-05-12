@@ -9190,6 +9190,7 @@ MonoBehaviour:
   doors:
   - {fileID: 870632359}
   - {fileID: 1161428420}
+  roomTrigger: {fileID: 743418577}
 --- !u!61 &743418577
 BoxCollider2D:
   m_ObjectHideFlags: 0

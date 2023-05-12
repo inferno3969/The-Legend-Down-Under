@@ -260,6 +260,7 @@ public class PlayerFunctions : MonoBehaviour
         else
         {
             this.gameObject.SetActive(false);
+            Destroy(BGSoundScript.Instance.gameObject);
             SceneManager.LoadScene("GameOver");
         }
     }

@@ -10279,6 +10279,7 @@ MonoBehaviour:
   doors:
   - {fileID: 428368838}
   - {fileID: 844882918}
+  roomTrigger: {fileID: 903763422}
 --- !u!61 &903763422
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10361,7 +10362,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 903763421}
         m_TargetAssemblyTypeName: DungeonEnemyRoom, Assembly-CSharp
-        m_MethodName: CheckEnemies
+        m_MethodName: EnemyDefeated
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -22505,7 +22506,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 418951353, guid: c47f25858579845299c7d9f8afba4ca2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

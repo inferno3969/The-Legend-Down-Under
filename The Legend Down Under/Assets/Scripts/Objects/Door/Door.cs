@@ -60,6 +60,11 @@ public class Door : Interactable
                 else if (playerInRange && thisDoorType == DoorType.Button && !open)
                 {
                     dialogBox.SetActive(true);
+                    dialogText.text = "A lever needs to be activated to open this door.";
+                }
+                else if (playerInRange && thisDoorType == DoorType.Button && !open)
+                {
+                    dialogBox.SetActive(true);
                     dialogText.text = "A switch needs to be pushed to open this door.";
                 }
                 else if (playerInRange && thisDoorType == DoorType.Boss && !open)

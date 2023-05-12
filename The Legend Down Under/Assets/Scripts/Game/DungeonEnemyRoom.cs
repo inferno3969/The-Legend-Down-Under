@@ -5,23 +5,19 @@ using UnityEngine;
 public class DungeonEnemyRoom : DungeonRoom
 {
     public Door[] doors;
+    private int defeatedEnemies = 0;
+    public Collider2D roomTrigger;
 
-    public int EnemiesActive()
+    public void EnemyDefeated()
     {
-        int activeEnemies = 0;
-        for (int i = 0; i < enemies.Length; i++)
-        {
-            if (enemies[i].gameObject.activeInHierarchy)
-            {
-                activeEnemies++;
-            }
-        }
-        return activeEnemies;
+        defeatedEnemies++;
+        Debug.Log(defeatedEnemies);
+        CheckEnemies();
     }
 
     public void CheckEnemies()
     {
-        if (EnemiesActive() == 1)
+        if (defeatedEnemies == enemies.Length)
         {
             OpenDoors();
         }
@@ -31,7 +27,8 @@ public class DungeonEnemyRoom : DungeonRoom
     {
         if (other.CompareTag("Player") && !other.isTrigger)
         {
-            if (EnemiesActive() == 0)
+            roomTrigger.enabled = false;
+            if (defeatedEnemies == 0)
             {
                 //Activate all enemies and pots
                 for (int i = 0; i < enemies.Length; i++)
@@ -50,7 +47,7 @@ public class DungeonEnemyRoom : DungeonRoom
     // empty override to prevent the base class from doing anything
     public override void OnTriggerExit2D(Collider2D other)
     {
-
+        defeatedEnemies = 0;
     }
 
     public void CloseDoors()
