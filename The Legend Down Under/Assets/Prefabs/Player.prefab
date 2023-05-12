@@ -139,7 +139,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 678480658}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.78, y: -1.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -206,7 +206,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: 2052114111, guid: ab804264a77f347918bc8c5e369239eb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2005,7 +2005,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6347956276113791960
 Transform:
   m_ObjectHideFlags: 0
@@ -4531,7 +4531,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6347956277346837362
 Transform:
   m_ObjectHideFlags: 0
@@ -4872,7 +4872,6 @@ MonoBehaviour:
   currentDirection: 0
   speed: 4
   startingPosition: {fileID: 11400000, guid: 4f0481c7e2a9c449bb5c7fd974d9a1ee, type: 2}
-  lastPosition: {fileID: 11400000, guid: 7ea79ce5ed8f74a9d873c997982ec173, type: 2}
   currentHealth: {fileID: 11400000, guid: 5ec9b721c3bff440d8ddb9bf0d620e60, type: 2}
   playerHealthSignal: {fileID: 11400000, guid: ffc32fd7680dc44d492217dce9d5731c, type: 2}
   animator: {fileID: 0}
@@ -4880,6 +4879,7 @@ MonoBehaviour:
   receivedNormalItemSprite: {fileID: 234191196}
   receivedSpecialItemSprite: {fileID: 797035410}
   soldierSword: {fileID: 0}
+  shield: {fileID: 11400000, guid: 93c9110459f0b4c5882052af0b6e1abd, type: 2}
   projectile: {fileID: 1972066825197807957, guid: ffa70a52c30354cac916c7283a31f5ca, type: 3}
   playerHit: {fileID: 11400000, guid: dea8065a57fe5464298aa91063e9b360, type: 2}
   flashColor: {r: 0.99215686, g: 0, b: 0, a: 0.59607846}

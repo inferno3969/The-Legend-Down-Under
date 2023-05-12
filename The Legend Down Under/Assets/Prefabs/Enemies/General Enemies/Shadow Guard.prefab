@@ -427,7 +427,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7947530123212770093}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.03, y: 4.06, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -644,7 +644,11 @@ MonoBehaviour:
   homePosition: {x: 0, y: 0}
   baseAttack: 2
   moveSpeed: 2
+  newAudio: 0
+  clipToChangeTo: {fileID: 0}
+  deathEffect: {fileID: 0}
   thisLoot: {fileID: 0}
+  roomSignal: {fileID: 0}
   flashColor: {r: 0.9529412, g: 0, b: 0, a: 0.59607846}
   regularColor: {r: 1, g: 1, b: 1, a: 1}
   flashDuration: 0.1
@@ -654,6 +658,7 @@ MonoBehaviour:
   enemySprite: {fileID: 7947530123212770086}
   enemyHitboxes: {fileID: 7947530124364710353}
   playerHitboxes: {fileID: 0}
+  treasureChest: {fileID: 0}
   generalEnemyRigidbody: {fileID: 0}
   target: {fileID: 0}
   chaseRadius: 4

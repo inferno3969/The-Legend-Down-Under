@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using E7.Introloop;
 
 public enum EnemyState
 {
@@ -19,6 +20,9 @@ public class GeneralEnemy : MonoBehaviour
     public Vector2 homePosition;
     public int baseAttack;
     public float moveSpeed;
+
+    public bool newAudio;
+    public IntroloopAudio clipToChangeTo;
 
     [Header("Death Effects")]
     public GameObject deathEffect;
@@ -68,6 +72,11 @@ public class GeneralEnemy : MonoBehaviour
             MakeLoot();
             // if we don't want the enemy to send out a signal,
             // we leave the roomSignal raise optional 
+            if (newAudio)
+            {
+                BGSoundScript.Instance.gameObject.GetComponent<IntroloopPlayer>().Stop();
+                BGSoundScript.Instance.gameObject.GetComponent<IntroloopPlayer>().Play(clipToChangeTo);
+            }
             if (roomSignal != null)
             {
                 roomSignal.RaiseSignal();

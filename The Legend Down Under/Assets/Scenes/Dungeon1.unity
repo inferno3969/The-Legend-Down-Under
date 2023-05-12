@@ -20017,8 +20017,8 @@ MonoBehaviour:
   placeName: 
   text: {fileID: 0}
   placeText: {fileID: 0}
-  clipToChangeTo: {fileID: 0}
-  newAudio: 0
+  clipToChangeTo: {fileID: 11400000, guid: 5a1e212ef94314c15a200f3b5e0d3e27, type: 2}
+  newAudio: 1
 --- !u!61 &1259370759
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24366,6 +24366,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4503427241532976483, guid: fd5739e4cc56f4045afdf61634bacad7, type: 3}
+      propertyPath: newAudio
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4503427241532976483, guid: fd5739e4cc56f4045afdf61634bacad7, type: 3}
       propertyPath: maxHealth
       value: 
       objectReference: {fileID: 11400000, guid: c53a74ace97ee4332bbf2ec72a359778, type: 2}
@@ -24393,6 +24397,10 @@ PrefabInstance:
       propertyPath: treasureChest
       value: 
       objectReference: {fileID: 1941942025}
+    - target: {fileID: 4503427241532976483, guid: fd5739e4cc56f4045afdf61634bacad7, type: 3}
+      propertyPath: clipToChangeTo
+      value: 
+      objectReference: {fileID: 11400000, guid: 30c048cfaf40240009e570fbaa708f00, type: 2}
     - target: {fileID: 4503427241532976484, guid: fd5739e4cc56f4045afdf61634bacad7, type: 3}
       propertyPath: damage
       value: 1.5

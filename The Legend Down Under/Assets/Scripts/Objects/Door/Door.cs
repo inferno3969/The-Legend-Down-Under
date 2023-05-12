@@ -57,7 +57,7 @@ public class Door : Interactable
                         dialogText.text = "You need a small key to open this door.";
                     }
                 }
-                else if (playerInRange && thisDoorType == DoorType.Button && !open)
+                else if (playerInRange && thisDoorType == DoorType.Lever && !open)
                 {
                     dialogBox.SetActive(true);
                     dialogText.text = "A lever needs to be activated to open this door.";

@@ -56,4 +56,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Dungeon3Entrance2.unity
     guid: 349b0686552f64df9bc404177a0b5662
+  - enabled: 1
+    path: Assets/Scenes/FinalStageEntrance.unity
+    guid: 2cc3d8fe45d8b46a0857eacb07e989e9
+  - enabled: 1
+    path: Assets/Scenes/FinalStage.unity
+    guid: 40950c1d98ab94960a89e8c6cf1351dc
   m_configObjects: {}
