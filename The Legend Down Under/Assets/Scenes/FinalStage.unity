@@ -3601,6 +3601,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 1824033208185582088, guid: 9d717f201f094432a9ae1705a89ecf4e, type: 3}
+    - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
       propertyPath: AttackRadius
       value: 1
       objectReference: {fileID: 0}
@@ -3699,6 +3703,10 @@ PrefabInstance:
       propertyPath: chaseRadius
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 1824033208185582088, guid: 9d717f201f094432a9ae1705a89ecf4e, type: 3}
     - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
       propertyPath: AttackRadius
       value: 1
@@ -3859,6 +3867,10 @@ PrefabInstance:
       propertyPath: chaseRadius
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 1824033208185582088, guid: 9d717f201f094432a9ae1705a89ecf4e, type: 3}
     - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
       propertyPath: AttackRadius
       value: 1
@@ -4234,6 +4246,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 1824033208185582088, guid: 9d717f201f094432a9ae1705a89ecf4e, type: 3}
+    - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
       propertyPath: AttackRadius
       value: 1
       objectReference: {fileID: 0}
@@ -4491,6 +4507,10 @@ PrefabInstance:
       propertyPath: chaseRadius
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 1824033208185582088, guid: 9d717f201f094432a9ae1705a89ecf4e, type: 3}
     - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
       propertyPath: AttackRadius
       value: 1
@@ -6006,6 +6026,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 1824033208185582088, guid: 9d717f201f094432a9ae1705a89ecf4e, type: 3}
+    - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
       propertyPath: AttackRadius
       value: 1
       objectReference: {fileID: 0}
@@ -6110,6 +6134,10 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 1824033208185582088, guid: 9d717f201f094432a9ae1705a89ecf4e, type: 3}
+    - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
       propertyPath: AttackRadius
       value: 1
       objectReference: {fileID: 0}
@@ -6208,6 +6236,10 @@ PrefabInstance:
       propertyPath: chaseRadius
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 1824033208185582088, guid: 9d717f201f094432a9ae1705a89ecf4e, type: 3}
     - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
       propertyPath: AttackRadius
       value: 1
@@ -6359,6 +6391,10 @@ PrefabInstance:
       propertyPath: chaseRadius
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 1824033208185582088, guid: 9d717f201f094432a9ae1705a89ecf4e, type: 3}
     - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
       propertyPath: AttackRadius
       value: 1
@@ -6621,6 +6657,10 @@ PrefabInstance:
       propertyPath: chaseRadius
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
+      propertyPath: deathEffect
+      value: 
+      objectReference: {fileID: 1824033208185582088, guid: 9d717f201f094432a9ae1705a89ecf4e, type: 3}
     - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
       propertyPath: AttackRadius
       value: 1

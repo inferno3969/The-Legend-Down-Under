@@ -132,29 +132,13 @@ PrefabInstance:
     m_TransformParent: {fileID: 264999331}
     m_Modifications:
     - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
-      propertyPath: health
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 538680605}
     - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
-      propertyPath: maxHealth
-      value: 
-      objectReference: {fileID: 11400000, guid: 3b84de9f65f764bbcbd1a13a801c711e, type: 2}
-    - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
-      propertyPath: chaseRadius
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
-      propertyPath: AttackRadius
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
       propertyPath: playerHitboxes
       value: 
-      objectReference: {fileID: 241873885}
+      objectReference: {fileID: 0}
     - target: {fileID: 7947530123212770087, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -203,13 +187,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shadow Guard (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7947530123212770093, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 7947530124552967607, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
@@ -411,29 +390,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 264999331}
     m_Modifications:
     - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
-      propertyPath: health
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 538680605}
-    - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
-      propertyPath: maxHealth
-      value: 
-      objectReference: {fileID: 11400000, guid: 3b84de9f65f764bbcbd1a13a801c711e, type: 2}
-    - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
-      propertyPath: chaseRadius
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
-      propertyPath: AttackRadius
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7947530123212770084, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
-      propertyPath: playerHitboxes
-      value: 
-      objectReference: {fileID: 241873885}
     - target: {fileID: 7947530123212770087, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -482,13 +441,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shadow Guard
       objectReference: {fileID: 0}
-    - target: {fileID: 7947530123212770093, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 7947530124552967607, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}
@@ -1844,6 +1798,14 @@ PrefabInstance:
       propertyPath: playerHitboxes
       value: 
       objectReference: {fileID: 241873885}
+    - target: {fileID: 3645577231231911371, guid: 0087aa5bbb63b450e9bdd5cbabca855c, type: 3}
+      propertyPath: shadowGuardsDefeated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645577231231911371, guid: 0087aa5bbb63b450e9bdd5cbabca855c, type: 3}
+      propertyPath: shadowGuards.Array.size
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3645577231231911371, guid: 0087aa5bbb63b450e9bdd5cbabca855c, type: 3}
       propertyPath: shadowGuards.Array.data[0]
       value: 

@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class VaatiPhase1 : BossEnemy
 {
-    private Rigidbody2D vaatiPhase1Rigidbody;
-    Animator animator;
-    [SerializeField]
-    private bool shadowGuardsDefeated;
-    [SerializeField]
-    private GameObject[] shadowGuards;
+    [SerializeField] private Rigidbody2D vaatiPhase1Rigidbody;
+    [SerializeField] private Animator animator;
+    [SerializeField] private bool summoned;
+    [SerializeField] private GameObject[] shadowGuards;
 
 
     // Start is called before the first frame update
@@ -43,8 +41,12 @@ public class VaatiPhase1 : BossEnemy
         nonTriggerCollider.enabled = false;
         if (health == 10)
         {
-            shadowGuards[0].SetActive(true);
-            shadowGuards[1].SetActive(true);
+            if (!summoned)
+            {
+                shadowGuards[0].SetActive(true);
+                shadowGuards[1].SetActive(true);
+                summoned = true;
+            }
             if (shadowGuards[0].GetComponent<ShadowGuard>().health <= 0)
             {
                 shadowGuards[0].SetActive(false);
@@ -58,14 +60,18 @@ public class VaatiPhase1 : BossEnemy
                 HandDownCo();
             }
         }
-        else if (health >= 8)
+        else if (health >= 8 && health < 10)
         {
             if (health != 8)
             {
                 health = 8;
             }
-            shadowGuards[2].SetActive(true);
-            shadowGuards[3].SetActive(true);
+            if (!summoned)
+            {
+                shadowGuards[2].SetActive(true);
+                shadowGuards[3].SetActive(true);
+                summoned = true;
+            }
             if (shadowGuards[2].GetComponent<ShadowGuard>().health <= 0)
             {
                 shadowGuards[2].SetActive(false);
@@ -79,14 +85,18 @@ public class VaatiPhase1 : BossEnemy
                 HandDownCo();
             }
         }
-        else if (health >= 6)
+        else if (health >= 6 && health < 8)
         {
             if (health != 6)
             {
                 health = 6;
             }
-            shadowGuards[4].SetActive(true);
-            shadowGuards[5].SetActive(true);
+            if (!summoned)
+            {
+                shadowGuards[4].SetActive(true);
+                shadowGuards[5].SetActive(true);
+                summoned = true;
+            }
             if (shadowGuards[4].GetComponent<ShadowGuard>().health <= 0)
             {
                 shadowGuards[4].SetActive(false);
@@ -100,14 +110,18 @@ public class VaatiPhase1 : BossEnemy
                 HandDownCo();
             }
         }
-        else if (health >= 4)
+        else if (health >= 4 && health < 6)
         {
             if (health != 4)
             {
                 health = 4;
             }
-            shadowGuards[6].SetActive(true);
-            shadowGuards[7].SetActive(true);
+            if (!summoned)
+            {
+                shadowGuards[6].SetActive(true);
+                shadowGuards[7].SetActive(true);
+                summoned = true;
+            }
             if (shadowGuards[6].GetComponent<ShadowGuard>().health <= 0)
             {
                 shadowGuards[6].SetActive(false);
@@ -121,14 +135,18 @@ public class VaatiPhase1 : BossEnemy
                 HandDownCo();
             }
         }
-        else if (health >= 2)
+        else if (health >= 2 && health < 4)
         {
             if (health != 2)
             {
                 health = 2;
             }
-            shadowGuards[8].SetActive(true);
-            shadowGuards[9].SetActive(true);
+            if (!summoned)
+            {
+                shadowGuards[8].SetActive(true);
+                shadowGuards[9].SetActive(true);
+                summoned = true;
+            }
             if (shadowGuards[8].GetComponent<ShadowGuard>().health <= 0)
             {
                 shadowGuards[8].SetActive(false);
@@ -148,6 +166,7 @@ public class VaatiPhase1 : BossEnemy
     {
         if (other.gameObject.CompareTag("Hitboxes") || other.gameObject.CompareTag("Player Projectile"))
         {
+            summoned = false;
             animator.SetBool("Summon", true);
         }
     }
