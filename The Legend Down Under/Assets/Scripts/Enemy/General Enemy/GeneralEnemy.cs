@@ -28,6 +28,7 @@ public class GeneralEnemy : MonoBehaviour
     public GameObject deathEffect;
     public LootTable thisLoot;
     public SignalSender roomSignal;
+    private bool isDead = false;
 
     [Header("Invulnerability Frame")]
     public Color flashColor;
@@ -65,9 +66,15 @@ public class GeneralEnemy : MonoBehaviour
 
     private void TakeDamage(float damage)
     {
+        playerHitboxes.SetActive(false);
         health -= damage;
-        if (health <= 0)
+        if (health <= 0 && !isDead)
         {
+            isDead = true;
+            if (roomSignal != null)
+            {
+                roomSignal.RaiseSignal();
+            }
             DeathEffect();
             MakeLoot();
             // if we don't want the enemy to send out a signal,
@@ -76,10 +83,6 @@ public class GeneralEnemy : MonoBehaviour
             {
                 BGSoundScript.Instance.gameObject.GetComponent<IntroloopPlayer>().Stop();
                 BGSoundScript.Instance.gameObject.GetComponent<IntroloopPlayer>().Play(clipToChangeTo);
-            }
-            if (roomSignal != null)
-            {
-                roomSignal.RaiseSignal();
             }
             if (treasureChest != null)
             {
@@ -92,11 +95,12 @@ public class GeneralEnemy : MonoBehaviour
 
     public void Knock(Rigidbody2D enemyRigidbody, float knockTime, float damage)
     {
+        TakeDamage(damage);
         if (enemyRigidbody != null)
         {
             StartCoroutine(KnockCo(enemyRigidbody, knockTime, damage));
         }
-        TakeDamage(damage);
+        playerHitboxes.SetActive(true);
     }
 
     public void KnockNoDamage(Rigidbody2D enemyRigidbody, float knockTime)
@@ -119,7 +123,7 @@ public class GeneralEnemy : MonoBehaviour
     {
         if (rigidbody != null)
         {
-            StartCoroutine(FlashCo(damage));
+            StartCoroutine(FlashCo());
             yield return new WaitForSeconds(knockTime);
             rigidbody.velocity = Vector2.zero;
             currentState = EnemyState.Idle;
@@ -127,9 +131,8 @@ public class GeneralEnemy : MonoBehaviour
         }
     }
 
-    private IEnumerator FlashCo(float damage)
+    private IEnumerator FlashCo()
     {
-        playerHitboxes.SetActive(false);
         int tempFlashes;
         // turn off player trigger collider to prevent from taking damage
         triggerCollider.enabled = false;
@@ -146,8 +149,6 @@ public class GeneralEnemy : MonoBehaviour
         // set trigger collider back on when for loop is finished
         triggerCollider.enabled = true;
         nonTriggerCollider.enabled = true;
-        playerHitboxes.SetActive(true);
-        damage = 2;
     }
 
     private void MakeLoot()

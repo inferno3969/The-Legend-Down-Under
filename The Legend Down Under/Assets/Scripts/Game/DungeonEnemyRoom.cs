@@ -5,7 +5,7 @@ using UnityEngine;
 public class DungeonEnemyRoom : DungeonRoom
 {
     public Door[] doors;
-    private int defeatedEnemies = 0;
+    [SerializeField] private int defeatedEnemies = 0;
     public Collider2D roomTrigger;
 
     public void EnemyDefeated()

@@ -16,7 +16,6 @@ public class VaatiPhase1 : BossEnemy
         vaatiPhase1Rigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         triggerCollider.enabled = false;
-        nonTriggerCollider.enabled = false;
         animator.SetBool("Summon", true);
     }
 
@@ -166,6 +165,11 @@ public class VaatiPhase1 : BossEnemy
     {
         if (other.gameObject.CompareTag("Hitboxes") || other.gameObject.CompareTag("Player Projectile"))
         {
+            if (health == 2)
+            {
+                health = 0;
+                this.gameObject.SetActive(false);
+            }
             summoned = false;
             animator.SetBool("Summon", true);
         }

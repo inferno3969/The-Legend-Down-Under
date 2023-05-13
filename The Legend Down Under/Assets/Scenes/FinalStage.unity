@@ -4164,10 +4164,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6347956277411589153, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
-      propertyPath: shield
-      value: 
-      objectReference: {fileID: 11400000, guid: 93c9110459f0b4c5882052af0b6e1abd, type: 2}
     - target: {fileID: 6347956277411589156, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -4212,17 +4208,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6347956277411589157, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
-      propertyPath: m_SortingOrder
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 6347956277411589158, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 6347956277411589158, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4385,6 +4373,10 @@ PrefabInstance:
       propertyPath: m_BodyType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3645577231231911368, guid: 0087aa5bbb63b450e9bdd5cbabca855c, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3645577231231911369, guid: 0087aa5bbb63b450e9bdd5cbabca855c, type: 3}
       propertyPath: m_SortingOrder
       value: 2
@@ -4480,6 +4472,26 @@ PrefabInstance:
     - target: {fileID: 3645577231231911372, guid: 0087aa5bbb63b450e9bdd5cbabca855c, type: 3}
       propertyPath: m_Name
       value: Vaati
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645577231231911374, guid: 0087aa5bbb63b450e9bdd5cbabca855c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645577231231911374, guid: 0087aa5bbb63b450e9bdd5cbabca855c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645577231231911375, guid: 0087aa5bbb63b450e9bdd5cbabca855c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645577231231911375, guid: 0087aa5bbb63b450e9bdd5cbabca855c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3645577231231911375, guid: 0087aa5bbb63b450e9bdd5cbabca855c, type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

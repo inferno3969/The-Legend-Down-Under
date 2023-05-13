@@ -48,6 +48,7 @@ public class BossEnemy : MonoBehaviour
 
     private void TakeDamage(float damage)
     {
+        playerHitboxes.SetActive(false);
         health -= damage;
         if (health <= 0)
         {
@@ -69,6 +70,7 @@ public class BossEnemy : MonoBehaviour
     {
         StartCoroutine(KnockCo(enemyRigidbody, knockTime));
         TakeDamage(damage);
+        playerHitboxes.SetActive(true);
     }
 
     public void KnockNoDamage(Rigidbody2D enemyRigidbody, float knockTime)
@@ -101,7 +103,6 @@ public class BossEnemy : MonoBehaviour
 
     private IEnumerator FlashCo()
     {
-        playerHitboxes.SetActive(false);
         int tempFlashes;
         // turn off player trigger collider to prevent from taking damage
         triggerCollider.enabled = false;
@@ -124,6 +125,5 @@ public class BossEnemy : MonoBehaviour
         {
             nonTriggerCollider.enabled = true;
         }
-        playerHitboxes.SetActive(true);
     }
 }
