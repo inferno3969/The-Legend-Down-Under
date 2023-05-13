@@ -9194,6 +9194,7 @@ MonoBehaviour:
   doors:
   - {fileID: 870632359}
   - {fileID: 1161428420}
+  defeatedEnemies: 0
   roomTrigger: {fileID: 743418577}
 --- !u!61 &743418577
 BoxCollider2D:
@@ -22576,6 +22577,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4503427241532976483, guid: fd5739e4cc56f4045afdf61634bacad7, type: 3}
+      propertyPath: thisLoot
+      value: 
+      objectReference: {fileID: 11400000, guid: 7b4d56b02f23149fd902559777857d2d, type: 2}
+    - target: {fileID: 4503427241532976483, guid: fd5739e4cc56f4045afdf61634bacad7, type: 3}
       propertyPath: maxHealth
       value: 
       objectReference: {fileID: 11400000, guid: c53a74ace97ee4332bbf2ec72a359778, type: 2}
@@ -23105,6 +23110,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 743418578}
     m_Modifications:
+    - target: {fileID: 4503427241532976483, guid: fd5739e4cc56f4045afdf61634bacad7, type: 3}
+      propertyPath: thisLoot
+      value: 
+      objectReference: {fileID: 11400000, guid: d27c7e351ba17407a87abcdd373877cf, type: 2}
     - target: {fileID: 4503427241532976483, guid: fd5739e4cc56f4045afdf61634bacad7, type: 3}
       propertyPath: maxHealth
       value: 

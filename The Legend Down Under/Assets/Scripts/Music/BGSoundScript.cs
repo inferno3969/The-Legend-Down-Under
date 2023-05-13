@@ -1,15 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using E7.Introloop;
 
 public class BGSoundScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-    private static BGSoundScript instance = null;
+    [SerializeField] private static BGSoundScript instance = null;
     public static BGSoundScript Instance
     {
         get { return instance; }

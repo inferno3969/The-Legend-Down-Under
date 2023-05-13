@@ -62,4 +62,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalStage.unity
     guid: 40950c1d98ab94960a89e8c6cf1351dc
+  - enabled: 1
+    path: Assets/Scenes/PMoneyShop.unity
+    guid: 2ef98410fe29649ceb96c17ae69fa2de
   m_configObjects: {}
