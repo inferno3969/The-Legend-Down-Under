@@ -27,7 +27,7 @@ public class Zelda : GeneralNPC
         zeldaRigidbody = GetComponent<Rigidbody2D>();
     }
 
-    public override void Update()
+    public void FixedUpdate()
     {
         FollowPlayer();
     }

@@ -14,6 +14,7 @@ public class InventoryItem : ScriptableObject
     public bool unique;
     public bool isKey;
     public bool isBossKey;
+    public bool isArrow;
     public UnityEvent thisEvent;
 
     public void Use()

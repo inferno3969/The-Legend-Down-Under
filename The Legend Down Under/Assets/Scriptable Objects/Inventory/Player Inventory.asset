@@ -18,6 +18,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d314624041a82450f904430fe4ca71a5, type: 2}
   - {fileID: 11400000, guid: 3bf965778e58242dbbf3345a5a732136, type: 2}
   - {fileID: 11400000, guid: 93c9110459f0b4c5882052af0b6e1abd, type: 2}
-  numberOfKeys: 56
-  numberOfBossKeys: 0
+  numberOfKeys: 2
+  numberOfBossKeys: 1
+  numberOfArrows: 0
   coins: 0

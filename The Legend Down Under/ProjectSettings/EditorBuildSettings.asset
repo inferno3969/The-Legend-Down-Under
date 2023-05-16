@@ -65,4 +65,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PMoneyShop.unity
     guid: 2ef98410fe29649ceb96c17ae69fa2de
+  - enabled: 1
+    path: Assets/Scenes/SouthHyruleFieldCutscene2.unity
+    guid: ad432a8592de940a68bd2db7c095f53a
+  - enabled: 1
+    path: Assets/Scenes/SouthHyruleFieldCutscene3.unity
+    guid: c38b04f1b8bbb455b9bc22df6a32b952
+  - enabled: 1
+    path: Assets/Scenes/LinksHouseMainFloorCutscene.unity
+    guid: 407233cf72a6b4a62b174331cf7eef7a
+  - enabled: 1
+    path: Assets/Scenes/SouthHyruleFieldCutscene.unity
+    guid: be84c4988b37647a8aefdcd836d36d7d
   m_configObjects: {}

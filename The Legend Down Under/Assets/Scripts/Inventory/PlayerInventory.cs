@@ -9,6 +9,7 @@ public class PlayerInventory : ScriptableObject
     public List<InventoryItem> myInventory = new List<InventoryItem>();
     public int numberOfKeys;
     public int numberOfBossKeys;
+    public int numberOfArrows;
     public int coins;
 
     public bool CheckForItem(InventoryItem item)
@@ -27,7 +28,6 @@ public class PlayerInventory : ScriptableObject
         if (itemToAdd.isKey)
         {
             numberOfKeys += currentItem.numberHeld;
-            currentItem.numberHeld = numberOfKeys;
             if (!myInventory.Contains(currentItem))
             {
                 myInventory.Add(currentItem);
@@ -35,8 +35,19 @@ public class PlayerInventory : ScriptableObject
         }
         else if (itemToAdd.isBossKey)
         {
-            numberOfBossKeys++;
-            myInventory.Add(currentItem);
+            numberOfBossKeys += currentItem.numberHeld;
+            if (!myInventory.Contains(currentItem))
+            {
+                myInventory.Add(currentItem);
+            }
+        }
+        else if (itemToAdd.isArrow)
+        {
+            numberOfArrows += currentItem.numberHeld;
+            if (!myInventory.Contains(currentItem))
+            {
+                myInventory.Add(currentItem);
+            }
         }
         else
         {
