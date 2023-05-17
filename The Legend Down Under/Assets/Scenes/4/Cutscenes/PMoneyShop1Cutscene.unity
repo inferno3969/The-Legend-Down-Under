@@ -3521,8 +3521,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Phil: You also need arrows in order to use the bow! Here''s some coins
-    you can use to buy some arrows!'
+  m_text: 'Phil: You also need arrows in order to use the bow! Here''s some PMoney
+    coins you can use to buy some arrows!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b058dd64241ac41b985c24f26953b05f, type: 2}
   m_sharedMaterial: {fileID: 1900223431894184185, guid: b058dd64241ac41b985c24f26953b05f, type: 2}
