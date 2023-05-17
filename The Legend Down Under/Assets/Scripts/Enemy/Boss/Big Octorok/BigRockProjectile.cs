@@ -14,7 +14,7 @@ public class BigRockProjectile : Projectile
         // {
         //     moveSpeed = 4;
         // }
-        moveSpeed = Random.Range(5, 10);
+        moveSpeed = Random.Range(5, 7);
         myRigidbody.velocity = initialVel * moveSpeed;
     }
 }
