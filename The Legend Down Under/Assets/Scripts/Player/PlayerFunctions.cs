@@ -48,7 +48,8 @@ public class PlayerFunctions : MonoBehaviour
     public SpriteRenderer receivedSpecialItemSprite;
 
     [Header("Weapons")]
-    public InventoryItem soldierSword;
+    public InventoryItem sword;
+    public InventoryItem bow;
     public InventoryItem shield;
     public GameObject projectile;
 
@@ -104,11 +105,20 @@ public class PlayerFunctions : MonoBehaviour
         }
         if (Input.GetButtonDown("Attack") && currentState != PlayerState.Attack && currentState != PlayerState.Stagger && currentState != PlayerState.Walk)
         {
-            StartCoroutine(AttackCo());
+            if (playerInventory.CheckForItem(sword))
+            {
+                StartCoroutine(AttackCo());
+            }
         }
         else if (Input.GetButtonDown("Second Attack") && currentState != PlayerState.Attack && currentState != PlayerState.Stagger)
         {
-            StartCoroutine(SecondAttackCo());
+            if (playerInventory.CheckForItem(bow))
+            {
+                if (playerInventory.numberOfArrows > 0)
+                {
+                    StartCoroutine(SecondAttackCo());
+                }
+            }
         }
         else if (Input.GetButton("Shield") && currentState != PlayerState.Attack && currentState != PlayerState.Stagger)
         {

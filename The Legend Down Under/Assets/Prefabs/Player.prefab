@@ -4878,7 +4878,8 @@ MonoBehaviour:
   playerInventory: {fileID: 11400000, guid: 5f791cf00fd5d46e5835285875fdd4d1, type: 2}
   receivedNormalItemSprite: {fileID: 234191196}
   receivedSpecialItemSprite: {fileID: 797035410}
-  soldierSword: {fileID: 0}
+  sword: {fileID: 11400000, guid: c8b782533f69248b6af821d67e9d2dc1, type: 2}
+  bow: {fileID: 11400000, guid: daea63111ec4b4f4fadad6a93281c556, type: 2}
   shield: {fileID: 11400000, guid: 93c9110459f0b4c5882052af0b6e1abd, type: 2}
   projectile: {fileID: 1972066825197807957, guid: ffa70a52c30354cac916c7283a31f5ca, type: 3}
   playerHit: {fileID: 11400000, guid: dea8065a57fe5464298aa91063e9b360, type: 2}

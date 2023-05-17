@@ -48,13 +48,7 @@ public class Phil : GeneralNPC
         dialogBox.SetActive(true);
         if (interactedOnce == false)
         {
-            dialogText.text = "If you have the PMoney coins, you can buy items from me!";
-            interactedOnce = true;
-        }
-        else
-        {
-            dialogText.text = "Say... there are four plants hidden around the map. If you find them all, I'll give you a special prize!";
-            interactedOnce = false;
+            dialogText.text = "Phil: If you have the PMoney coins, you can buy items from me!";
         }
         player.currentState = PlayerState.Interact;
     }

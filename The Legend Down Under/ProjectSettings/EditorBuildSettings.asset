@@ -6,75 +6,105 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 3ac1348c6412b4a44b53f326d999bb3f
+    path: Assets/Scenes/0/Cutscenes/LinksBedroomCutscene.unity
+    guid: 0312526008b8b43fab0db18f3e237b6d
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/0/After Cutscenes/LinksBedroomAfterCutscene.unity
+    guid: e9ba03596f57241a3a4b7eb819df58c8
+  - enabled: 1
+    path: Assets/Scenes/0/Cutscenes/LinksHouseMainFloorCutscene.unity
+    guid: 407233cf72a6b4a62b174331cf7eef7a
+  - enabled: 1
+    path: Assets/Scenes/0/After Cutscenes/LinksHouseMainFloorAfterCutscene.unity
+    guid: 6e8e7e8767d0144da85b1ee0404b9d76
+  - enabled: 1
+    path: Assets/Scenes/0/LinksBedroom0.unity
+    guid: a98da2f3c8ec34bb8a101f082a40b0d2
+  - enabled: 1
+    path: Assets/Scenes/0/LinksHouseMainFloor0.unity
+    guid: 1bb6d8ef7d67b465e837360b270d725f
+  - enabled: 1
+    path: Assets/Scenes/0/LinksHouseSmithsRoom0.unity
+    guid: 782e0423817a14486822c14c1aa8e106
+  - enabled: 1
+    path: Assets/Scenes/1/LinksBedroom1.unity
+    guid: 98fab83d8ac5a4478a53b7fa62bfcabc
+  - enabled: 1
+    path: Assets/Scenes/1/LinksHouseMainFloor1.unity
+    guid: b294b8125a711470b9e713d2ebfd904d
+  - enabled: 1
+    path: Assets/Scenes/1/LinksHouseSmithsRoom1.unity
+    guid: b14ae6a1b89f045ca96d9d2031651414
+  - enabled: 1
+    path: Assets/Scenes/1/Cutscenes/LinksHouseSmithRoomCutscene.unity
+    guid: 78f237ca6a1cb40a599c0720a861140c
+  - enabled: 1
+    path: Assets/Scenes/1/Cutscenes/RoyalCastleCutscene.unity
+    guid: ad432a8592de940a68bd2db7c095f53a
+  - enabled: 1
+    path: Assets/Scenes/1/Cutscenes/RoyalCastleCutscene2.unity
+    guid: c38b04f1b8bbb455b9bc22df6a32b952
+  - enabled: 1
+    path: Assets/Scenes/1/Cutscenes/SouthHyruleFieldCutscene.unity
+    guid: be84c4988b37647a8aefdcd836d36d7d
+  - enabled: 1
+    path: Assets/Scenes/1/After Cutscenes/LinksBedroom1AfterCutscene.unity
+    guid: d136165aeb0c6474bbea97ba86e9d905
+  - enabled: 1
+    path: Assets/Scenes/1/After Cutscenes/LinksHouseMainFloor1AfterCutscene.unity
+    guid: fdb33f20c01d04ece9254a2ce27ca455
+  - enabled: 1
+    path: Assets/Scenes/1/After Cutscenes/LinksHouseSmithRoomAfterCutscene.unity
+    guid: e22762ee34b364c42b6fe7fefdaf2ba5
+  - enabled: 1
+    path: Assets/Scenes/1/After Cutscenes/RoyalCastleAfterCutscene.unity
+    guid: 10b78a51f70e947d6b3e906efeeb23f2
+  - enabled: 1
+    path: Assets/Scenes/2/KennysHouse.unity
+    guid: 273ba41052f434a4fa6048fa875cbda2
+  - enabled: 1
+    path: Assets/Scenes/2/SouthHyruleField2.unity
+    guid: 75d1f745606554db7820ce79d8024381
+  - enabled: 1
+    path: Assets/Scenes/2/Cutscenes/KennysHouseCutscene.unity
+    guid: 708384bc26f4e45e3a3f330e8d89165b
+  - enabled: 1
+    path: Assets/Scenes/2/After Cutscenes/KennysHouse1AfterCutscene.unity
+    guid: 90633fa17b22d4e4a9edd28f8e7c92a2
+  - enabled: 1
+    path: Assets/Scenes/3/Dungeon1.unity
+    guid: 35b5941e2d4fd4544b5eb570e5404a31
+  - enabled: 1
+    path: Assets/Scenes/3/Dungeon1Entrance.unity
+    guid: c519b896df5a64586861cd500e8ae07a
+  - enabled: 1
+    path: Assets/Scenes/3/Cutscenes/SouthHyruleField3Cutscene.unity
+    guid: 59bfaba55ec8d4b25b860e82e97f6e5e
+  - enabled: 1
+    path: Assets/Scenes/3/After Cutscenes/SouthHyruleField3AfterCutscene.unity
+    guid: 8f038c3118108428d869ea90eee315c6
+  - enabled: 1
+    path: Assets/Scenes/4/Cutscenes/PMoneyShop1Cutscene.unity
+    guid: 2ef98410fe29649ceb96c17ae69fa2de
+  - enabled: 1
+    path: Assets/Scenes/4/Cutscenes/PMoneyShop2Cutscene.unity
+    guid: f4dce9468525947028f61359802c233b
+  - enabled: 1
+    path: Assets/Scenes/4/Cutscenes/SouthHyruleField4Cutscene.unity
+    guid: 78ece0b517830429dae7b1ce377ac081
+  - enabled: 1
+    path: Assets/Scenes/4/After Cutscenes/PMoneyShop1AfterCutscene.unity
+    guid: 18535dced750244d0918baba4a413893
+  - enabled: 1
+    path: Assets/Scenes/4/After Cutscenes/PMoneyShop2AfterCutscene.unity
+    guid: dd015334b506943aba14960613932480
+  - enabled: 1
+    path: Assets/Scenes/4/After Cutscenes/SouthHyruleField4AfterCutscene.unity
+    guid: 22d0c95e8de044537b98f6dcb8b93ef1
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 17b651588700443a39198755e5eff5f2
   - enabled: 1
-    path: Assets/Scenes/EnemyPrototyping.unity
-    guid: 62043c2a54682420ab01df657dc392f9
-  - enabled: 1
-    path: Assets/Scenes/SouthHyruleField.unity
-    guid: 83021cd1db9264a01be1a4f770f50351
-  - enabled: 1
-    path: Assets/Scenes/LinksBedroom.unity
-    guid: a98da2f3c8ec34bb8a101f082a40b0d2
-  - enabled: 1
-    path: Assets/Scenes/LinksHouseMainFloor.unity
-    guid: 810bd3e7445db4a6689fbe800b9c079b
-  - enabled: 1
-    path: Assets/Scenes/LinksHouseSmithsRoom.unity
-    guid: 78f237ca6a1cb40a599c0720a861140c
-  - enabled: 1
-    path: Assets/Scenes/KennysHouse.unity
-    guid: 273ba41052f434a4fa6048fa875cbda2
-  - enabled: 1
-    path: Assets/Scenes/Dungeon2Entrance.unity
-    guid: 797e06ba34be64b6f8aeb975bd646ff3
-  - enabled: 1
-    path: Assets/Scenes/Dungeon1Entrance.unity
-    guid: c519b896df5a64586861cd500e8ae07a
-  - enabled: 1
-    path: Assets/Scenes/Dungeon1.unity
-    guid: 35b5941e2d4fd4544b5eb570e5404a31
-  - enabled: 1
-    path: Assets/Scenes/RoyalValley.unity
-    guid: 2144b51b913a24fedb3fce63b20f5772
-  - enabled: 1
-    path: Assets/Scenes/Dungeon2.unity
-    guid: 381f31d71e1654e07a68333a4c7768a8
-  - enabled: 1
-    path: Assets/Scenes/Dungeon3.unity
-    guid: 84fb0c65b04ce4bb39c8184d8303b110
-  - enabled: 1
-    path: Assets/Scenes/Dungeon3Entrance.unity
-    guid: b1fcc9e4d489041218178e63548d8774
-  - enabled: 1
-    path: Assets/Scenes/Dungeon3Entrance2.unity
-    guid: 349b0686552f64df9bc404177a0b5662
-  - enabled: 1
-    path: Assets/Scenes/FinalStageEntrance.unity
-    guid: 2cc3d8fe45d8b46a0857eacb07e989e9
-  - enabled: 1
-    path: Assets/Scenes/FinalStage.unity
-    guid: 40950c1d98ab94960a89e8c6cf1351dc
-  - enabled: 1
-    path: Assets/Scenes/PMoneyShop.unity
-    guid: 2ef98410fe29649ceb96c17ae69fa2de
-  - enabled: 1
-    path: Assets/Scenes/SouthHyruleFieldCutscene2.unity
-    guid: ad432a8592de940a68bd2db7c095f53a
-  - enabled: 1
-    path: Assets/Scenes/SouthHyruleFieldCutscene3.unity
-    guid: c38b04f1b8bbb455b9bc22df6a32b952
-  - enabled: 1
-    path: Assets/Scenes/LinksHouseMainFloorCutscene.unity
-    guid: 407233cf72a6b4a62b174331cf7eef7a
-  - enabled: 1
-    path: Assets/Scenes/SouthHyruleFieldCutscene.unity
-    guid: be84c4988b37647a8aefdcd836d36d7d
+    path: Assets/Scenes/MainMenu.unity
+    guid: 3ac1348c6412b4a44b53f326d999bb3f
   m_configObjects: {}

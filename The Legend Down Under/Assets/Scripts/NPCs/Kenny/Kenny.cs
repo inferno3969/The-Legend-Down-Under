@@ -7,6 +7,7 @@ public class Kenny : GeneralNPC
     public bool interactedOnce = false;
     public bool interactedTwice = false;
     public bool insult = false;
+    public Animator animator;
 
     public Collider2D barrier;
 
@@ -15,6 +16,14 @@ public class Kenny : GeneralNPC
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerFunctions>();
+    }
+
+    public void Start()
+    {
+        if (animator != null)
+        {
+            animator = GetComponent<Animator>();
+        }
     }
 
     public override void Update()
@@ -43,18 +52,18 @@ public class Kenny : GeneralNPC
         dialogBox.SetActive(true);
         if (interactedOnce == false)
         {
-            dialogText.text = "Hello there! I'm Kenny, Heir to the thrones of Gonder and Malkier, bearer of the sacred flame of Asgaloth, wielder of the sacred hammer Voldrung, and frequent sampler of fine cheeses and meats.";
+            dialogText.text = "???: Hello there! I'm Kenny, Heir to the thrones of Gonder and Malkier, bearer of the sacred flame of Asgaloth, wielder of the sacred hammer Voldrung, and frequent sampler of fine cheeses and meats.";
             interactedOnce = true;
         }
         else if (interactedOnce == true && insult == false)
         {
-            dialogText.text = "Behind me is the shield of the royal family. It's been passed down for generations, and is said to be unbreakable. I'm not sure if that's true, but I'm not going to test it. You can try it out for yourself if you want.";
+            dialogText.text = "Kenny: Behind me is the shield of the royal family. It's been passed down for generations, and is said to be unbreakable. I'm not sure if that's true, but I'm not going to test it. You can try it out for yourself if you want.";
             insult = true;
             interactedTwice = true;
         }
         else if (insult == true)
         {
-            dialogText.text = "Nate is a piece of s#!t... he's always trying to make me look bad...";
+            dialogText.text = "Kenny: Nate is a piece of s#!t... he's always trying to make me look bad...";
         }
         player.currentState = PlayerState.Interact;
     }

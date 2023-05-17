@@ -6,6 +6,7 @@ using TMPro;
 public class StoreItem : Interactable
 {
     public string itemName;
+    public int quantity;
     public int cost;
     public PlayerInventory playerInventory;
     public Phil phil;
@@ -79,16 +80,12 @@ public class StoreItem : Interactable
         dialogBox.SetActive(true);
         if (isPlant == false)
         {
-            dialogText.text = "Thank you for your purchase!";
-        }
-        else
-        {
-            dialogText.text = "Be careful with that plant...";
-            isPlant = false;
+            dialogText.text = "Phil: Thank you for your purchase!";
         }
         playerInventory.coins -= cost;
         coinSignal.RaiseSignal();
         playerInventory.AddItem(item);
+        item.numberHeld += quantity;
         successfullPurchase = true;
     }
 
@@ -99,11 +96,11 @@ public class StoreItem : Interactable
         int costDifference = cost - playerInventory.coins;
         if (costDifference > 1)
         {
-            dialogText.text = "You don't have enough PMoney coins! You need " + costDifference + " coins to buy this item.";
+            dialogText.text = "Phil: You don't have enough PMoney coins! You need " + costDifference + " coins to buy this item.";
         }
         else
         {
-            dialogText.text = "You don't have enough PMoney coins! You need " + costDifference + " coin to buy this item.";
+            dialogText.text = "Phil: You don't have enough PMoney coins! You need " + costDifference + " coin to buy this item.";
         }
     }
 

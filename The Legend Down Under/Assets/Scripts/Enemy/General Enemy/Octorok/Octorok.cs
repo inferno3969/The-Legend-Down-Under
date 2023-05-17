@@ -24,10 +24,7 @@ public class Octorok : GeneralEnemy
     void Start()
     {
         currentState = EnemyState.Idle;
-        if (generalEnemyRigidbody != null)
-        {
-            generalEnemyRigidbody = GetComponent<Rigidbody2D>();
-        }
+        generalEnemyRigidbody = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         target = GameObject.FindWithTag("Player").transform;
     }
