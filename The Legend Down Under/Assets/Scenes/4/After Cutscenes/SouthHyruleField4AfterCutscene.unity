@@ -33247,11 +33247,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6347956277411589156, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 64.59
+      value: -17.48
       objectReference: {fileID: 0}
     - target: {fileID: 6347956277411589156, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.65
+      value: 16.2
       objectReference: {fileID: 0}
     - target: {fileID: 6347956277411589156, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: m_LocalPosition.z
@@ -110611,7 +110611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fed6f166575304e5a84c09ecc388a897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeInPanel: {fileID: 6423183300260518373, guid: ff3be039c75d64da59b96d42e4c00f65, type: 3}
+  fadeInPanel: {fileID: 2668009473969193489, guid: 42e7faf1fd6ab4a9db68e0d6c29dc90f, type: 3}
 --- !u!4 &1977901905
 Transform:
   m_ObjectHideFlags: 0

@@ -7727,6 +7727,8 @@ MonoBehaviour:
   player: {fileID: 771809151}
   dialogBox: {fileID: 388820610}
   dialogText: {fileID: 388820609}
+  smallKey: {fileID: 11400000, guid: 3bf965778e58242dbbf3345a5a732136, type: 2}
+  bossKey: {fileID: 0}
 --- !u!1001 &388820608
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7997,6 +7999,8 @@ MonoBehaviour:
   player: {fileID: 771809151}
   dialogBox: {fileID: 0}
   dialogText: {fileID: 0}
+  smallKey: {fileID: 0}
+  bossKey: {fileID: 0}
 --- !u!1 &497937432
 GameObject:
   m_ObjectHideFlags: 0
@@ -10241,6 +10245,8 @@ MonoBehaviour:
   player: {fileID: 771809151}
   dialogBox: {fileID: 0}
   dialogText: {fileID: 0}
+  smallKey: {fileID: 0}
+  bossKey: {fileID: 0}
 --- !u!1 &903763420
 GameObject:
   m_ObjectHideFlags: 0
@@ -10279,6 +10285,7 @@ MonoBehaviour:
   doors:
   - {fileID: 428368838}
   - {fileID: 844882918}
+  defeatedEnemies: 0
   roomTrigger: {fileID: 903763422}
 --- !u!61 &903763422
 BoxCollider2D:
@@ -20220,6 +20227,8 @@ MonoBehaviour:
   homePosition: {x: 0.06, y: 3.12}
   baseAttack: 2
   moveSpeed: 2
+  newAudio: 0
+  clipToChangeTo: {fileID: 0}
   deathEffect: {fileID: 1824033208185582088, guid: 9d717f201f094432a9ae1705a89ecf4e, type: 3}
   thisLoot: {fileID: 0}
   roomSignal: {fileID: 11400000, guid: 2600ee3957c024470b5e542a3076e3d4, type: 2}
@@ -20452,6 +20461,8 @@ MonoBehaviour:
   homePosition: {x: -9.79, y: -1.82}
   baseAttack: 2
   moveSpeed: 2
+  newAudio: 0
+  clipToChangeTo: {fileID: 0}
   deathEffect: {fileID: 1824033208185582088, guid: 9d717f201f094432a9ae1705a89ecf4e, type: 3}
   thisLoot: {fileID: 0}
   roomSignal: {fileID: 11400000, guid: 2600ee3957c024470b5e542a3076e3d4, type: 2}

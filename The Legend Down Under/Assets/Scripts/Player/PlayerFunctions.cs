@@ -51,6 +51,7 @@ public class PlayerFunctions : MonoBehaviour
     public InventoryItem sword;
     public InventoryItem bow;
     public InventoryItem shield;
+    public InventoryItem arrow;
     public GameObject projectile;
 
     [Header("Player Hit")]
@@ -114,6 +115,8 @@ public class PlayerFunctions : MonoBehaviour
         {
             if (playerInventory.CheckForItem(bow))
             {
+                Debug.Log(playerInventory.numberOfArrows);
+
                 if (playerInventory.numberOfArrows > 0)
                 {
                     StartCoroutine(SecondAttackCo());
@@ -225,6 +228,8 @@ public class PlayerFunctions : MonoBehaviour
         currentState = PlayerState.Attack;
         yield return null;
         MakeArrow();
+        playerInventory.numberOfArrows -= 1;
+        arrow.DecreaseAmount(1);
         yield return new WaitForSeconds(.3f);
         if (currentState != PlayerState.Interact)
         {

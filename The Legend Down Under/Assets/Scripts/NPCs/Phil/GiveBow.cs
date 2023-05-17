@@ -16,6 +16,5 @@ public class GiveBow : MonoBehaviour
     public void GiveBowToPlayer()
     {
         playerInventory.AddItem(bow);
-        player.receivedSpecialItemSprite.sprite = playerInventory.currentItem.itemImage;
     }
 }

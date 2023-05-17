@@ -7167,6 +7167,51 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.28350782}
   m_EdgeRadius: 0
+--- !u!1 &313803431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 313803433}
+  - component: {fileID: 313803432}
+  m_Layer: 0
+  m_Name: Transition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &313803432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313803431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed6f166575304e5a84c09ecc388a897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeInPanel: {fileID: 6423183300260518373, guid: ff3be039c75d64da59b96d42e4c00f65, type: 3}
+--- !u!4 &313803433
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313803431}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.647438, y: 6.992884, z: -3.1883888}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &480550730
 GameObject:
   m_ObjectHideFlags: 0
@@ -9639,6 +9684,8 @@ MonoBehaviour:
   player: {fileID: 0}
   dialogBox: {fileID: 0}
   dialogText: {fileID: 0}
+  smallKey: {fileID: 0}
+  bossKey: {fileID: 0}
 --- !u!61 &870632360
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19470,7 +19517,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: cc287d317d44b48deaf147473aa37e28, type: 2}
     - target: {fileID: 1086227631166305993, guid: abea9bdfb077a43c5a8c3610445892a9, type: 3}
       propertyPath: chaseRadius
-      value: 4.7
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 1086227631166305993, guid: abea9bdfb077a43c5a8c3610445892a9, type: 3}
       propertyPath: clipToChangeTo
@@ -19678,6 +19725,8 @@ MonoBehaviour:
   player: {fileID: 0}
   dialogBox: {fileID: 0}
   dialogText: {fileID: 0}
+  smallKey: {fileID: 0}
+  bossKey: {fileID: 0}
 --- !u!61 &1161428421
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19930,6 +19979,8 @@ MonoBehaviour:
   player: {fileID: 481143740}
   dialogBox: {fileID: 1781763340}
   dialogText: {fileID: 99659082}
+  smallKey: {fileID: 0}
+  bossKey: {fileID: 0}
 --- !u!61 &1224832708
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20294,6 +20345,8 @@ MonoBehaviour:
   player: {fileID: 0}
   dialogBox: {fileID: 1781763340}
   dialogText: {fileID: 99659082}
+  smallKey: {fileID: 11400000, guid: 3bf965778e58242dbbf3345a5a732136, type: 2}
+  bossKey: {fileID: 0}
 --- !u!61 &1386125712
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -22918,6 +22971,8 @@ MonoBehaviour:
   player: {fileID: 481143740}
   dialogBox: {fileID: 1781763340}
   dialogText: {fileID: 99659082}
+  smallKey: {fileID: 11400000, guid: 3bf965778e58242dbbf3345a5a732136, type: 2}
+  bossKey: {fileID: 0}
 --- !u!61 &1550463806
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -24504,7 +24559,7 @@ PrefabInstance:
     - target: {fileID: 4503427241532976483, guid: fd5739e4cc56f4045afdf61634bacad7, type: 3}
       propertyPath: maxHealth
       value: 
-      objectReference: {fileID: 11400000, guid: 9020a0855a4b44c539518b3879f3729e, type: 2}
+      objectReference: {fileID: 11400000, guid: dcc37927fad10497d97841ae96169c2e, type: 2}
     - target: {fileID: 4503427241532976483, guid: fd5739e4cc56f4045afdf61634bacad7, type: 3}
       propertyPath: moveSpeed
       value: 2
@@ -24551,7 +24606,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4503427241532976488, guid: fd5739e4cc56f4045afdf61634bacad7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.976227
+      value: 17.73
       objectReference: {fileID: 0}
     - target: {fileID: 4503427241532976488, guid: fd5739e4cc56f4045afdf61634bacad7, type: 3}
       propertyPath: m_LocalPosition.y

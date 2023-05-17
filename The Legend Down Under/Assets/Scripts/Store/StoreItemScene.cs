@@ -56,9 +56,9 @@ public class StoreItemScene : Interactable
             }
             else if (attemptPurchase == true && player.currentState == PlayerState.Interact)
             {
+                StartCoroutine(FadeCo());
                 if (successfullPurchase == true)
                 {
-                    Destroy(itemObject);
                     successfullPurchase = false;
                 }
                 phil.GetComponent<Animator>().SetBool("BoughtSomething", false);
@@ -75,7 +75,6 @@ public class StoreItemScene : Interactable
         if (coins >= cost)
         {
             Success();
-            StartCoroutine(FadeCo());
         }
         else
         {
@@ -95,7 +94,12 @@ public class StoreItemScene : Interactable
         playerInventory.coins -= cost;
         coinSignal.RaiseSignal();
         playerInventory.AddItem(item);
+        playerInventory.currentItem = item;
         item.numberHeld += quantity;
+        if (item.isArrow)
+        {
+            playerInventory.numberOfArrows = item.numberHeld;
+        }
         successfullPurchase = true;
     }
 
@@ -142,6 +146,7 @@ public class StoreItemScene : Interactable
         }
         yield return new WaitForSeconds(fadeWait);
         AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneToLoad);
+        Destroy(itemObject);
         while (!asyncOperation.isDone)
         {
             yield return null;

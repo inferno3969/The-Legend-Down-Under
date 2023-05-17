@@ -106433,7 +106433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fed6f166575304e5a84c09ecc388a897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fadeInPanel: {fileID: 6423183300260518373, guid: ff3be039c75d64da59b96d42e4c00f65, type: 3}
+  fadeInPanel: {fileID: 2668009473969193489, guid: 42e7faf1fd6ab4a9db68e0d6c29dc90f, type: 3}
 --- !u!320 &1179840553
 PlayableDirector:
   m_ObjectHideFlags: 0

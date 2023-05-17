@@ -4685,7 +4685,7 @@ Transform:
   - {fileID: 1759849149}
   - {fileID: 2144117523}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &6347956277411589157
 SpriteRenderer:
@@ -4881,6 +4881,7 @@ MonoBehaviour:
   sword: {fileID: 11400000, guid: c8b782533f69248b6af821d67e9d2dc1, type: 2}
   bow: {fileID: 11400000, guid: daea63111ec4b4f4fadad6a93281c556, type: 2}
   shield: {fileID: 11400000, guid: 93c9110459f0b4c5882052af0b6e1abd, type: 2}
+  arrow: {fileID: 11400000, guid: e1efb4efd9313463da058b3985d3fe50, type: 2}
   projectile: {fileID: 1972066825197807957, guid: ffa70a52c30354cac916c7283a31f5ca, type: 3}
   playerHit: {fileID: 11400000, guid: dea8065a57fe5464298aa91063e9b360, type: 2}
   flashColor: {r: 0.99215686, g: 0, b: 0, a: 0.59607846}

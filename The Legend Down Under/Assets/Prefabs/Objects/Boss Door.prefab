@@ -109,6 +109,8 @@ MonoBehaviour:
   player: {fileID: 0}
   dialogBox: {fileID: 0}
   dialogText: {fileID: 0}
+  smallKey: {fileID: 0}
+  bossKey: {fileID: 11400000, guid: 374775d2eabae42a1b282450d262aa89, type: 2}
 --- !u!60 &4238823521986095011
 PolygonCollider2D:
   m_ObjectHideFlags: 0

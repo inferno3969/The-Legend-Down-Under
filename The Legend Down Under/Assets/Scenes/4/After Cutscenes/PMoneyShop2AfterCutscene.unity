@@ -7851,6 +7851,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 04edccdaade054d4988d76453a4a1eb0, type: 2}
     - target: {fileID: 6052779783804818904, guid: 87e3d813ed0f84a03b6ea9296963e663, type: 3}
+      propertyPath: sceneToLoad
+      value: SouthHyruleField4AfterCutscene
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052779783804818904, guid: 87e3d813ed0f84a03b6ea9296963e663, type: 3}
       propertyPath: bgSoundScript
       value: 
       objectReference: {fileID: 0}
@@ -7864,7 +7868,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6052779783804818904, guid: 87e3d813ed0f84a03b6ea9296963e663, type: 3}
       propertyPath: playerPosition.x
-      value: -17.49
+      value: -17.48
       objectReference: {fileID: 0}
     - target: {fileID: 6052779783804818904, guid: 87e3d813ed0f84a03b6ea9296963e663, type: 3}
       propertyPath: playerPosition.y

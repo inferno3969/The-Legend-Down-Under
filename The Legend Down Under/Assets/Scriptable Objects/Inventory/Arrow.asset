@@ -15,7 +15,7 @@ MonoBehaviour:
   itemName: Arrow
   itemDescription: A plain arrow... has a sharp tip.
   itemImage: {fileID: 21300000, guid: b3b0baf88bac24026a1d991cd6fb62e4, type: 3}
-  numberHeld: 0
+  numberHeld: 29
   usable: 0
   unique: 0
   isKey: 0
