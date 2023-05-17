@@ -106443,7 +106443,7 @@ PlayableDirector:
   m_GameObject: {fileID: 1179840551}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 11400000, guid: e6ad8c417301e4d2999e7322d68ab6f6, type: 2}
+  m_PlayableAsset: {fileID: 11400000, guid: f351f533a985946babe4e4bf1c38f11f, type: 2}
   m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
@@ -106509,6 +106509,14 @@ PlayableDirector:
     value: {fileID: 1945505991}
   - key: {fileID: 881834294936809371, guid: e6ad8c417301e4d2999e7322d68ab6f6, type: 2}
     value: {fileID: 487218320}
+  - key: {fileID: 881834294936809371, guid: f351f533a985946babe4e4bf1c38f11f, type: 2}
+    value: {fileID: 487218320}
+  - key: {fileID: 176238044899325285, guid: f351f533a985946babe4e4bf1c38f11f, type: 2}
+    value: {fileID: 1945505991}
+  - key: {fileID: -8714071093059294553, guid: f351f533a985946babe4e4bf1c38f11f, type: 2}
+    value: {fileID: 317599190}
+  - key: {fileID: -3175425541758853715, guid: f351f533a985946babe4e4bf1c38f11f, type: 2}
+    value: {fileID: 1945505991}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1179840554
@@ -109151,6 +109159,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 275495948}
+    - target: {fileID: 7628628771734128453, guid: eba91ac3f30d247839785a2b07c8279e, type: 3}
+      propertyPath: followPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7628628771734128462, guid: eba91ac3f30d247839785a2b07c8279e, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -109210,8 +109222,8 @@ MonoBehaviour:
   playerStorage: {fileID: 11400000, guid: 4f0481c7e2a9c449bb5c7fd974d9a1ee, type: 2}
   cameraNewMax: {x: 0, y: 0}
   cameraNewMin: {x: 0, y: 0}
-  cameraMin: {fileID: 11400000, guid: b470aec255e48435f8b641490f8f8798, type: 2}
-  cameraMax: {fileID: 11400000, guid: 1b956119627554ff08f9656d358109dc, type: 2}
+  cameraMin: {fileID: 11400000, guid: 9f830a7c82676452e87dbec3a8110b44, type: 2}
+  cameraMax: {fileID: 11400000, guid: d7410ecdffea74c4abf521fada0b55cf, type: 2}
   fadeInPanel: {fileID: 0}
   fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
   fadeWait: 1

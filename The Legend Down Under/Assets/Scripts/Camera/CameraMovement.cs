@@ -18,9 +18,6 @@ public class CameraMovement : MonoBehaviour
     public VectorValue camMin;
     public VectorValue camMax;
 
-    public bool isDungeon;
-
-
     // Use this for initialization
     private void Start()
     {
@@ -28,10 +25,13 @@ public class CameraMovement : MonoBehaviour
         minPosition = camMin.runtimeValue;
 
         animator = GetComponent<Animator>();
-        if (target != null)
-        {
-            transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
-        }
+        // if (target != null)
+        // {
+        //     if (followPlayer)
+        //     {
+        //         transform.position = new Vector3(target.position.x, target.position.y, transform.position.z);
+        //     }
+        // }
     }
 
     void FixedUpdate()

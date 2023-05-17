@@ -6416,7 +6416,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7628628771734128451, guid: eba91ac3f30d247839785a2b07c8279e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7628628771734128451, guid: eba91ac3f30d247839785a2b07c8279e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6446,6 +6446,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7628628771734128452, guid: eba91ac3f30d247839785a2b07c8279e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7628628771734128453, guid: eba91ac3f30d247839785a2b07c8279e, type: 3}
       propertyPath: camMax
       value: 
@@ -6458,6 +6462,10 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 771809152}
+    - target: {fileID: 7628628771734128453, guid: eba91ac3f30d247839785a2b07c8279e, type: 3}
+      propertyPath: followPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7628628771734128453, guid: eba91ac3f30d247839785a2b07c8279e, type: 3}
       propertyPath: maxPosition.x
       value: 0
