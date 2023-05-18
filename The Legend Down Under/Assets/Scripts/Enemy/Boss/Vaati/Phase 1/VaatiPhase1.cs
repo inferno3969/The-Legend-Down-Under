@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class VaatiPhase1 : BossEnemy
 {
@@ -8,6 +9,20 @@ public class VaatiPhase1 : BossEnemy
     [SerializeField] private Animator animator;
     [SerializeField] private bool summoned;
     [SerializeField] private GameObject[] shadowGuards;
+
+    [Header("New Scene Variables")]
+    public string sceneToLoad;
+    public Vector2 playerPosition;
+    public VectorValue playerStorage;
+    public Vector2 cameraNewMax;
+    public Vector2 cameraNewMin;
+    public VectorValue cameraMin;
+    public VectorValue cameraMax;
+
+    [Header("Transition Variables")]
+    public GameObject fadeInPanel;
+    public GameObject fadeOutPanel;
+    public float fadeWait;
 
 
     // Start is called before the first frame update
@@ -168,10 +183,37 @@ public class VaatiPhase1 : BossEnemy
             if (health == 2)
             {
                 health = 0;
-                this.gameObject.SetActive(false);
+                StartCoroutine(FadeCo());
             }
             summoned = false;
             animator.SetBool("Summon", true);
         }
+    }
+
+    public IEnumerator FadeCo()
+    {
+        newAudio = true;
+        if (fadeOutPanel != null)
+        {
+            Instantiate(fadeOutPanel, Vector3.zero, Quaternion.identity);
+        }
+        yield return new WaitForSeconds(fadeWait);
+        if (newAudio)
+        {
+            Destroy(BGSoundScript.Instance.gameObject);
+        }
+        ResetCameraBounds();
+        AsyncOperation asyncOperation = SceneManager.LoadSceneAsync(sceneToLoad);
+        this.gameObject.SetActive(false);
+        while (!asyncOperation.isDone)
+        {
+            yield return null;
+        }
+    }
+
+    public void ResetCameraBounds()
+    {
+        cameraMax.runtimeValue = cameraNewMax;
+        cameraMin.runtimeValue = cameraNewMin;
     }
 }

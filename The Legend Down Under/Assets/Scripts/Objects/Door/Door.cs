@@ -48,7 +48,6 @@ public class Door : Interactable
                     {
                         // temove a player key
                         playerInventory.numberOfKeys--;
-                        smallKey.DecreaseAmount(1);
                         // if so, then call the open method
                         Open();
                         context.RaiseSignal();
@@ -78,7 +77,6 @@ public class Door : Interactable
                     {
                         // temove a player key
                         playerInventory.numberOfBossKeys--;
-                        bossKey.DecreaseAmount(1);
                         // if so, then call the open method
                         Open();
                         context.RaiseSignal();

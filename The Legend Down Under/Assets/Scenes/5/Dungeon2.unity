@@ -8127,8 +8127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09faf5f48f7d64684a31579656689027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SouthHyruleField
-  playerPosition: {x: 40.96, y: 36.27}
+  sceneToLoad: SouthHyruleField6Cutscene
+  playerPosition: {x: 41, y: 35.6}
   playerStorage: {fileID: 11400000, guid: 4f0481c7e2a9c449bb5c7fd974d9a1ee, type: 2}
   cameraNewMax: {x: 60.99, y: 63.01}
   cameraNewMin: {x: 23.99, y: 30}
@@ -9791,6 +9791,10 @@ PrefabInstance:
       propertyPath: clipToChangeTo
       value: 
       objectReference: {fileID: 11400000, guid: 23f2ae80d01414e178bbd89fbeca03da, type: 2}
+    - target: {fileID: 2674552323611305134, guid: c8118ccdd58ae42989edab174a5cda43, type: 3}
+      propertyPath: heartContainer
+      value: 
+      objectReference: {fileID: 1220816953}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10514,6 +10518,51 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1215919, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1044908039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1044908041}
+  - component: {fileID: 1044908040}
+  m_Layer: 0
+  m_Name: Transition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1044908040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044908039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed6f166575304e5a84c09ecc388a897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeInPanel: {fileID: 6423183300260518373, guid: ff3be039c75d64da59b96d42e4c00f65, type: 3}
+--- !u!4 &1044908041
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044908039}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 42.560764, y: 33.375492, z: -1.3398478}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1071045910
 GameObject:
   m_ObjectHideFlags: 0
@@ -20230,7 +20279,7 @@ MonoBehaviour:
   newAudio: 0
   clipToChangeTo: {fileID: 0}
   deathEffect: {fileID: 1824033208185582088, guid: 9d717f201f094432a9ae1705a89ecf4e, type: 3}
-  thisLoot: {fileID: 0}
+  thisLoot: {fileID: 11400000, guid: 7b4d56b02f23149fd902559777857d2d, type: 2}
   roomSignal: {fileID: 11400000, guid: 2600ee3957c024470b5e542a3076e3d4, type: 2}
   flashColor: {r: 0.9529412, g: 0, b: 0, a: 0.59607846}
   regularColor: {r: 1, g: 1, b: 1, a: 1}
@@ -20269,6 +20318,76 @@ SpriteRenderer:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4689487166023955125, guid: 5cc9b46b7b0c748afad6e127901bbf6d, type: 3}
   m_PrefabInstance: {fileID: 1180089287}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1220816952
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4294582614686243874, guid: 20d400adf946744f4a0b9ae0ab5c587b, type: 3}
+      propertyPath: m_Name
+      value: Heart Container
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294582614686243874, guid: 20d400adf946744f4a0b9ae0ab5c587b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294582614686243879, guid: 20d400adf946744f4a0b9ae0ab5c587b, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294582614686243879, guid: 20d400adf946744f4a0b9ae0ab5c587b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294582614686243879, guid: 20d400adf946744f4a0b9ae0ab5c587b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294582614686243879, guid: 20d400adf946744f4a0b9ae0ab5c587b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294582614686243879, guid: 20d400adf946744f4a0b9ae0ab5c587b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294582614686243879, guid: 20d400adf946744f4a0b9ae0ab5c587b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294582614686243879, guid: 20d400adf946744f4a0b9ae0ab5c587b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294582614686243879, guid: 20d400adf946744f4a0b9ae0ab5c587b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294582614686243879, guid: 20d400adf946744f4a0b9ae0ab5c587b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294582614686243879, guid: 20d400adf946744f4a0b9ae0ab5c587b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4294582614686243879, guid: 20d400adf946744f4a0b9ae0ab5c587b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 20d400adf946744f4a0b9ae0ab5c587b, type: 3}
+--- !u!1 &1220816953 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4294582614686243874, guid: 20d400adf946744f4a0b9ae0ab5c587b, type: 3}
+  m_PrefabInstance: {fileID: 1220816952}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1316153438 stripped
 Transform:
@@ -20464,7 +20583,7 @@ MonoBehaviour:
   newAudio: 0
   clipToChangeTo: {fileID: 0}
   deathEffect: {fileID: 1824033208185582088, guid: 9d717f201f094432a9ae1705a89ecf4e, type: 3}
-  thisLoot: {fileID: 0}
+  thisLoot: {fileID: 11400000, guid: 7b4d56b02f23149fd902559777857d2d, type: 2}
   roomSignal: {fileID: 11400000, guid: 2600ee3957c024470b5e542a3076e3d4, type: 2}
   flashColor: {r: 0.9529412, g: 0, b: 0, a: 0.59607846}
   regularColor: {r: 1, g: 1, b: 1, a: 1}

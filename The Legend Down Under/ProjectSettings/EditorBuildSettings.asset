@@ -107,4 +107,52 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 3ac1348c6412b4a44b53f326d999bb3f
+  - enabled: 1
+    path: Assets/Scenes/5/Dungeon2.unity
+    guid: 381f31d71e1654e07a68333a4c7768a8
+  - enabled: 1
+    path: Assets/Scenes/5/Dungeon2Entrance.unity
+    guid: 797e06ba34be64b6f8aeb975bd646ff3
+  - enabled: 1
+    path: Assets/Scenes/5/PMoneyShop5.unity
+    guid: 031df2012b1e14ded8985c345841d70c
+  - enabled: 1
+    path: Assets/Scenes/5/Cutscenes/SouthHyruleField5Cutscene.unity
+    guid: 8cdd1f7eb318846b6a0a8cc008c4b4f8
+  - enabled: 1
+    path: Assets/Scenes/5/After Cutscenes/SouthHyruleField5AfterCutscene.unity
+    guid: f913133bb7977414aa1c815b9db49caa
+  - enabled: 1
+    path: Assets/Scenes/6/Dungeon3.unity
+    guid: 84fb0c65b04ce4bb39c8184d8303b110
+  - enabled: 1
+    path: Assets/Scenes/6/Dungeon3Entrance.unity
+    guid: b1fcc9e4d489041218178e63548d8774
+  - enabled: 1
+    path: Assets/Scenes/6/Dungeon3Entrance2.unity
+    guid: 349b0686552f64df9bc404177a0b5662
+  - enabled: 1
+    path: Assets/Scenes/6/RoyalValley.unity
+    guid: 2144b51b913a24fedb3fce63b20f5772
+  - enabled: 1
+    path: Assets/Scenes/6/Cutscenes/SouthHyruleField6Cutscene.unity
+    guid: 19bbed055d20a4c1f97cfef031a4a24d
+  - enabled: 1
+    path: Assets/Scenes/6/After Cutscenes/SouthHyruleField6AfterCutscene.unity
+    guid: 4ab1fc4b489324ad1adb9ce25a1fa886
+  - enabled: 1
+    path: Assets/Scenes/7/FinalStageEntrance.unity
+    guid: 2cc3d8fe45d8b46a0857eacb07e989e9
+  - enabled: 1
+    path: Assets/Scenes/7/Cutscenes/FinalStageCutscene.unity
+    guid: f72cd2ee4527d450f8d3388691774de9
+  - enabled: 1
+    path: Assets/Scenes/7/Cutscenes/FinalStageCutscene2.unity
+    guid: b2f1b113d7fec482abc355d50b2d4286
+  - enabled: 1
+    path: Assets/Scenes/7/After Cutscenes/FinalStage.unity
+    guid: 40950c1d98ab94960a89e8c6cf1351dc
+  - enabled: 1
+    path: Assets/Scenes/8/Cutscenes/LumiriaSavedCutscene.unity
+    guid: d0a8e5b415594454480f89a35ad2f84f
   m_configObjects: {}

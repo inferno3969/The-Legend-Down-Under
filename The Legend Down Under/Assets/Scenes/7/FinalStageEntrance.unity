@@ -2376,7 +2376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09faf5f48f7d64684a31579656689027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: FinalStage
+  sceneToLoad: FinalStageCutscene
   playerPosition: {x: 0, y: -2.3}
   playerStorage: {fileID: 11400000, guid: 4f0481c7e2a9c449bb5c7fd974d9a1ee, type: 2}
   cameraNewMax: {x: 0, y: 0}

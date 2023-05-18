@@ -22,6 +22,7 @@ public class BossEnemy : MonoBehaviour
     public int baseAttack;
     public float moveSpeed;
     public GameObject teleport;
+    public GameObject heartContainer;
     public bool newAudio;
     public IntroloopAudio clipToChangeTo;
 
@@ -60,6 +61,10 @@ public class BossEnemy : MonoBehaviour
             if (teleport != null)
             {
                 teleport.SetActive(true);
+            }
+            if (heartContainer != null)
+            {
+                heartContainer.SetActive(true);
             }
             this.gameObject.SetActive(false);
             playerHitboxes.SetActive(true);

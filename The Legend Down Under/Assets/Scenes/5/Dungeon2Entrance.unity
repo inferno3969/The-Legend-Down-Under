@@ -2461,7 +2461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09faf5f48f7d64684a31579656689027, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneToLoad: SouthHyruleField
+  sceneToLoad: SouthHyruleField5AfterCutscene
   playerPosition: {x: 40.96, y: 36.27}
   playerStorage: {fileID: 11400000, guid: 4f0481c7e2a9c449bb5c7fd974d9a1ee, type: 2}
   cameraNewMax: {x: 60.99, y: 63.01}
@@ -2698,6 +2698,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eba91ac3f30d247839785a2b07c8279e, type: 3}
+--- !u!1 &957323315
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 957323317}
+  - component: {fileID: 957323316}
+  m_Layer: 0
+  m_Name: Transition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &957323316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957323315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fed6f166575304e5a84c09ecc388a897, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fadeInPanel: {fileID: 2668009473969193489, guid: 42e7faf1fd6ab4a9db68e0d6c29dc90f, type: 3}
+--- !u!4 &957323317
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957323315}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 42.560764, y: 33.375492, z: -1.3398478}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1071045910
 GameObject:
   m_ObjectHideFlags: 0
@@ -5331,7 +5376,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 1477833441, guid: c47f25858579845299c7d9f8afba4ca2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -5375,8 +5420,8 @@ MonoBehaviour:
   playerStorage: {fileID: 11400000, guid: 4f0481c7e2a9c449bb5c7fd974d9a1ee, type: 2}
   cameraNewMax: {x: 0, y: 0}
   cameraNewMin: {x: 0, y: 0}
-  cameraMin: {fileID: 11400000, guid: b470aec255e48435f8b641490f8f8798, type: 2}
-  cameraMax: {fileID: 11400000, guid: 1b956119627554ff08f9656d358109dc, type: 2}
+  cameraMin: {fileID: 11400000, guid: 9f830a7c82676452e87dbec3a8110b44, type: 2}
+  cameraMax: {fileID: 11400000, guid: d7410ecdffea74c4abf521fada0b55cf, type: 2}
   fadeInPanel: {fileID: 0}
   fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
   fadeWait: 1

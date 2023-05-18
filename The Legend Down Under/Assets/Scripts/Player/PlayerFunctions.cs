@@ -266,6 +266,7 @@ public class PlayerFunctions : MonoBehaviour
     public void Knock(float knockTime, float damage)
     {
         currentHealth.RuntimeValue -= damage;
+        currentHealth.initialValue = currentHealth.RuntimeValue;
         playerHealthSignal.RaiseSignal();
         if (currentHealth.RuntimeValue > 0 && this.gameObject != null)
         {
@@ -303,8 +304,6 @@ public class PlayerFunctions : MonoBehaviour
             DisableEnemyHitboxes();
         }
         int tempFlashes;
-        // turn off player trigger collider to prevent from taking damage
-        triggerCollider.enabled = false;
         // prevent player from sliding when hit by an enemy
         nonTriggerCollider.enabled = false;
         // go through numberOfFlashes while iterating tempFlashes
@@ -315,8 +314,6 @@ public class PlayerFunctions : MonoBehaviour
             playerSprite.color = regularColor;
             yield return new WaitForSeconds(flashDuration);
         }
-        // set trigger collider back on when for loop is finished
-        triggerCollider.enabled = true;
         nonTriggerCollider.enabled = true;
 
         if (enemies != null)
