@@ -139,7 +139,7 @@ public class StoreItemScene : Interactable
     public IEnumerator FadeCo()
     {
         player.currentState = PlayerState.Interact;
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(1f);
         if (fadeOutPanel != null)
         {
             Instantiate(fadeOutPanel, Vector3.zero, Quaternion.identity);
