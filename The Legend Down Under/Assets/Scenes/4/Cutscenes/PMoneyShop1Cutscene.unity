@@ -221,7 +221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8429216258488170150, guid: 74a4dd2000eba4e3db5bb72bf446cfcb, type: 3}
       propertyPath: m_text
-      value: '???: Hello travler!'
+      value: '???: Hello traveler!'
       objectReference: {fileID: 0}
     - target: {fileID: 8429216258488170150, guid: 74a4dd2000eba4e3db5bb72bf446cfcb, type: 3}
       propertyPath: m_fontSize
@@ -6443,8 +6443,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player HUD Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 7428564014150187251, guid: 9bc892b4118714590ba27c2731db428c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7428564014326043694, guid: 9bc892b4118714590ba27c2731db428c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7428564014326043694, guid: 9bc892b4118714590ba27c2731db428c, type: 3}
+    - {fileID: 7428564014150187251, guid: 9bc892b4118714590ba27c2731db428c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9bc892b4118714590ba27c2731db428c, type: 3}

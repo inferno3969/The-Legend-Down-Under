@@ -15,7 +15,11 @@ MonoBehaviour:
   currentItem: {fileID: 0}
   myInventory:
   - {fileID: 11400000, guid: c8b782533f69248b6af821d67e9d2dc1, type: 2}
+  - {fileID: 11400000, guid: 3bf965778e58242dbbf3345a5a732136, type: 2}
+  - {fileID: 11400000, guid: 374775d2eabae42a1b282450d262aa89, type: 2}
+  - {fileID: 11400000, guid: daea63111ec4b4f4fadad6a93281c556, type: 2}
+  - {fileID: 11400000, guid: e1efb4efd9313463da058b3985d3fe50, type: 2}
   numberOfKeys: 0
   numberOfBossKeys: 0
-  numberOfArrows: 0
+  numberOfArrows: 7
   coins: 0

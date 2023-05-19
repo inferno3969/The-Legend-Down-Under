@@ -27,11 +27,7 @@ public class PlayerInventory : ScriptableObject
         // is the item a key?
         if (itemToAdd.isKey)
         {
-            numberOfKeys += currentItem.numberHeld;
-            if (numberOfKeys <= 0)
-            {
-                numberOfKeys++;
-            }
+            numberOfKeys++;
             if (!myInventory.Contains(currentItem))
             {
                 myInventory.Add(currentItem);
@@ -39,11 +35,7 @@ public class PlayerInventory : ScriptableObject
         }
         else if (itemToAdd.isBossKey)
         {
-            numberOfBossKeys += currentItem.numberHeld;
-            if (numberOfBossKeys <= 0)
-            {
-                numberOfBossKeys++;
-            }
+            numberOfBossKeys++;
             if (!myInventory.Contains(currentItem))
             {
                 myInventory.Add(currentItem);

@@ -20,7 +20,8 @@ public class MainMenu : MonoBehaviour
 
     public void NewGame()
     {
-        SceneManager.LoadScene("EnemyPrototyping");
+        Destroy(BGSoundScript.Instance.gameObject);
+        SceneManager.LoadScene("LinksBedroomCutscene");
     }
 
     public void QuitToDesktop()

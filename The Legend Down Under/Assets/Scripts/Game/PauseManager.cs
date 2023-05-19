@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class PauseManager : MonoBehaviour
 {
@@ -12,10 +13,14 @@ public class PauseManager : MonoBehaviour
     public GameObject playerCanvas;
     public bool usingPausePanel;
     public string mainMenu;
+    public GameObject resumeButton;
+    public GameObject previousButton;
+    public GameObject inventoryButton;
 
     // Start is called before the first frame update
     void Start()
     {
+        EventSystem.current.firstSelectedGameObject = resumeButton;
         isPaused = false;
         usingPausePanel = false;
         pausePanel.SetActive(false);
@@ -29,7 +34,6 @@ public class PauseManager : MonoBehaviour
         {
             ChangePause();
         }
-
     }
 
     public void ChangePause()
@@ -65,11 +69,13 @@ public class PauseManager : MonoBehaviour
         {
             pausePanel.SetActive(true);
             inventoryPanel.SetActive(false);
+            EventSystem.current.SetSelectedGameObject(inventoryButton);
         }
         else
         {
             inventoryPanel.SetActive(true);
             pausePanel.SetActive(false);
+            EventSystem.current.SetSelectedGameObject(previousButton);
         }
     }
 

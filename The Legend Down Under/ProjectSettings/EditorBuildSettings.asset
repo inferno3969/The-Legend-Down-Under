@@ -102,10 +102,10 @@ EditorBuildSettings:
     path: Assets/Scenes/4/After Cutscenes/SouthHyruleField4AfterCutscene.unity
     guid: 22d0c95e8de044537b98f6dcb8b93ef1
   - enabled: 1
-    path: Assets/Scenes/GameOver.unity
+    path: Assets/Scenes/Misc/GameOver.unity
     guid: 17b651588700443a39198755e5eff5f2
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/Misc/MainMenu.unity
     guid: 3ac1348c6412b4a44b53f326d999bb3f
   - enabled: 1
     path: Assets/Scenes/5/Dungeon2.unity
@@ -155,4 +155,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/8/Cutscenes/LumiriaSavedCutscene.unity
     guid: d0a8e5b415594454480f89a35ad2f84f
+  - enabled: 1
+    path: Assets/Scenes/Misc/Credits.unity
+    guid: c02950f29dbcd40ddb372f0dcb9939a2
+  - enabled: 1
+    path: Assets/Scenes/Misc/ThankYouForPlaying.unity
+    guid: 262bc45e0648b403b9c98414e16a8a1c
+  - enabled: 1
+    path: Assets/Scenes/Misc/EasterEgg.unity
+    guid: 569b8648f0999415cadf5c5670da14a2
+  - enabled: 1
+    path: Assets/Scenes/3/After Cutscenes/Dungeon1AfterCutscene.unity
+    guid: 338de0dd02dd54cc68f0ff99ecb15e40
+  - enabled: 1
+    path: Assets/Scenes/3/Cutscenes/ShieldBreakCutscene.unity
+    guid: d1a6b3a1e578b4f8589b5aa3689e8119
   m_configObjects: {}

@@ -17,16 +17,6 @@ public class ProjectileOcotorok : Octorok
         generalEnemyRigidbody = GetComponent<Rigidbody2D>();
     }
 
-    private void OnEnable()
-    {
-        transform.position = homePosition;
-        health = maxHealth.initialValue;
-        currentState = EnemyState.Idle;
-        triggerCollider.enabled = true;
-        nonTriggerCollider.enabled = true;
-        enemySprite.color = regularColor;
-    }
-
     private void Update()
     {
         // will count down if projectile has been fired

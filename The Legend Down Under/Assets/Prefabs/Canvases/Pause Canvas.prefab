@@ -539,7 +539,7 @@ RectTransform:
   - {fileID: 2727840745938122212}
   - {fileID: 2727840746533413083}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -625,6 +625,9 @@ MonoBehaviour:
   playerCanvas: {fileID: 9002354015117284626, guid: 9f7bbd42373394a6183530924d955305, type: 3}
   usingPausePanel: 0
   mainMenu: MainMenu
+  resumeButton: {fileID: 2727840747351019880}
+  previousButton: {fileID: 1317421815682496725}
+  inventoryButton: {fileID: 2727840747016602658}
 --- !u!1 &2727840746715803364
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,11 +1257,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: -5
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnLeft: {fileID: 1317421815682496747}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
@@ -1339,7 +1342,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 632852512, guid: b0e5193e3785444eaa8a6fa71b406294, type: 3}
       propertyPath: m_Colors.m_SelectedColor.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 632852512, guid: b0e5193e3785444eaa8a6fa71b406294, type: 3}
       propertyPath: m_Colors.m_HighlightedColor.r
@@ -1463,13 +1466,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4004633133153381709, guid: b0e5193e3785444eaa8a6fa71b406294, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 25
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b0e5193e3785444eaa8a6fa71b406294, type: 3}
+--- !u!1 &1317421815682496725 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 632852510, guid: b0e5193e3785444eaa8a6fa71b406294, type: 3}
+  m_PrefabInstance: {fileID: 1317421816144357579}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1317421815682496747 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 632852512, guid: b0e5193e3785444eaa8a6fa71b406294, type: 3}
+  m_PrefabInstance: {fileID: 1317421816144357579}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317421815682496725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2727840745938122212 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4004633132188310831, guid: b0e5193e3785444eaa8a6fa71b406294, type: 3}

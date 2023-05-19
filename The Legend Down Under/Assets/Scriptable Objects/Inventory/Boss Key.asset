@@ -15,11 +15,12 @@ MonoBehaviour:
   itemName: Boss Key
   itemDescription: This is a boss key! There is a boss door nearby...
   itemImage: {fileID: 21300000, guid: 9dbe91bd166ff4fb2adb400bf3bb55d1, type: 3}
-  numberHeld: 1
+  numberHeld: 0
   usable: 0
   unique: 1
   isKey: 0
   isBossKey: 1
+  isArrow: 0
   thisEvent:
     m_PersistentCalls:
       m_Calls: []

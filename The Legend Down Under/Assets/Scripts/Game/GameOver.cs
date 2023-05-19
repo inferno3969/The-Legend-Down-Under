@@ -19,6 +19,7 @@ public class GameOver : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
+        Destroy(BGSoundScript.Instance.gameObject);
         SceneManager.LoadScene("MainMenu");
     }
 }

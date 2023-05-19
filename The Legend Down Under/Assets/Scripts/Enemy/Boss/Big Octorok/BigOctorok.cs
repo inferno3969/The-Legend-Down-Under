@@ -68,38 +68,54 @@ public class BigOctorok : BossEnemy
     private void SpawnOctoroks()
     {
         // spawn octoroks
-        if (health == 6)
+        if (health >= 6 && health < 8)
         {
+            if (health != 6)
+            {
+                health = 6;
+            }
             octoroks[0].SetActive(true);
-            octoroks[0].GetComponent<Octorok>().playerHitboxes = GameObject.FindGameObjectWithTag("Hitboxes");
+            octoroks[0].GetComponent<ProjectileOcotorok>().playerHitboxes = GameObject.FindGameObjectWithTag("Hitboxes");
             octorokMinionDefeated = false;
-            if (octoroks[0].GetComponent<Octorok>().health <= 0)
+            if (octoroks[0].GetComponent<ProjectileOcotorok>().health <= 0)
             {
                 octoroks[0].SetActive(false);
                 octorokMinionDefeated = true;
             }
         }
-        if (health == 4)
+        if (health >= 4 && health < 6)
         {
+            if (health != 4)
+            {
+                health = 4;
+            }
             octoroks[1].SetActive(true);
-            octoroks[1].GetComponent<Octorok>().playerHitboxes = GameObject.FindGameObjectWithTag("Hitboxes");
+            octoroks[1].GetComponent<ProjectileOcotorok>().playerHitboxes = GameObject.FindGameObjectWithTag("Hitboxes");
             octorokMinionDefeated = false;
-            if (octoroks[1].GetComponent<Octorok>().health <= 0)
+            if (octoroks[1].GetComponent<ProjectileOcotorok>().health <= 0)
             {
                 octoroks[1].SetActive(false);
                 octorokMinionDefeated = true;
             }
         }
-        if (health == 2)
+        if (health >= 2 && health < 4)
         {
+            if (health != 2)
+            {
+                health = 2;
+            }
             octoroks[2].SetActive(true);
-            octoroks[2].GetComponent<Octorok>().playerHitboxes = GameObject.FindGameObjectWithTag("Hitboxes");
+            octoroks[2].GetComponent<ProjectileOcotorok>().playerHitboxes = GameObject.FindGameObjectWithTag("Hitboxes");
             octorokMinionDefeated = false;
-            if (octoroks[2].GetComponent<Octorok>().health <= 0)
+            if (octoroks[2].GetComponent<ProjectileOcotorok>().health <= 0)
             {
                 octoroks[2].SetActive(false);
                 octorokMinionDefeated = true;
             }
+        }
+        if (health > 0 && health < 2)
+        {
+            health = 0;
         }
     }
 }

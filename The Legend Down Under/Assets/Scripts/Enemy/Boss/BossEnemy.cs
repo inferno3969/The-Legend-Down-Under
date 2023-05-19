@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using E7.Introloop;
+using UnityEngine.SceneManagement;
 
 public enum BossEnemyState
 {
@@ -37,6 +38,10 @@ public class BossEnemy : MonoBehaviour
     public GameObject enemyHitboxes;
     public GameObject playerHitboxes;
 
+    public GameObject transition;
+
+    public bool isOctorok;
+
     void Awake()
     {
         playerHitboxes = GameObject.FindGameObjectWithTag("Hitboxes");
@@ -45,6 +50,7 @@ public class BossEnemy : MonoBehaviour
     void Start()
     {
         playerHitboxes = GetComponent<PlayerFunctions>().playerSwordHitboxes;
+        health = maxHealth.initialValue;
     }
 
     private void TakeDamage(float damage)
@@ -65,6 +71,10 @@ public class BossEnemy : MonoBehaviour
             if (heartContainer != null)
             {
                 heartContainer.SetActive(true);
+            }
+            if (isOctorok)
+            {
+                transition.SetActive(true);
             }
             this.gameObject.SetActive(false);
             playerHitboxes.SetActive(true);

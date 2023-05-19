@@ -266,7 +266,6 @@ public class PlayerFunctions : MonoBehaviour
     public void Knock(float knockTime, float damage)
     {
         currentHealth.RuntimeValue -= damage;
-        currentHealth.initialValue = currentHealth.RuntimeValue;
         playerHealthSignal.RaiseSignal();
         if (currentHealth.RuntimeValue > 0 && this.gameObject != null)
         {
