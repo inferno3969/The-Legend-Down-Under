@@ -170,4 +170,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/3/Cutscenes/ShieldBreakCutscene.unity
     guid: d1a6b3a1e578b4f8589b5aa3689e8119
+  - enabled: 1
+    path: Assets/Scenes/5/Cutscenes/BowBreakCutscene.unity
+    guid: 9547026e7c96e4a5ab9ccfa5fc0c8535
+  - enabled: 1
+    path: Assets/Scenes/5/After Cutscenes/Dungeon2AfterCutscene.unity
+    guid: 073b3e0871ce740148bfa43a353de62e
   m_configObjects: {}

@@ -39,8 +39,10 @@ public class BossEnemy : MonoBehaviour
     public GameObject playerHitboxes;
 
     public GameObject transition;
+    public GameObject transition2;
 
     public bool isOctorok;
+    public bool isGleerok;
 
     void Awake()
     {
@@ -75,6 +77,10 @@ public class BossEnemy : MonoBehaviour
             if (isOctorok)
             {
                 transition.SetActive(true);
+            }
+            if (isGleerok)
+            {
+                transition2.SetActive(true);
             }
             this.gameObject.SetActive(false);
             playerHitboxes.SetActive(true);
