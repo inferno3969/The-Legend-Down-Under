@@ -219,6 +219,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialog Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8429216256756531835, guid: 74a4dd2000eba4e3db5bb72bf446cfcb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8429216258488170150, guid: 74a4dd2000eba4e3db5bb72bf446cfcb, type: 3}
       propertyPath: m_text
       value: '???: Hello traveler!'
@@ -6158,6 +6162,12 @@ PlayableDirector:
     value: {fileID: 1178407230}
   - key: {fileID: -2647251518696358649, guid: e2909227396324dcfb9ffd7bdfa3643d, type: 2}
     value: {fileID: 1719919976}
+  - key: {fileID: 4695669066412494022, guid: e2909227396324dcfb9ffd7bdfa3643d, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -1703544654931620376, guid: e2909227396324dcfb9ffd7bdfa3643d, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -4141212448926514693, guid: e2909227396324dcfb9ffd7bdfa3643d, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - 5656fd99a96f84fb98241e8450067f42: {fileID: 1502952524}
