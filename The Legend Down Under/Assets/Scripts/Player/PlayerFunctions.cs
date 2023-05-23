@@ -265,6 +265,12 @@ public class PlayerFunctions : MonoBehaviour
 
     public void Knock(float knockTime, float damage)
     {
+        // should prevent from player being stuck in shield animation when hit
+        if (animator.GetBool("Shielding") && animator.GetBool("HoldingDown"))
+        {
+            animator.SetBool("Shielding", false);
+            animator.SetBool("HoldingDown", false);
+        }
         currentHealth.RuntimeValue -= damage;
         playerHealthSignal.RaiseSignal();
         if (currentHealth.RuntimeValue > 0 && this.gameObject != null)
