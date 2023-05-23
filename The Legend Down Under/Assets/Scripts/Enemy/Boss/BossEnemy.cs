@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using E7.Introloop;
-using UnityEngine.SceneManagement;
 
 public enum BossEnemyState
 {

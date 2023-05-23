@@ -5,21 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject playerCanvas;
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
+    public FloatValue[] playerHealth;
+    public BoolValue[] otherScriptableObjects;
 
     public void NewGame()
     {
+        foreach (FloatValue floatValue in playerHealth)
+        {
+            floatValue.RuntimeValue = floatValue.initialValue;
+        }
+        foreach (BoolValue boolValue in otherScriptableObjects)
+        {
+            boolValue.RuntimeValue = boolValue.initialValue;
+        }
         Destroy(BGSoundScript.Instance.gameObject);
         SceneManager.LoadScene("LinksBedroomCutscene");
     }

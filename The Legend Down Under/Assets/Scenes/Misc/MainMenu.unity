@@ -776,7 +776,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6fd8017490f94d0e8919bf169f4c455, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCanvas: {fileID: 9002354015117284626, guid: 9f7bbd42373394a6183530924d955305, type: 3}
+  playerHealth:
+  - {fileID: 11400000, guid: 7144b2bf4a13641ba90e35dba2740709, type: 2}
+  - {fileID: 11400000, guid: 5ec9b721c3bff440d8ddb9bf0d620e60, type: 2}
+  otherScriptableObjects:
+  - {fileID: 11400000, guid: ea8198b5507614c23842ca7872e83f49, type: 2}
+  - {fileID: 11400000, guid: e7f999a8a33064feebf39ba795089c60, type: 2}
+  - {fileID: 11400000, guid: 41c9ce4353c574ca3b0f6af3eaf5daca, type: 2}
+  - {fileID: 11400000, guid: b65ece966300a4d23ba50b139be8add2, type: 2}
+  - {fileID: 11400000, guid: 14ee6a8ee66304b86b84731702a56550, type: 2}
+  - {fileID: 11400000, guid: 3f4cf2d5dab4841dca5633a87265c86b, type: 2}
+  - {fileID: 11400000, guid: 1968c107308bc40fa8af65994f1284fa, type: 2}
+  - {fileID: 11400000, guid: b42c0e957ae5d48eaa71cdfcf4ce4395, type: 2}
+  - {fileID: 11400000, guid: a15305759329b4ea285b20efc836d962, type: 2}
+  - {fileID: 11400000, guid: b9469d8f7021745a9a25c2b75a240d58, type: 2}
 --- !u!1 &1759142449
 GameObject:
   m_ObjectHideFlags: 0
