@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using InControl;
 
 public class CameraMovement : MonoBehaviour
 {
@@ -21,9 +22,14 @@ public class CameraMovement : MonoBehaviour
     // Use this for initialization
     private void Start()
     {
-        maxPosition = camMax.runtimeValue;
-        minPosition = camMin.runtimeValue;
-
+        if (maxPosition != null && camMax != null)
+        {
+            maxPosition = camMax.initialValue;
+        }
+        if (minPosition != null && camMin != null)
+        {
+            minPosition = camMin.initialValue;
+        }
         animator = GetComponent<Animator>();
         // if (target != null)
         // {
@@ -53,10 +59,6 @@ public class CameraMovement : MonoBehaviour
                 transform.position = Vector3.Lerp(transform.position,
                                                  targetPosition, smoothing);
             }
-        }
-        else
-        {
-
         }
     }
 

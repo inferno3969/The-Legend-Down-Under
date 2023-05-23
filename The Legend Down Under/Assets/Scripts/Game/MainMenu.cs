@@ -7,9 +7,15 @@ public class MainMenu : MonoBehaviour
 {
     public FloatValue[] playerHealth;
     public BoolValue[] otherScriptableObjects;
+    public PlayerInventory playerInventory;
 
     public void NewGame()
     {
+        // remove all items from inventory
+        playerInventory.myInventory.Clear();
+        playerInventory.numberOfArrows = 0;
+        playerInventory.numberOfBossKeys = 0;
+        playerInventory.numberOfKeys = 0;
         foreach (FloatValue floatValue in playerHealth)
         {
             floatValue.RuntimeValue = floatValue.initialValue;

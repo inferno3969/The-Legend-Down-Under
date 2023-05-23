@@ -18,6 +18,7 @@ TagManager:
   - Breakable
   - NPC
   - Gleerocket
+  - Saved Input
   layers:
   - Default
   - TransparentFX
