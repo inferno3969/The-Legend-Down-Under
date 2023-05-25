@@ -1586,10 +1586,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11b2844e96d2f4651b4d409885e41bbe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
   buttons:
   - {fileID: 985708268}
   - {fileID: 2093670282}
   blackImage: {fileID: 1889566800}
+  savedInput: {fileID: 0}
+  clipToChangeTo: {fileID: 11400000, guid: 62d21c21a34614641993aaadae316dbc, type: 2}
 --- !u!4 &2143605726
 Transform:
   m_ObjectHideFlags: 0

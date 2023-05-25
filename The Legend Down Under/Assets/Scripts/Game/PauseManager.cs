@@ -16,10 +16,12 @@ public class PauseManager : MonoBehaviour
     public GameObject resumeButton;
     public GameObject previousButton;
     public GameObject inventoryButton;
+    public SaveControllerInput savedInput;
 
     // Start is called before the first frame update
     void Start()
     {
+        savedInput = GameObject.Find("Saved Input").GetComponent<SaveControllerInput>();
         EventSystem.current.firstSelectedGameObject = resumeButton;
         isPaused = false;
         usingPausePanel = false;
@@ -30,9 +32,19 @@ public class PauseManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Start"))
+        if (savedInput.inputType == InputType.Xbox)
         {
-            ChangePause();
+            if (Input.GetButtonDown("StartXbox"))
+            {
+                ChangePause();
+            }
+        }
+        if (savedInput.inputType == InputType.PlayStation || savedInput.inputType == InputType.Keyboard)
+        {
+            if (Input.GetButtonDown("Start"))
+            {
+                ChangePause();
+            }
         }
     }
 

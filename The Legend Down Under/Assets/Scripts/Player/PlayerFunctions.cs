@@ -32,6 +32,7 @@ public class PlayerFunctions : MonoBehaviour
     [Header("Player Health")]
     public FloatValue currentHealth;
     public SignalSender playerHealthSignal;
+    // public variables (seen in Unity inspector)
 
     // [HideInInspector] field hides the public variable in Unity inspector
     [HideInInspector]
@@ -46,7 +47,7 @@ public class PlayerFunctions : MonoBehaviour
     public SpriteRenderer receivedNormalItemSprite;
     public SpriteRenderer receivedSpecialItemSprite;
 
-    [Header("Inventory Items")]
+    [Header("Inventory")]
     public InventoryItem sword;
     public InventoryItem bow;
     public InventoryItem shield;
@@ -89,7 +90,7 @@ public class PlayerFunctions : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        // changes direction based on Input 
+        // changes sprite based on Input 
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal") * Time.deltaTime * speed;
         change.y = Input.GetAxisRaw("Vertical") * Time.deltaTime * speed;
@@ -103,7 +104,7 @@ public class PlayerFunctions : MonoBehaviour
         {
             return;
         }
-        if (Input.GetButtonDown("Attack") && currentState != PlayerState.Attack && currentState != PlayerState.Stagger && currentState != PlayerState.Walk)
+        if (Input.GetButtonDown("Attack") || Input.GetButtonDown("XboxAttack") && currentState != PlayerState.Attack && currentState != PlayerState.Stagger && currentState != PlayerState.Walk)
         {
             if (playerInventory.CheckForItem(sword))
             {

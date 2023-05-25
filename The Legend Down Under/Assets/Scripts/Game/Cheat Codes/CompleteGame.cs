@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using TMPro;
+using E7.Introloop;
 
 public class CompleteGame : MonoBehaviour
 {
     private string[] cheatCode;
-    private int index;
+    private string[] cheatCodeXbox;
+    public int index;
 
     private int[] values;
     private bool[] keys;
@@ -16,10 +17,16 @@ public class CompleteGame : MonoBehaviour
 
     public GameObject blackImage;
 
+    public SaveControllerInput savedInput;
+    public IntroloopAudio clipToChangeTo;
+
     void Start()
     {
+        savedInput = GameObject.Find("Saved Input").GetComponent<SaveControllerInput>();
+
         // Code is "idkfa", user needs to input this in the right order
         cheatCode = new string[] { "Cheat1", "Cheat2", "Cheat3", "Cheat4", "Cheat5", "Cheat6" };
+        cheatCodeXbox = new string[] { "Cheat1Xbox", "Cheat2Xbox", "Cheat3Xbox", "Cheat4Xbox", "Cheat5Xbox", "Cheat6Xbox" };
         index = 0;
     }
 
@@ -36,20 +43,45 @@ public class CompleteGame : MonoBehaviour
 
     void Update()
     {
+        foreach (KeyCode vKey in System.Enum.GetValues(typeof(KeyCode)))
+        {
+            if (Input.GetKeyDown(vKey))
+            {
+                Debug.Log("KeyCode down: " + vKey);
+            }
+        }
         // Check if any key is pressed
         if (Input.anyKeyDown)
         {
-            // Check if the next key in the code is pressed
-            if (Input.GetButtonDown(cheatCode[index]))
+            if (savedInput.inputType == InputType.Xbox)
             {
-                // Add 1 to index to check the next key in the code
-                index++;
+                // Check if the next key in the code is pressed
+                if (Input.GetButtonDown(cheatCodeXbox[index]))
+                {
+                    // Add 1 to index to check the next key in the code
+                    index++;
+                }
+                // Wrong key entered, we reset code typing
+                else
+                {
+                    index = 0;
+                }
             }
-            // Wrong key entered, we reset code typing
             else
             {
-                index = 0;
+                // Check if the next key in the code is pressed
+                if (Input.GetButtonDown(cheatCode[index]))
+                {
+                    // Add 1 to index to check the next key in the code
+                    index++;
+                }
+                // Wrong key entered, we reset code typing
+                else
+                {
+                    index = 0;
+                }
             }
+            Debug.Log(index);
         }
 
         // If index reaches the length of the cheatCode string, 
@@ -63,6 +95,7 @@ public class CompleteGame : MonoBehaviour
             blackImage.SetActive(true);
             // Cheat code successfully inputted!
             // Unlock crazy cheat code stuff
+            Destroy(BGSoundScript.Instance.gameObject);
             SceneManager.LoadScene("FinalStageCutscene2");
         }
     }
