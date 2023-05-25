@@ -63,7 +63,6 @@ public class PlayerFunctions : MonoBehaviour
     public float flashDuration;
     public int numberOfFlashes;
     public Collider2D triggerCollider;
-    public Collider2D nonTriggerCollider;
     public SpriteRenderer playerSprite;
 
     [Header("Player Sword Hitboxes")]
@@ -310,7 +309,8 @@ public class PlayerFunctions : MonoBehaviour
         }
         int tempFlashes;
         // prevent player from sliding when hit by an enemy
-        nonTriggerCollider.enabled = false;
+
+        triggerCollider.enabled = false;
         // go through numberOfFlashes while iterating tempFlashes
         for (tempFlashes = 0; tempFlashes < numberOfFlashes; tempFlashes++)
         {
@@ -319,7 +319,7 @@ public class PlayerFunctions : MonoBehaviour
             playerSprite.color = regularColor;
             yield return new WaitForSeconds(flashDuration);
         }
-        nonTriggerCollider.enabled = true;
+        triggerCollider.enabled = true;
 
         if (enemies != null)
         {

@@ -20,6 +20,7 @@ public class SaveControllerInput : MonoBehaviour
     void FixedUpdate()
     {
         inputDevice = InputManager.ActiveDevice;
+        inputDevice.SetLightColor(255, 0, 0);
         GetControllerType();
     }
 

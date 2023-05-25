@@ -2769,6 +2769,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 771597148, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: contextClue.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 771597148, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: contextClue.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 771597148, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: contextClue.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 771597149, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+      propertyPath: signalEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6347956277411589153, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
       propertyPath: shield
       value: 
@@ -2825,8 +2841,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedComponents:
+    - {fileID: 771597148, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 1759849148, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f15d4e7eb5ffa452f84dedf7005ccf20, type: 3}
