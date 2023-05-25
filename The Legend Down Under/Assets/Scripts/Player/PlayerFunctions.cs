@@ -32,7 +32,6 @@ public class PlayerFunctions : MonoBehaviour
     [Header("Player Health")]
     public FloatValue currentHealth;
     public SignalSender playerHealthSignal;
-    // public variables (seen in Unity inspector)
 
     // [HideInInspector] field hides the public variable in Unity inspector
     [HideInInspector]
@@ -47,7 +46,7 @@ public class PlayerFunctions : MonoBehaviour
     public SpriteRenderer receivedNormalItemSprite;
     public SpriteRenderer receivedSpecialItemSprite;
 
-    [Header("Weapons")]
+    [Header("Inventory Items")]
     public InventoryItem sword;
     public InventoryItem bow;
     public InventoryItem shield;
@@ -90,7 +89,7 @@ public class PlayerFunctions : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        // changes sprite based on Input 
+        // changes direction based on Input 
         change = Vector3.zero;
         change.x = Input.GetAxisRaw("Horizontal") * Time.deltaTime * speed;
         change.y = Input.GetAxisRaw("Vertical") * Time.deltaTime * speed;

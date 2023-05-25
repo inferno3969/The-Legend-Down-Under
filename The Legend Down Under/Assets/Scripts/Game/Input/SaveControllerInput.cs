@@ -30,23 +30,22 @@ public class SaveControllerInput : MonoBehaviour
 
     private InputType GetControllerType()
     {
-        if (inputDevice.Name.Contains("Sony") && inputDevice.IsAttached && inputDevice.IsActive)
+        if (inputDevice.Name.Contains("Sony") && inputDevice.IsAttached)
         {
             inputType = InputType.PlayStation;
-            Debug.Log("PlayStation");
+            //Debug.Log("PlayStation");
         }
-        if (inputDevice.Name.Contains("Microsoft") && inputDevice.IsAttached && inputDevice.IsActive)
+        if (inputDevice.Name.Contains("Microsoft") && inputDevice.IsAttached)
         {
             inputType = InputType.Xbox;
-            Debug.Log("Xbox");
+            //Debug.Log("Xbox");
         }
-        if (Input.anyKey)
+        if (!inputDevice.IsAttached || Input.anyKey && !inputDevice.IsActive)
         {
             inputType = InputType.Keyboard;
-            Debug.Log("Keyboard");
+            //Debug.Log("Keyboard");
         }
-        Debug.Log("InputType: " + inputType);
-        DontDestroyOnLoad(this);
+        //Debug.Log("InputType: " + inputType);
         return inputType;
     }
 }
