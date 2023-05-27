@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Misc/MainMenu.unity
     guid: 3ac1348c6412b4a44b53f326d999bb3f
   - enabled: 1
+    path: Assets/Scenes/Misc/GameOver.unity
+    guid: 17b651588700443a39198755e5eff5f2
+  - enabled: 1
     path: Assets/Scenes/0/Cutscenes/LinksBedroomCutscene.unity
     guid: 0312526008b8b43fab0db18f3e237b6d
   - enabled: 1
@@ -81,6 +84,12 @@ EditorBuildSettings:
     path: Assets/Scenes/3/Dungeon1Entrance.unity
     guid: c519b896df5a64586861cd500e8ae07a
   - enabled: 1
+    path: Assets/Scenes/3/After Cutscenes/Dungeon1AfterCutscene.unity
+    guid: 338de0dd02dd54cc68f0ff99ecb15e40
+  - enabled: 1
+    path: Assets/Scenes/3/Cutscenes/ShieldBreakCutscene.unity
+    guid: d1a6b3a1e578b4f8589b5aa3689e8119
+  - enabled: 1
     path: Assets/Scenes/3/Cutscenes/SouthHyruleField3Cutscene.unity
     guid: 59bfaba55ec8d4b25b860e82e97f6e5e
   - enabled: 1
@@ -104,9 +113,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/4/After Cutscenes/SouthHyruleField4AfterCutscene.unity
     guid: 22d0c95e8de044537b98f6dcb8b93ef1
-  - enabled: 1
-    path: Assets/Scenes/Misc/GameOver.unity
-    guid: 17b651588700443a39198755e5eff5f2
   - enabled: 1
     path: Assets/Scenes/5/Dungeon2.unity
     guid: 381f31d71e1654e07a68333a4c7768a8
@@ -164,12 +170,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Misc/EasterEgg.unity
     guid: 569b8648f0999415cadf5c5670da14a2
-  - enabled: 1
-    path: Assets/Scenes/3/After Cutscenes/Dungeon1AfterCutscene.unity
-    guid: 338de0dd02dd54cc68f0ff99ecb15e40
-  - enabled: 1
-    path: Assets/Scenes/3/Cutscenes/ShieldBreakCutscene.unity
-    guid: d1a6b3a1e578b4f8589b5aa3689e8119
   - enabled: 1
     path: Assets/Scenes/5/Cutscenes/BowBreakCutscene.unity
     guid: 9547026e7c96e4a5ab9ccfa5fc0c8535

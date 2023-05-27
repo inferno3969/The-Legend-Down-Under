@@ -309,7 +309,6 @@ public class PlayerFunctions : MonoBehaviour
         }
         int tempFlashes;
         // prevent player from sliding when hit by an enemy
-
         triggerCollider.enabled = false;
         // go through numberOfFlashes while iterating tempFlashes
         for (tempFlashes = 0; tempFlashes < numberOfFlashes; tempFlashes++)
@@ -319,6 +318,7 @@ public class PlayerFunctions : MonoBehaviour
             playerSprite.color = regularColor;
             yield return new WaitForSeconds(flashDuration);
         }
+        playerRigidBody.velocity = Vector2.zero;
         triggerCollider.enabled = true;
 
         if (enemies != null)

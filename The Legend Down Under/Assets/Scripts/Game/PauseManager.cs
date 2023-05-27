@@ -70,6 +70,7 @@ public class PauseManager : MonoBehaviour
 
     public void QuitToMain()
     {
+        Destroy(BGSoundScript.Instance.gameObject);
         SceneManager.LoadScene(mainMenu);
         Time.timeScale = 1f;
     }

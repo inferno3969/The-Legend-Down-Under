@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using E7.Introloop;
 
 public class CompleteGame : MonoBehaviour
 {
@@ -18,7 +17,6 @@ public class CompleteGame : MonoBehaviour
     public GameObject blackImage;
 
     public SaveControllerInput savedInput;
-    public IntroloopAudio clipToChangeTo;
 
     void Start()
     {
