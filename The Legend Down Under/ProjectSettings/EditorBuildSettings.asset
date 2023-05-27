@@ -63,6 +63,9 @@ EditorBuildSettings:
     path: Assets/Scenes/1/After Cutscenes/LinksHouseSmithRoomAfterCutscene.unity
     guid: e22762ee34b364c42b6fe7fefdaf2ba5
   - enabled: 1
+    path: Assets/Scenes/Misc/MainMenuContinue.unity
+    guid: a39f300a465ee4ad8a02af2d536b9111
+  - enabled: 1
     path: Assets/Scenes/1/After Cutscenes/RoyalCastleAfterCutscene.unity
     guid: 10b78a51f70e947d6b3e906efeeb23f2
   - enabled: 1

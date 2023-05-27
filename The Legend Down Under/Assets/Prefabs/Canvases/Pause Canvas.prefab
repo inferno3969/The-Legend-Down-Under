@@ -539,7 +539,7 @@ RectTransform:
   - {fileID: 2727840745938122212}
   - {fileID: 2727840746533413083}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -628,6 +628,9 @@ MonoBehaviour:
   resumeButton: {fileID: 2727840747351019880}
   previousButton: {fileID: 1317421815682496725}
   inventoryButton: {fileID: 2727840747016602658}
+  savedInput: {fileID: 0}
+  saves:
+  - {fileID: 11400000, guid: b6f4a3d2c294f4dfaa7e0c2f9af781a0, type: 2}
 --- !u!1 &2727840746715803364
 GameObject:
   m_ObjectHideFlags: 0

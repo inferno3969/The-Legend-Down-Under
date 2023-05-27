@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     public FloatValue[] playerHealth;
     public BoolValue[] otherScriptableObjects;
     public PlayerInventory playerInventory;
+    public BoolValue[] saves;
 
     public void NewGame()
     {
@@ -26,6 +27,19 @@ public class MainMenu : MonoBehaviour
         }
         Destroy(BGSoundScript.Instance.gameObject);
         SceneManager.LoadScene("LinksBedroomCutscene");
+    }
+
+    public void Continue()
+    {
+        Destroy(BGSoundScript.Instance.gameObject);
+        if (saves[0].RuntimeValue)
+        {
+            SceneManager.LoadScene("KennysHouseCutscene");
+        }
+        else
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 
     public void QuitToDesktop()

@@ -17,6 +17,7 @@ public class PauseManager : MonoBehaviour
     public GameObject previousButton;
     public GameObject inventoryButton;
     public SaveControllerInput savedInput;
+    public BoolValue[] saves;
 
     // Start is called before the first frame update
     void Start()
@@ -71,7 +72,14 @@ public class PauseManager : MonoBehaviour
     public void QuitToMain()
     {
         Destroy(BGSoundScript.Instance.gameObject);
-        SceneManager.LoadScene(mainMenu);
+        if (saves[0].RuntimeValue)
+        {
+            SceneManager.LoadScene("MainMenuContinue");
+        }
+        else
+        {
+            SceneManager.LoadScene(mainMenu);
+        }
         Time.timeScale = 1f;
     }
 

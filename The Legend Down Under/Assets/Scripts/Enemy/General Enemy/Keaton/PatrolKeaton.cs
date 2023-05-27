@@ -22,6 +22,7 @@ public class PatrolKeaton : PatrolEnemy
             if (currentState == EnemyState.Idle || currentState == EnemyState.Walk
                 && currentState != EnemyState.Stagger)
             {
+                moveSpeed = 5;
                 Vector3 temp = Vector3.MoveTowards(transform.position,
                                                          target.position,
                                                          moveSpeed * Time.deltaTime);
@@ -46,6 +47,7 @@ public class PatrolKeaton : PatrolEnemy
         {
             if (Vector3.Distance(transform.position, patrolPoints[currentPatrolPoint].position) > roundingDistance)
             {
+                moveSpeed = 2;
                 Vector3 temp = Vector3.MoveTowards(transform.position,
                 patrolPoints[currentPatrolPoint].position,
                 moveSpeed * Time.deltaTime);
@@ -62,9 +64,9 @@ public class PatrolKeaton : PatrolEnemy
     private IEnumerator AttackCo()
     {
         currentState = EnemyState.Attack;
-        animator.SetBool("Attacking", true);
+        animator.SetBool("Attack", true);
         yield return new WaitForSeconds(1f);
         currentState = EnemyState.Walk;
-        animator.SetBool("Attacking", false);
+        animator.SetBool("Attack", false);
     }
 }

@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
+    public BoolValue[] saves;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +19,29 @@ public class GameOver : MonoBehaviour
 
     }
 
+    public void Continue()
+    {
+        Destroy(BGSoundScript.Instance.gameObject);
+        if (saves[0].RuntimeValue)
+        {
+            SceneManager.LoadScene("KennysHouseCutscene");
+        }
+        else
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+    }
+
     public void ReturnToMainMenu()
     {
         Destroy(BGSoundScript.Instance.gameObject);
-        SceneManager.LoadScene("MainMenu");
+        if (saves[0].RuntimeValue)
+        {
+            SceneManager.LoadScene("MainMenuContinue");
+        }
+        else
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
     }
 }
