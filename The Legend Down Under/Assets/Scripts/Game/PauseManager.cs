@@ -76,14 +76,7 @@ public class PauseManager : MonoBehaviour
     public void QuitToMain()
     {
         Destroy(BGSoundScript.Instance.gameObject);
-        if (saves[0].RuntimeValue || saves[1].RuntimeValue)
-        {
-            SceneManager.LoadScene("MainMenuContinue");
-        }
-        else
-        {
-            SceneManager.LoadScene(mainMenu);
-        }
+        SceneManager.LoadScene(mainMenu);
         Time.timeScale = 1f;
     }
 

@@ -20,6 +20,7 @@ TagManager:
   - Gleerocket
   - Saved Input
   - LoadingScreen
+  - SaveManager
   layers:
   - Default
   - TransparentFX

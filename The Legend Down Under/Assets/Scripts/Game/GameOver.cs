@@ -39,13 +39,6 @@ public class GameOver : MonoBehaviour
     {
         Destroy(BGSoundScript.Instance.gameObject);
         audioSource.PlayOneShot(clickSound);
-        if (saves[0].RuntimeValue)
-        {
-            SceneManager.LoadScene("MainMenuContinue");
-        }
-        else
-        {
-            SceneManager.LoadScene("MainMenu");
-        }
+
     }
 }

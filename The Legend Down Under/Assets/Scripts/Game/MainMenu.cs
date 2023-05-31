@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class MainMenu : MonoBehaviour
 {
@@ -12,6 +14,34 @@ public class MainMenu : MonoBehaviour
     public GameObject[] scenes;
     public AudioSource audioSource;
     public AudioClip clickSound;
+    public GameObject newGameButton;
+    public GameObject quitButton;
+    public Button quitButton2;
+    public Button newGameButton2;
+
+    public GameObject promptPanel;
+    public GameObject areYouSurePrompt;
+    public GameObject yesButton;
+    public GameObject noButton;
+
+
+    public SaveManager saveManager;
+
+    public Button continueButton;
+
+    public void Start()
+    {
+        saveManager = GameObject.FindGameObjectWithTag("SaveManager").GetComponent<SaveManager>();
+        saveManager.LoadScriptables();
+        if (saves[0].RuntimeValue)
+        {
+            continueButton.interactable = true;
+        }
+        else
+        {
+            continueButton.interactable = false;
+        }
+    }
 
     public void NewGame()
     {
@@ -32,7 +62,9 @@ public class MainMenu : MonoBehaviour
         {
             boolValue.RuntimeValue = boolValue.initialValue;
         }
+        saveManager.objects.Clear();
         audioSource.PlayOneShot(clickSound);
+        Destroy(BGSoundScript.Instance.gameObject);
         SceneManager.LoadScene("LinksBedroomCutscene");
     }
 
@@ -51,6 +83,34 @@ public class MainMenu : MonoBehaviour
         {
             SceneManager.LoadScene("MainMenu");
         }
+    }
+
+    public void QuitPrompt()
+    {
+        quitButton2.interactable = false;
+        newGameButton2.interactable = false;
+        continueButton.interactable = false;
+        audioSource.PlayOneShot(clickSound);
+        promptPanel.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(quitButton);
+    }
+
+    public void AreYouSurePrompt()
+    {
+        promptPanel.SetActive(false);
+        audioSource.PlayOneShot(clickSound);
+        areYouSurePrompt.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(noButton);
+    }
+
+    public void CancelQuit()
+    {
+        quitButton2.interactable = true;
+        newGameButton2.interactable = true;
+        continueButton.interactable = true;
+        audioSource.PlayOneShot(clickSound);
+        areYouSurePrompt.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(newGameButton);
     }
 
     public void QuitToDesktop()
