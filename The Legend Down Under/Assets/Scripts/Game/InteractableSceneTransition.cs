@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using E7.Introloop;
 
 public class InteractableSceneTransition : Interactable
 {

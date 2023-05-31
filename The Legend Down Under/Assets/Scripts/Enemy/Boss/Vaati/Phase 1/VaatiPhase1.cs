@@ -24,6 +24,7 @@ public class VaatiPhase1 : BossEnemy
     public GameObject fadeOutPanel;
     public float fadeWait;
 
+    public AudioSource summonSound;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +40,7 @@ public class VaatiPhase1 : BossEnemy
     {
         if (animator.GetBool("Summon") == true)
         {
-            SummonShadowGuards();
+            StartCoroutine(WaitCo());
         }
     }
 
@@ -57,6 +58,7 @@ public class VaatiPhase1 : BossEnemy
         {
             if (!summoned)
             {
+                summonSound.Play();
                 shadowGuards[0].SetActive(true);
                 shadowGuards[1].SetActive(true);
                 summoned = true;
@@ -82,6 +84,7 @@ public class VaatiPhase1 : BossEnemy
             }
             if (!summoned)
             {
+                summonSound.Play();
                 shadowGuards[2].SetActive(true);
                 shadowGuards[3].SetActive(true);
                 summoned = true;
@@ -107,6 +110,7 @@ public class VaatiPhase1 : BossEnemy
             }
             if (!summoned)
             {
+                summonSound.Play();
                 shadowGuards[4].SetActive(true);
                 shadowGuards[5].SetActive(true);
                 summoned = true;
@@ -132,6 +136,7 @@ public class VaatiPhase1 : BossEnemy
             }
             if (!summoned)
             {
+                summonSound.Play();
                 shadowGuards[6].SetActive(true);
                 shadowGuards[7].SetActive(true);
                 summoned = true;
@@ -157,6 +162,7 @@ public class VaatiPhase1 : BossEnemy
             }
             if (!summoned)
             {
+                summonSound.Play();
                 shadowGuards[8].SetActive(true);
                 shadowGuards[9].SetActive(true);
                 summoned = true;
@@ -215,5 +221,11 @@ public class VaatiPhase1 : BossEnemy
     {
         cameraMax.runtimeValue = cameraNewMax;
         cameraMin.runtimeValue = cameraNewMin;
+    }
+
+    public IEnumerator WaitCo()
+    {
+        yield return new WaitForSeconds(.73f);
+        SummonShadowGuards();
     }
 }

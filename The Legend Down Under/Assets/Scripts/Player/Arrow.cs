@@ -9,6 +9,7 @@ public class Arrow : MonoBehaviour
     public float lifetime;
     private float lifetimeCounter;
     public Animator weakpoint;
+    public AudioSource arrowHit;
 
     // Start is called before the first frame update
     void Awake()
@@ -44,6 +45,10 @@ public class Arrow : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy") || other.gameObject.CompareTag("Boss")
         || other.gameObject.CompareTag("Boss Weakpoint"))
         {
+            if (arrowHit != null)
+            {
+                arrowHit.Play();
+            }
             Destroy(this.gameObject);
             if (other.gameObject.CompareTag("Boss Weakpoint"))
             {

@@ -8,6 +8,7 @@ public class ProjectileOcotorok : Octorok
     public float fireDelay;
     private float fireDelaySeconds;
     public bool canFire;
+    public AudioClip rockThrowSound;
 
     void Start()
     {
@@ -66,6 +67,10 @@ public class ProjectileOcotorok : Octorok
                 else
                 {
                     tempVector.x = 0;
+                }
+                if (rockThrowSound != null)
+                {
+                    enemySFX.PlayOneShot(rockThrowSound);
                 }
                 current.GetComponent<Projectile>().Launch(tempVector);
                 canFire = false;

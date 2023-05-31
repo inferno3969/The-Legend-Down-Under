@@ -22,6 +22,8 @@ public class TreasureChest : Interactable
     [Header("Animator")]
     private Animator animator;
 
+    public AudioSource chestOpenAudio;
+
     private PlayerFunctions player;
 
     private void Awake()
@@ -45,6 +47,10 @@ public class TreasureChest : Interactable
         {
             if (!isOpen)
             {
+                if (chestOpenAudio != null)
+                {
+                    chestOpenAudio.Play();
+                }
                 OpenChest();
             }
             else

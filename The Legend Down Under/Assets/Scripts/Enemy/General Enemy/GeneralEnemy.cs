@@ -42,6 +42,11 @@ public class GeneralEnemy : MonoBehaviour
     public GameObject playerHitboxes;
     public GameObject treasureChest;
 
+    [Header("SFX")]
+    public AudioSource enemySFX;
+    public AudioClip enemyHitSound;
+    public AudioClip enemyDeathSound;
+
     void Awake()
     {
         homePosition = transform.position;
@@ -68,6 +73,10 @@ public class GeneralEnemy : MonoBehaviour
     {
         playerHitboxes.SetActive(false);
         health -= damage;
+        if (health > 0 && enemyHitSound != null)
+        {
+            enemySFX.PlayOneShot(enemyHitSound);
+        }
         if (health <= 0 && !isDead)
         {
             isDead = true;

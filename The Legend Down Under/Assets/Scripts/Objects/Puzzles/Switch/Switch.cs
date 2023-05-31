@@ -9,6 +9,7 @@ public class Switch : MonoBehaviour
     public Sprite activeSprite;
     private SpriteRenderer mySprite;
     public Door thisDoor;
+    public AudioSource switchSound;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,10 @@ public class Switch : MonoBehaviour
         // Is it the player?
         if (other.CompareTag("Player"))
         {
+            if (!active)
+            {
+                switchSound.Play();
+            }
             ActivateSwitch();
         }
     }

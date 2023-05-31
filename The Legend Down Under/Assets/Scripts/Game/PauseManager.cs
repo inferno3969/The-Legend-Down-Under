@@ -6,7 +6,6 @@ using UnityEngine.EventSystems;
 
 public class PauseManager : MonoBehaviour
 {
-
     private bool isPaused;
     public GameObject pausePanel;
     public GameObject inventoryPanel;
@@ -18,6 +17,9 @@ public class PauseManager : MonoBehaviour
     public GameObject inventoryButton;
     public SaveControllerInput savedInput;
     public BoolValue[] saves;
+    public AudioSource soundSource;
+
+    public AudioClip buttonSound;
 
     // Start is called before the first frame update
     void Start()
@@ -51,6 +53,7 @@ public class PauseManager : MonoBehaviour
 
     public void ChangePause()
     {
+        soundSource.PlayOneShot(buttonSound);
         playerCanvas.SetActive(false);
         isPaused = !isPaused;
         if (isPaused)
@@ -61,6 +64,7 @@ public class PauseManager : MonoBehaviour
         }
         else
         {
+            soundSource.PlayOneShot(buttonSound);
             inventoryPanel.SetActive(false);
             pausePanel.SetActive(false);
             playerCanvas.SetActive(true);
@@ -72,7 +76,7 @@ public class PauseManager : MonoBehaviour
     public void QuitToMain()
     {
         Destroy(BGSoundScript.Instance.gameObject);
-        if (saves[0].RuntimeValue)
+        if (saves[0].RuntimeValue || saves[1].RuntimeValue)
         {
             SceneManager.LoadScene("MainMenuContinue");
         }
@@ -88,16 +92,17 @@ public class PauseManager : MonoBehaviour
         usingPausePanel = !usingPausePanel;
         if (usingPausePanel)
         {
+            soundSource.PlayOneShot(buttonSound);
             pausePanel.SetActive(true);
             inventoryPanel.SetActive(false);
             EventSystem.current.SetSelectedGameObject(inventoryButton);
         }
         else
         {
+            soundSource.PlayOneShot(buttonSound);
             inventoryPanel.SetActive(true);
             pausePanel.SetActive(false);
             EventSystem.current.SetSelectedGameObject(previousButton);
         }
     }
-
 }

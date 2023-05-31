@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     public BoolValue[] saves;
+    public AudioSource audioSource;
+    public AudioClip clickSound;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,7 @@ public class GameOver : MonoBehaviour
     public void Continue()
     {
         Destroy(BGSoundScript.Instance.gameObject);
+        audioSource.PlayOneShot(clickSound);
         if (saves[0].RuntimeValue)
         {
             SceneManager.LoadScene("KennysHouseCutscene");
@@ -35,6 +38,7 @@ public class GameOver : MonoBehaviour
     public void ReturnToMainMenu()
     {
         Destroy(BGSoundScript.Instance.gameObject);
+        audioSource.PlayOneShot(clickSound);
         if (saves[0].RuntimeValue)
         {
             SceneManager.LoadScene("MainMenuContinue");

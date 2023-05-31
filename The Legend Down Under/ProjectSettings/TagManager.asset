@@ -19,6 +19,7 @@ TagManager:
   - NPC
   - Gleerocket
   - Saved Input
+  - LoadingScreen
   layers:
   - Default
   - TransparentFX

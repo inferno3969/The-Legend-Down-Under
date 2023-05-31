@@ -5,6 +5,7 @@ using UnityEngine;
 public class Rocket : Projectile
 {
     public Animator animator;
+    public AudioClip explosionSound;
 
     private void Awake()
     {
@@ -21,6 +22,7 @@ public class Rocket : Projectile
 
     private IEnumerator Explode()
     {
+        projectileSFX.PlayOneShot(explosionSound);
         animator.SetBool("Explode", true);
         yield return new WaitForSeconds(0.42f);
         Destroy(this.gameObject);

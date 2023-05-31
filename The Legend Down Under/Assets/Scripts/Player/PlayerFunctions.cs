@@ -57,6 +57,8 @@ public class PlayerFunctions : MonoBehaviour
     [Header("Player Hit")]
     public SignalSender playerHit;
 
+    public bool isAttacking;
+
     [Header("Invulnerability Frame")]
     public Color flashColor;
     public Color regularColor;
@@ -64,6 +66,12 @@ public class PlayerFunctions : MonoBehaviour
     public int numberOfFlashes;
     public Collider2D triggerCollider;
     public SpriteRenderer playerSprite;
+
+    [Header("SFX")]
+    public AudioSource playerSFX;
+    public AudioClip swordSwing;
+    public AudioClip arrowShoot;
+    public AudioClip shieldDraw;
 
     [Header("Player Sword Hitboxes")]
     public GameObject playerSwordHitboxes;
@@ -105,7 +113,7 @@ public class PlayerFunctions : MonoBehaviour
         }
         if (Input.GetButtonDown("Attack") || Input.GetButtonDown("XboxAttack") && currentState != PlayerState.Attack && currentState != PlayerState.Stagger && currentState != PlayerState.Walk)
         {
-            if (playerInventory.CheckForItem(sword))
+            if (playerInventory.CheckForItem(sword) && !isAttacking)
             {
                 StartCoroutine(AttackCo());
             }
@@ -126,6 +134,13 @@ public class PlayerFunctions : MonoBehaviour
         {
             if (playerInventory.CheckForItem(shield))
             {
+                if (Input.GetButtonDown("Shield"))
+                {
+                    if (shieldDraw != null)
+                    {
+                        playerSFX.PlayOneShot(shieldDraw);
+                    }
+                }
                 StartCoroutine(ShieldCo());
             }
         }
@@ -140,6 +155,7 @@ public class PlayerFunctions : MonoBehaviour
     // moves position of player
     void MoveCharacter()
     {
+        currentState = PlayerState.Walk;
         change.Normalize();
         playerRigidBody.MovePosition(transform.position + change.normalized * speed * Time.deltaTime);
         PlayerCurrentDirection(change);
@@ -211,19 +227,30 @@ public class PlayerFunctions : MonoBehaviour
     // and short delay
     private IEnumerator AttackCo()
     {
+        isAttacking = true;
         animator.SetBool("Attacking", true);
         currentState = PlayerState.Attack;
         yield return null;
+        if (swordSwing != null)
+        {
+            playerSFX.PlayOneShot(swordSwing);
+        }
         animator.SetBool("Attacking", false);
         yield return new WaitForSeconds(.3f);
         if (currentState != PlayerState.Interact)
         {
             currentState = PlayerState.Walk;
         }
+        yield return new WaitForSeconds(.15f);
+        isAttacking = false;
     }
 
     private IEnumerator SecondAttackCo()
     {
+        if (arrowShoot != null)
+        {
+            playerSFX.PlayOneShot(arrowShoot);
+        }
         currentState = PlayerState.Attack;
         yield return null;
         MakeArrow();

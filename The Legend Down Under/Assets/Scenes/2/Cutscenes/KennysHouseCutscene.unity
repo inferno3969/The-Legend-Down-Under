@@ -4327,6 +4327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saveGame: {fileID: 11400000, guid: b6f4a3d2c294f4dfaa7e0c2f9af781a0, type: 2}
+  saved: 0
 --- !u!4 &1387428716
 Transform:
   m_ObjectHideFlags: 0

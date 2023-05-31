@@ -4410,6 +4410,9 @@ MonoBehaviour:
   fadeInPanel: {fileID: 0}
   fadeOutPanel: {fileID: 2547551480192540232, guid: 065dccd6c4add4eba810d7deb07e691d, type: 3}
   fadeWait: 1
+  loadingScreen: {fileID: 0}
+  slider: {fileID: 0}
+  progressText: {fileID: 0}
   newAudio: 1
   player: {fileID: 771809151}
 --- !u!61 &1770817015

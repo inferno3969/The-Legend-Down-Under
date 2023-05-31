@@ -9,6 +9,9 @@ public class MainMenu : MonoBehaviour
     public BoolValue[] otherScriptableObjects;
     public PlayerInventory playerInventory;
     public BoolValue[] saves;
+    public GameObject[] scenes;
+    public AudioSource audioSource;
+    public AudioClip clickSound;
 
     public void NewGame()
     {
@@ -25,16 +28,24 @@ public class MainMenu : MonoBehaviour
         {
             boolValue.RuntimeValue = boolValue.initialValue;
         }
-        Destroy(BGSoundScript.Instance.gameObject);
+        foreach (BoolValue boolValue in saves)
+        {
+            boolValue.RuntimeValue = boolValue.initialValue;
+        }
+        audioSource.PlayOneShot(clickSound);
         SceneManager.LoadScene("LinksBedroomCutscene");
     }
 
     public void Continue()
     {
-        Destroy(BGSoundScript.Instance.gameObject);
-        if (saves[0].RuntimeValue)
+        audioSource.PlayOneShot(clickSound);
+        if (saves[0].RuntimeValue && !saves[1].RuntimeValue)
         {
-            SceneManager.LoadScene("KennysHouseCutscene");
+            scenes[0].SetActive(true);
+        }
+        else if (saves[1].RuntimeValue && saves[0].RuntimeValue)
+        {
+            scenes[1].SetActive(true);
         }
         else
         {

@@ -9,6 +9,7 @@ public class Lever : Interactable
     public Sprite activeSprite;
     private SpriteRenderer mySprite;
     public Door thisDoor;
+    public AudioSource leverSound;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class Lever : Interactable
         {
             if (!active)
             {
+                leverSound.Play();
                 ActivateLever();
                 context.RaiseSignal();
                 playerInRange = false;

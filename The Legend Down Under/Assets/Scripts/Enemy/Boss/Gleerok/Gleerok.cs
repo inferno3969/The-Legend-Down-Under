@@ -17,6 +17,9 @@ public class Gleerok : BossEnemy
     private bool firedTwoTimes;
     [SerializeField]
     private int fireCount = 0;
+    public AudioSource fireSFX;
+    public AudioClip chargeSound;
+    public AudioClip fireSound;
 
 
     void Start()
@@ -76,7 +79,8 @@ public class Gleerok : BossEnemy
 
     private IEnumerator AttackCo()
     {
-        yield return new WaitForSeconds(2f);
+        bossSFX.PlayOneShot(chargeSound);
+        yield return new WaitForSeconds(2.5f);
         animator.SetBool("Attacking", true);
         if (canFire && !firedTwoTimes)
         {
@@ -87,6 +91,7 @@ public class Gleerok : BossEnemy
                     Vector3 tempVector = target.transform.position - transform.position;
                     tempVector.Normalize();
                     GameObject current = Instantiate(projectile, transform.position, Quaternion.identity);
+                    fireSFX.PlayOneShot(fireSound);
                     current.GetComponent<Rocket>().Launch(tempVector);
                     canFire = false;
                     fireDelaySeconds = fireDelay; // Reset fire delay timer

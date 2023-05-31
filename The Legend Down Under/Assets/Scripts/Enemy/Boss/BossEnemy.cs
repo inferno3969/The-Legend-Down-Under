@@ -43,6 +43,11 @@ public class BossEnemy : MonoBehaviour
     public bool isOctorok;
     public bool isGleerok;
 
+    [Header("SFX")]
+    public AudioSource bossSFX;
+    public AudioClip bossHitSound;
+    public AudioClip bossDeathSound;
+
     void Awake()
     {
         playerHitboxes = GameObject.FindGameObjectWithTag("Hitboxes");
@@ -58,8 +63,16 @@ public class BossEnemy : MonoBehaviour
     {
         playerHitboxes.SetActive(false);
         health -= damage;
+        if (health > 0 && bossHitSound != null)
+        {
+            bossSFX.PlayOneShot(bossHitSound);
+        }
         if (health <= 0)
         {
+            if (bossDeathSound != null)
+            {
+                bossSFX.PlayOneShot(bossDeathSound);
+            }
             if (newAudio)
             {
                 BGSoundScript.Instance.gameObject.GetComponent<IntroloopPlayer>().Stop();

@@ -4027,6 +4027,9 @@ MonoBehaviour:
   fadeInPanel: {fileID: 0}
   fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
   fadeWait: 1
+  loadingScreen: {fileID: 0}
+  slider: {fileID: 0}
+  progressText: {fileID: 0}
   newAudio: 0
   player: {fileID: 32871706}
 --- !u!1 &906001874
@@ -5700,6 +5703,9 @@ MonoBehaviour:
   fadeInPanel: {fileID: 0}
   fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
   fadeWait: 1
+  loadingScreen: {fileID: 0}
+  slider: {fileID: 0}
+  progressText: {fileID: 0}
   newAudio: 0
   player: {fileID: 32871706}
 --- !u!61 &1231722800
@@ -6346,6 +6352,9 @@ MonoBehaviour:
   fadeOutPanel: {fileID: 2547551480192540232, guid: 065dccd6c4add4eba810d7deb07e691d, type: 3}
   fadeWait: 1
   newAudio: 1
+  loadingScreen: {fileID: 0}
+  slider: {fileID: 0}
+  progressText: {fileID: 0}
   player: {fileID: 32871706}
 --- !u!4 &1378683344
 Transform:
@@ -6458,6 +6467,10 @@ PlayableDirector:
     value: {fileID: 771809152}
   - key: {fileID: 3386078747550130876, guid: cd1678b0e26a64f3286f767601a47b0b, type: 2}
     value: {fileID: 1797030525}
+  - key: {fileID: -7243149658770763360, guid: cd1678b0e26a64f3286f767601a47b0b, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 5739021063329307747, guid: cd1678b0e26a64f3286f767601a47b0b, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1485236143
@@ -6580,6 +6593,9 @@ MonoBehaviour:
   fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
   fadeWait: 1
   newAudio: 0
+  loadingScreen: {fileID: 0}
+  slider: {fileID: 0}
+  progressText: {fileID: 0}
 --- !u!4 &1797030527
 Transform:
   m_ObjectHideFlags: 0

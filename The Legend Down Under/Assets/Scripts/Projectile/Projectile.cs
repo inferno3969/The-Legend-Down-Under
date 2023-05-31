@@ -13,6 +13,8 @@ public class Projectile : MonoBehaviour
     private float lifetimeSeconds;
     public Rigidbody2D myRigidbody;
 
+    public AudioSource projectileSFX;
+
     // Start is called before the first frame update
     void Start()
     {
