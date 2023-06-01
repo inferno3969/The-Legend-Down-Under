@@ -301,6 +301,53 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &63693693
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 63693695}
+  - component: {fileID: 63693694}
+  m_Layer: 0
+  m_Name: Save
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &63693694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63693693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ee87a3dd17f747e691498b709bccbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newSave: {fileID: 11400000, guid: 1698895657bf5440e89ebb448163d3a7, type: 2}
+  prevSave: {fileID: 11400000, guid: 27013deeb10d548e8a1778badd063c2b, type: 2}
+  saveManager: {fileID: 0}
+--- !u!4 &63693695
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63693693}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 24
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &90796472
 GameObject:
   m_ObjectHideFlags: 0
@@ -1373,9 +1420,6 @@ MonoBehaviour:
   fadeInPanel: {fileID: 0}
   fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
   fadeWait: 1
-  loadingScreen: {fileID: 0}
-  slider: {fileID: 0}
-  progressText: {fileID: 0}
   newAudio: 1
   player: {fileID: 848848869}
 --- !u!61 &394929013
@@ -32373,9 +32417,6 @@ MonoBehaviour:
   fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
   fadeWait: 1
   newAudio: 1
-  loadingScreen: {fileID: 0}
-  slider: {fileID: 0}
-  progressText: {fileID: 0}
 --- !u!4 &667136727
 Transform:
   m_ObjectHideFlags: 0
@@ -106268,9 +106309,6 @@ MonoBehaviour:
   fadeInPanel: {fileID: 0}
   fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
   fadeWait: 1
-  loadingScreen: {fileID: 0}
-  slider: {fileID: 0}
-  progressText: {fileID: 0}
   newAudio: 1
   player: {fileID: 848848869}
 --- !u!60 &1181438813
@@ -106482,9 +106520,6 @@ MonoBehaviour:
   fadeInPanel: {fileID: 0}
   fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
   fadeWait: 1
-  loadingScreen: {fileID: 0}
-  slider: {fileID: 0}
-  progressText: {fileID: 0}
   newAudio: 1
   player: {fileID: 848848869}
 --- !u!1 &1281006462
@@ -107515,9 +107550,6 @@ MonoBehaviour:
   fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
   fadeWait: 1
   newAudio: 1
-  loadingScreen: {fileID: 0}
-  slider: {fileID: 0}
-  progressText: {fileID: 0}
   player: {fileID: 848848869}
 --- !u!1 &1603928424
 GameObject:
@@ -107761,9 +107793,6 @@ MonoBehaviour:
   fadeInPanel: {fileID: 0}
   fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
   fadeWait: 1
-  loadingScreen: {fileID: 0}
-  slider: {fileID: 0}
-  progressText: {fileID: 0}
   newAudio: 1
   player: {fileID: 848848869}
 --- !u!61 &1640691354
@@ -108787,6 +108816,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 6098524824226976287, guid: 4a0d261bb8e4445e0bc7a7d2d9e22738, type: 2}
     value: {fileID: 0}
+  - key: {fileID: -999691183243108260, guid: 4a0d261bb8e4445e0bc7a7d2d9e22738, type: 2}
+    value: {fileID: 63693693}
   m_ExposedReferences:
     m_References: []
 --- !u!114 &1825225682
@@ -108872,9 +108903,6 @@ MonoBehaviour:
   fadeInPanel: {fileID: 0}
   fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
   fadeWait: 1
-  loadingScreen: {fileID: 0}
-  slider: {fileID: 0}
-  progressText: {fileID: 0}
   newAudio: 1
   player: {fileID: 848848869}
 --- !u!61 &1828199101

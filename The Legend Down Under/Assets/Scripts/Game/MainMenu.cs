@@ -10,7 +10,6 @@ public class MainMenu : MonoBehaviour
     public FloatValue[] playerHealth;
     public BoolValue[] otherScriptableObjects;
     public PlayerInventory playerInventory;
-    public BoolValue[] saves;
     public GameObject[] scenes;
     public AudioSource audioSource;
     public AudioClip clickSound;
@@ -46,7 +45,9 @@ public class MainMenu : MonoBehaviour
                 SaveScene temp = (SaveScene)saveManager.objects[i];
                 if (temp.saved)
                 {
+                    playerHealth[1].RuntimeValue = playerHealth[1].initialValue;
                     continueButton.interactable = true;
+                    EventSystem.current.SetSelectedGameObject(continueButton.gameObject);
                 }
             }
         }
@@ -67,11 +68,21 @@ public class MainMenu : MonoBehaviour
         {
             boolValue.RuntimeValue = boolValue.initialValue;
         }
-        foreach (BoolValue boolValue in saves)
+        foreach (ScriptableObject scriptableObject in saveManager.objects)
         {
-            boolValue.RuntimeValue = boolValue.initialValue;
+            if (scriptableObject.GetType() == typeof(SaveScene))
+            {
+                SaveScene temp = (SaveScene)scriptableObject;
+                temp.saved = false;
+            }
+            if (scriptableObject.GetType() == typeof(FloatValue))
+            {
+                FloatValue temp = (FloatValue)scriptableObject;
+                temp.RuntimeValue = temp.initialValue;
+            }
         }
         saveManager.objects.Clear();
+        saveManager.ResetScriptables();
         audioSource.PlayOneShot(clickSound);
         Destroy(BGSoundScript.Instance.gameObject);
         SceneManager.LoadScene("LinksBedroomCutscene");
@@ -79,7 +90,14 @@ public class MainMenu : MonoBehaviour
 
     public void Continue()
     {
+        playerInventory.numberOfBossKeys = 0;
+        playerInventory.numberOfKeys = 0;
+        foreach (BoolValue boolValue in otherScriptableObjects)
+        {
+            boolValue.RuntimeValue = boolValue.initialValue;
+        }
         audioSource.PlayOneShot(clickSound);
+        saveManager.ResetScriptables();
         foreach (ScriptableObject scriptableObject in saveManager.objects)
         {
             if (scriptableObject.GetType() == typeof(SaveScene))
@@ -87,13 +105,18 @@ public class MainMenu : MonoBehaviour
                 SaveScene temp = (SaveScene)scriptableObject;
                 if (temp.saved)
                 {
+                    GameOver sceneIndex = new GameOver();
+                    Debug.Log(temp.sceneIndex);
                     scenes[temp.sceneIndex].SetActive(true);
+                    sceneIndex.CurrentSave(temp.sceneIndex);
+                    Debug.Log(temp.sceneIndex);
+
                 }
             }
         }
     }
 
-    public void QuitPrompt()
+    public void NewGamePrompt()
     {
         quitButton2.interactable = false;
         newGameButton2.interactable = false;
@@ -111,7 +134,7 @@ public class MainMenu : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(noButton);
     }
 
-    public void CancelQuit()
+    public void CancelNewGame()
     {
         quitButton2.interactable = true;
         newGameButton2.interactable = true;

@@ -88,6 +88,7 @@ public class PlayerFunctions : MonoBehaviour
         animator = GetComponent<Animator>();
         animator.SetFloat("MoveX", 0);
         animator.SetFloat("MoveY", -1);
+        currentHealth.RuntimeValue = currentHealth.initialValue;
         if (startingPosition != null)
         {
             transform.position = startingPosition.runtimeValue;
@@ -130,7 +131,7 @@ public class PlayerFunctions : MonoBehaviour
                 }
             }
         }
-        else if (Input.GetButton("Shield") && currentState != PlayerState.Attack && currentState != PlayerState.Stagger)
+        else if (Input.GetButton("Shield") && currentState != PlayerState.Attack && currentState != PlayerState.Stagger && currentState != PlayerState.Walk)
         {
             if (playerInventory.CheckForItem(shield))
             {
@@ -306,8 +307,23 @@ public class PlayerFunctions : MonoBehaviour
         }
         else
         {
-            this.gameObject.SetActive(false);
             Destroy(BGSoundScript.Instance.gameObject);
+            SaveManager saveManager = FindObjectOfType<SaveManager>();
+            foreach (ScriptableObject scriptableObject in saveManager.objects)
+            {
+                if (scriptableObject.GetType() == typeof(SaveScene))
+                {
+                    SaveScene temp = (SaveScene)scriptableObject;
+                    if (temp.saved)
+                    {
+                        GameOver sceneIndex = new GameOver();
+                        sceneIndex.CurrentSave(temp.sceneIndex);
+                        Debug.Log(temp.sceneIndex);
+
+                    }
+                }
+            }
+            this.gameObject.SetActive(false);
             SceneManager.LoadScene("GameOver");
         }
     }

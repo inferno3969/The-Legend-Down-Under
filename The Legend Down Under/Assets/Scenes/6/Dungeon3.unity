@@ -5323,7 +5323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: FinalStageEntrance
-  playerPosition: {x: 0, y: 0}
+  playerPosition: {x: 0, y: -2}
   playerStorage: {fileID: 11400000, guid: 4f0481c7e2a9c449bb5c7fd974d9a1ee, type: 2}
   cameraNewMax: {x: 0, y: 0}
   cameraNewMin: {x: 0, y: 0}
@@ -17872,6 +17872,57 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eba91ac3f30d247839785a2b07c8279e, type: 3}
+--- !u!1 &1227999264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1227999266}
+  - component: {fileID: 1227999265}
+  m_Layer: 0
+  m_Name: Timeline Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!320 &1227999265
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227999264}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 49d0d84a51a054185a62d03aef0e806e, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 8187661391339706234, guid: 49d0d84a51a054185a62d03aef0e806e, type: 2}
+    value: {fileID: 1337510889}
+  m_ExposedReferences:
+    m_References: []
+--- !u!4 &1227999266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1227999264}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1271955144
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17966,6 +18017,53 @@ MonoBehaviour:
   storedValue: {fileID: 11400000, guid: b65ece966300a4d23ba50b139be8add2, type: 2}
   activeSprite: {fileID: -63155887, guid: c47f25858579845299c7d9f8afba4ca2, type: 3}
   objectToActivate: {fileID: 987508662}
+--- !u!1 &1337510889
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1337510891}
+  - component: {fileID: 1337510890}
+  m_Layer: 0
+  m_Name: Save
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1337510890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337510889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ee87a3dd17f747e691498b709bccbdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newSave: {fileID: 11400000, guid: 1da647e515d8b49eb82e16d2496f4da0, type: 2}
+  prevSave: {fileID: 11400000, guid: 13e5823389c754722ac79f5576033c43, type: 2}
+  saveManager: {fileID: 0}
+--- !u!4 &1337510891
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1337510889}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1407949767 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7947530123212770087, guid: a36ee74c7cf1d44c98f74038f97558c0, type: 3}

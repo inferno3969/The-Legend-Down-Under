@@ -24,13 +24,13 @@ public class ContextClue : MonoBehaviour
                 contextClue[2].SetActive(false);
                 contextClue[0].SetActive(true);
             }
-            if (savedInput.inputType == InputType.PlayStation)
+            else if (savedInput.inputType == InputType.PlayStation)
             {
                 contextClue[0].SetActive(false);
                 contextClue[2].SetActive(false);
                 contextClue[1].SetActive(true);
             }
-            if (savedInput.inputType == InputType.Xbox)
+            else if (savedInput.inputType == InputType.Xbox)
             {
                 contextClue[2].SetActive(true);
                 contextClue[0].SetActive(false);

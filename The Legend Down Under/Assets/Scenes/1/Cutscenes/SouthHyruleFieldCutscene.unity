@@ -393,7 +393,7 @@ GameObject:
   - component: {fileID: 233565970}
   - component: {fileID: 233565969}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Zephyr Encounter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -421,9 +421,6 @@ MonoBehaviour:
   fadeInPanel: {fileID: 0}
   fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
   fadeWait: 1
-  loadingScreen: {fileID: 0}
-  slider: {fileID: 0}
-  progressText: {fileID: 0}
   newAudio: 1
   player: {fileID: 848848869}
 --- !u!61 &233565970
@@ -1030,9 +1027,6 @@ MonoBehaviour:
   fadeInPanel: {fileID: 0}
   fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
   fadeWait: 1
-  loadingScreen: {fileID: 0}
-  slider: {fileID: 0}
-  progressText: {fileID: 0}
   newAudio: 1
   player: {fileID: 848848869}
 --- !u!61 &394929013
@@ -105429,9 +105423,6 @@ MonoBehaviour:
   fadeInPanel: {fileID: 0}
   fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
   fadeWait: 1
-  loadingScreen: {fileID: 0}
-  slider: {fileID: 0}
-  progressText: {fileID: 0}
   newAudio: 1
   player: {fileID: 848848869}
 --- !u!60 &1181438813
@@ -105643,9 +105634,6 @@ MonoBehaviour:
   fadeInPanel: {fileID: 0}
   fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
   fadeWait: 1
-  loadingScreen: {fileID: 0}
-  slider: {fileID: 0}
-  progressText: {fileID: 0}
   newAudio: 1
   player: {fileID: 848848869}
 --- !u!1001 &1262286071
@@ -106737,9 +106725,6 @@ MonoBehaviour:
   fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
   fadeWait: 1
   newAudio: 1
-  loadingScreen: {fileID: 0}
-  slider: {fileID: 0}
-  progressText: {fileID: 0}
   player: {fileID: 848848869}
 --- !u!1 &1609617871
 GameObject:
@@ -106906,9 +106891,6 @@ MonoBehaviour:
   fadeInPanel: {fileID: 0}
   fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
   fadeWait: 1
-  loadingScreen: {fileID: 0}
-  slider: {fileID: 0}
-  progressText: {fileID: 0}
   newAudio: 1
   player: {fileID: 848848869}
 --- !u!61 &1640691354
@@ -107733,9 +107715,6 @@ MonoBehaviour:
   fadeInPanel: {fileID: 0}
   fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
   fadeWait: 1
-  loadingScreen: {fileID: 0}
-  slider: {fileID: 0}
-  progressText: {fileID: 0}
   newAudio: 1
   player: {fileID: 848848869}
 --- !u!61 &1828199101

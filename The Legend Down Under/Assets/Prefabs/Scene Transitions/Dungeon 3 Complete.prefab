@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: FinalStageEntrance
-  playerPosition: {x: 0, y: 0}
+  playerPosition: {x: 0, y: -2}
   playerStorage: {fileID: 11400000, guid: 4f0481c7e2a9c449bb5c7fd974d9a1ee, type: 2}
   cameraNewMax: {x: 0, y: 0}
   cameraNewMin: {x: 0, y: 0}

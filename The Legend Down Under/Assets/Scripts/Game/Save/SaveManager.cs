@@ -11,14 +11,13 @@ public class SaveManager : MonoBehaviour
 
     public void ResetScriptables()
     {
-        for (int i = 0; i < objects.Count; i++)
+        int i = 0;
+        while (File.Exists(Application.persistentDataPath +
+            string.Format($"/{i}.dat", i)))
         {
-            if (File.Exists(Application.persistentDataPath +
-                string.Format($"/{i}.dat", i)))
-            {
-                File.Delete(Application.persistentDataPath +
-                    string.Format($"/{i}.dat", i));
-            }
+            File.Delete(Application.persistentDataPath +
+                string.Format($"/{i}.dat", i));
+            i++;
         }
     }
 

@@ -109668,8 +109668,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ee87a3dd17f747e691498b709bccbdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  saveGame: {fileID: 11400000, guid: d2987b056f05d4849814d804a8736d8d, type: 2}
-  saved: 0
+  newSave: {fileID: 11400000, guid: d2987b056f05d4849814d804a8736d8d, type: 2}
+  prevSave: {fileID: 11400000, guid: 1698895657bf5440e89ebb448163d3a7, type: 2}
   saveManager: {fileID: 0}
 --- !u!4 &2125776673
 Transform:

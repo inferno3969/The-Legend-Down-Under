@@ -1943,7 +1943,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ee87a3dd17f747e691498b709bccbdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  newSave: {fileID: 11400000, guid: 0af403e5a4c504e00add7b7310f7f02d, type: 2}
+  newSave: {fileID: 11400000, guid: 27013deeb10d548e8a1778badd063c2b, type: 2}
   prevSave: {fileID: 0}
   saveManager: {fileID: 0}
 --- !u!4 &259551283
