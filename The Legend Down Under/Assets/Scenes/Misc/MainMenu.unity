@@ -900,7 +900,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 453942333}
   m_OnClick:
     m_PersistentCalls:
@@ -3689,7 +3689,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2aa74e68ee71438bb8f1d14d464c702, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objects: []
+  objects:
+  - {fileID: 11400000, guid: 0af403e5a4c504e00add7b7310f7f02d, type: 2}
+  - {fileID: 11400000, guid: b0901e27b7a41469c95f40bc7a430912, type: 2}
 --- !u!4 &1939778596
 Transform:
   m_ObjectHideFlags: 0

@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &59420926365853449
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 59420926365853455}
+  - component: {fileID: -5559987194463241911}
+  m_Layer: 0
+  m_Name: Dungeon 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &59420926365853455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59420926365853449}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-5559987194463241911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 59420926365853449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e8ec64f8901140d081f0384b32bc894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Dungeon2
+  playerPosition: {x: 0, y: 0}
+  playerStorage: {fileID: 11400000, guid: 4f0481c7e2a9c449bb5c7fd974d9a1ee, type: 2}
+  cameraNewMax: {x: 0, y: 0}
+  cameraNewMin: {x: 0, y: 0}
+  cameraMin: {fileID: 11400000, guid: 9f830a7c82676452e87dbec3a8110b44, type: 2}
+  cameraMax: {fileID: 11400000, guid: d7410ecdffea74c4abf521fada0b55cf, type: 2}
+  fadeInPanel: {fileID: 0}
+  fadeOutPanel: {fileID: 2201207492552975120, guid: 794c1e8968ea64d1baf0319c938d22b9, type: 3}
+  fadeWait: 1
+  newAudio: 1

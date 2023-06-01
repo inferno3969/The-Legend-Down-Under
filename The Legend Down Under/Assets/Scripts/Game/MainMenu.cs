@@ -24,22 +24,31 @@ public class MainMenu : MonoBehaviour
     public GameObject yesButton;
     public GameObject noButton;
 
+    private int sceneIndex;
 
     public SaveManager saveManager;
 
     public Button continueButton;
 
-    public void Start()
+    public void Awake()
     {
         saveManager = GameObject.FindGameObjectWithTag("SaveManager").GetComponent<SaveManager>();
         saveManager.LoadScriptables();
-        if (saves[0].RuntimeValue)
+    }
+
+    public void Start()
+    {
+        for (int i = 0; i < saveManager.objects.Count; i++)
         {
-            continueButton.interactable = true;
-        }
-        else
-        {
-            continueButton.interactable = false;
+            if (saveManager.objects[i].GetType() == typeof(SaveScene))
+            {
+                Debug.Log("found");
+                SaveScene temp = (SaveScene)saveManager.objects[i];
+                if (temp.saved)
+                {
+                    continueButton.interactable = true;
+                }
+            }
         }
     }
 
@@ -71,17 +80,16 @@ public class MainMenu : MonoBehaviour
     public void Continue()
     {
         audioSource.PlayOneShot(clickSound);
-        if (saves[0].RuntimeValue && !saves[1].RuntimeValue)
+        foreach (ScriptableObject scriptableObject in saveManager.objects)
         {
-            scenes[0].SetActive(true);
-        }
-        else if (saves[1].RuntimeValue && saves[0].RuntimeValue)
-        {
-            scenes[1].SetActive(true);
-        }
-        else
-        {
-            SceneManager.LoadScene("MainMenu");
+            if (scriptableObject.GetType() == typeof(SaveScene))
+            {
+                SaveScene temp = (SaveScene)scriptableObject;
+                if (temp.saved)
+                {
+                    scenes[temp.sceneIndex].SetActive(true);
+                }
+            }
         }
     }
 

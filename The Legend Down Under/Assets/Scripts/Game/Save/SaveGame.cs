@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class SaveGame : MonoBehaviour
 {
-    public BoolValue saveGame;
-    public bool saved;
+    public SaveScene newSave;
+    public SaveScene prevSave;
     public SaveManager saveManager;
 
     public void OnEnable()
     {
         saveManager = GameObject.FindGameObjectWithTag("SaveManager").GetComponent<SaveManager>();
-        saved = true;
-        saveGame.RuntimeValue = saved;
-        saveManager.objects.Add(saveGame);
+        if (prevSave != null)
+        {
+            prevSave.saved = false;
+        }
+        newSave.saved = true;
+        saveManager.objects.Add(newSave);
         saveManager.SaveScriptables();
     }
 }

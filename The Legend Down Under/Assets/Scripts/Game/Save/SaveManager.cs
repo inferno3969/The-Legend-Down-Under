@@ -14,10 +14,10 @@ public class SaveManager : MonoBehaviour
         for (int i = 0; i < objects.Count; i++)
         {
             if (File.Exists(Application.persistentDataPath +
-                string.Format("/{0}.dat", i)))
+                string.Format($"/{i}.dat", i)))
             {
                 File.Delete(Application.persistentDataPath +
-                    string.Format("/{0}.dat", i));
+                    string.Format($"/{i}.dat", i));
             }
         }
     }
@@ -25,10 +25,14 @@ public class SaveManager : MonoBehaviour
     private void Start()
     {
         DontDestroyOnLoad(this.gameObject);
-        LoadScriptables();
     }
 
     private void OnDisable()
+    {
+        SaveScriptables();
+    }
+
+    private void OnApplicationQuit()
     {
         SaveScriptables();
     }
@@ -38,7 +42,7 @@ public class SaveManager : MonoBehaviour
         for (int i = 0; i < objects.Count; i++)
         {
             FileStream file = File.Create(Application.persistentDataPath +
-                string.Format("/{0}.dat", i));
+                string.Format($"/{i}.dat", i));
             BinaryFormatter binary = new BinaryFormatter();
             var json = JsonUtility.ToJson(objects[i]);
             binary.Serialize(file, json);
@@ -48,19 +52,18 @@ public class SaveManager : MonoBehaviour
 
     public void LoadScriptables()
     {
-        int i = 0;
-        while (File.Exists(Application.persistentDataPath +
-            string.Format("/{0}.dat", i)))
+        for (int i = 0; i < objects.Count; i++)
         {
-            var temp = ScriptableObject.CreateInstance<BoolValue>();
+            if (File.Exists(Application.persistentDataPath +
+                string.Format($"/{i}.dat")))
+            {
             FileStream file = File.Open(Application.persistentDataPath +
-                string.Format("/{0}.dat", i), FileMode.Open);
+            string.Format($"/{i}.dat"), FileMode.Open);
             BinaryFormatter binary = new BinaryFormatter();
             JsonUtility.FromJsonOverwrite((string)binary.Deserialize(file),
-                temp);
+                objects[i]);
             file.Close();
-            objects.Add(temp);
-            i++;
+            }
         }
     }
 }
